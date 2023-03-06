@@ -1,0 +1,88 @@
+.product-show-page {
+  padding-top: 20vh;
+}
+
+.product-show-page img {
+  display: flex;
+  float: left;
+  
+}
+
+.product-show-page h1 {
+  display: flex;
+  float: right;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.product-show-page h3 {
+  display: flex;
+  float: right;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.size-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 220px;
+    float: right;
+    
+    padding: 10px;
+    margin: 10px;
+  }
+
+  
+  .size-buttons button {
+    /* display: flex; */
+    margin: 2px;
+    height: 50px;
+    width: 65px;
+    border: #dcd8d8 solid 1px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  .size-buttons p {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+    height: fit-content;
+  }
+  .size-buttons button:hover {
+    border: #111  solid 1px;
+  }
+  
+  .add-favorite-show-page-buttons button {
+    
+    float: right;
+    background-color: #111;
+    color: #fff;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+
+.add-favorite-show-page-buttons button:hover {
+  background-color: #757575;
+  color: #ffffff;
+}
+
+.favorite-button {
+  background-color: white;
+  border: #CACACA solid 1px;
+}

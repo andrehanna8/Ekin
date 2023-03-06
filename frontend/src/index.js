@@ -17,11 +17,11 @@ if (process.env.NODE_ENV !== "production") {
   window.sessionActions = sessionActions;
 }
 
-const ProfilePic = () => (
-  <div style={{ fontSize: "100px" }}>
-    <i class="fa-solid fa-user"></i>
-  </div>
-);
+// const ProfilePic = () => (
+//   <div style={{ fontSize: "100px" }}>
+//     <i class="fa-solid fa-user"></i>
+//   </div>
+// );
 
 function Root() {
   return (
@@ -29,7 +29,7 @@ function Root() {
       <Provider store={store}>
         <BrowserRouter>
           <App />
-          <ProfilePic />
+          {/* <ProfilePic /> */}
         </BrowserRouter>
       </Provider>
     </ModalProvider>

@@ -1,0 +1,22 @@
+.nav-bar {
+	background-color: #F5F5F5;
+	height: 25px;
+}
+
+.nav-bar img {
+    display: flex;
+    max-width: 100px;
+  }
+
+  #sign-up {
+	display: flex;
+	float: right;
+	background: transparent;
+	border: none;
+}
+
+#sign-up p {
+	display: flex;
+	float: right;
+	font-size: 11px;
+}

@@ -1,19 +1,33 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
-import SignupFormPage from "./components/SignupFormPage";
-import Navigation from "./components/Navigation";
+import SplashPage from "./components/SplashPage";
+import ProductShowPage from "./components/ProductShowPage";
+import NavBar from "./components/NavBar";
+import SecondNavBar from "./components/SecondNavBar";
+import SlideShowBar from "./components/SlideShowBar";
+import './components/SlideShowBar/SlideShowBar.css'
+import CartIndex from "./components/CartIndex";
+// import "./components/ProductShowPage/ProductShowPage.css";
 
 function App() {
   return (
     <>
-      <Navigation />
+    <NavBar />
+    <SecondNavBar />
+    <SlideShowBar />
         <Switch>
-          <Route path="/login">
+          <Route exact path="/products/:productId">
+            <ProductShowPage/>
+          </Route>
+          <Route exact path="/cart">
+            <CartIndex />
+          </Route>
+          <Route exact path="/login">
             <LoginFormPage />
           </Route>
-          <Route path="/signup">
-            <SignupFormPage />
+          <Route exact path="/">
+            <SplashPage />
           </Route>
         </Switch>
     </>

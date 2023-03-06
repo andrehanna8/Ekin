@@ -1,8 +1,14 @@
 import {legacy_createStore, combineReducers, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
 import session from './session'
+import reviews from './reviews'
+import productsReducer from './products'
+import cartItemsReducer from './cartItems'
+
 const rootReducer = combineReducers({
-    session
+    session,
+    products: productsReducer,
+    cartItems: cartItemsReducer,
 })
 
 let enhancer;

@@ -24,10 +24,10 @@ function Navigation() {
 
   return (
     <ul>
-      <li>
+      {/* <li>
         <NavLink exact to="/">Home</NavLink>
         {sessionLinks}
-      </li>
+      </li> */}
     </ul>
   );
 }

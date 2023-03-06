@@ -1,17 +1,18 @@
 class ApplicationController < ActionController::API
-    rescue_from StandardError, with: :unhandled_error
-    rescue_from ActionController::InvalidAuthenticityToken,
-    with: :invalid_authenticity_token
-    
     include ActionController::RequestForgeryProtection
     protect_from_forgery with: :exception
+    rescue_from StandardError, with: :unhandled_error
+
+    rescue_from ActionController::InvalidAuthenticityToken,
+      with: :invalid_authenticity_token
+    
 
     before_action :snake_case_params, :attach_authenticity_token
-
+    helper_method :current_user
 
     def current_user
         @current_user ||= User.find_by(session_token: session[:session_token])
-    end
+      end
 
     def login!(user)
         @current_user = user
@@ -65,7 +66,7 @@ class ApplicationController < ActionController::API
     end
 
     def attach_authenticity_token
-        headers['X-CSRF-Token'] = masked_authenticity_token(session)
+      headers['X-CSRF-Token'] = masked_authenticity_token(session)
     end
 
     def invalid_authenticity_token

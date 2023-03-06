@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import SignupFormModal from '../SignupFormModal';
 import './LoginForm.css';
 // import sessionReducer from '../../store/session';
 
-function LoginFormPage() {
+function LoginFormPage({setShowForm, setShowLoginForm}) {
   const dispatch = useDispatch();
 
   const sessionUser = useSelector(state => state.session.user);
@@ -33,31 +34,62 @@ function LoginFormPage() {
       });
   }
 
+  const hideModal = (e) => {
+    e.preventDefault()
+    setShowLoginForm(false)
+  }
+
+  const keepModal = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+  }
+
+  const showSignUpForm = (e) => {
+    e.preventDefault()
+    setShowForm(true)
+    setShowLoginForm(false)
+    return (
+      <> 
+        <SignupFormModal />
+      </>
+    )
+  }
+
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map((error, i) => <li key={i}>{error}</li>)}
-      </ul>
-      <label>
-        Username or Email
-        <input
-          type="text"
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+    <div className="modal-wrapper" onClick={hideModal}>
+      <form className="form-control" onSubmit={handleSubmit} onClick={keepModal}>
+      <button className="close-button" onClick={hideModal}> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png"/> </button>
+        <h2 id="join-nike-now-header"> WELCOME BACK</h2>
+        <ul>
+          {errors.map(error => <li key={error}>{error}</li>)}
+        </ul>
+        <label>
+          
+          <input
+            className='input-field'
+            placeholder="Email or Username"
+            type="text"
+            value={credential}
+            onChange={(e) => setCredential(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          
+          <input
+            className='input-field'
+            placeholder="Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </label>
+        <button className='signup-button' type="submit" onClick={handleSubmit}>Log In</button>
+        <p>Don't have an account?  <button onClick={showSignUpForm} >Sign Up</button></p>
+
+      </form>
+    </div>
   );
 }
 
