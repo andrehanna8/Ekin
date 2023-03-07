@@ -13,6 +13,7 @@ export default function NavBar() {
     const [showForm, setShowForm] = useState(false);
     const [showLoginForm, setShowLoginForm] = useState(false);
     
+    
 
     const hideLoginShowSignup = (e) => {
         e.preventDefault()
@@ -33,12 +34,11 @@ export default function NavBar() {
         
     }
 
+    if (currentUser) {
     return (
         <>
             <div className="nav-bar-flip">
             <div className="nav-bar">
-                <button id="sign-up" onClick={hideLoginShowSignup}> <p> Join Us </p>  </button>
-                <button id="sign-up" onClick={hideSignupShowLogin}> <p>Sign In</p> </button>
                 <button id="sign-up" onClick={handleLogout}> <p>Log Out</p> </button>
                 <button id="greeting"> {currentUser ? ` Hi, ${currentUser.firstName}`  : "not logged in"} </button>
             </div>
@@ -51,4 +51,23 @@ export default function NavBar() {
             
         </>
     )
+    } else { 
+        return (
+            <>
+                <div className="nav-bar-flip">
+                <div className="nav-bar">
+                    <button id="sign-up" onClick={hideLoginShowSignup}> <p> Join Us </p>  </button>
+                    <button id="sign-up" onClick={hideSignupShowLogin}> <p>Sign In</p> </button>
+                    <button id="greeting"> {currentUser ? ` Hi, ${currentUser.firstName}`  : ""} </button>
+                </div>
+                {showForm ? ( <div className={showForm  ? "modal-show" : "modal-hide"}> <SignupFormModal setShowLoginForm={setShowLoginForm} setShowForm={setShowForm} /> </div>) : null } 
+    
+                {showLoginForm ? ( <div className={showLoginForm ? "modal-show" : "modal-hide"}> <LoginFormPage setShowForm={setShowForm}  setShowLoginForm={setShowLoginForm} /> </div>) : null }
+                
+                </div>
+                
+                
+            </>
+        )
+    }
 }

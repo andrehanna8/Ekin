@@ -39,14 +39,14 @@
       }) 
     end
 
-    10.times do
+    30.times do
       Product.create!({
         name: Faker::Commerce.product_name,
         description: Faker::Lorem.paragraph,
         price: Faker::Commerce.price,
         category: Faker::Commerce.department,
-        size: "m",
-        color: "black"
+        size: Faker::Commerce.size,
+        color: Faker::Commerce.color,
         # photo: Faker::LoremFlickr.image(size: "300x300", search_terms: ['product'])
       })
     end

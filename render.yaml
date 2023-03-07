@@ -1,12 +1,12 @@
 databases:
-  - name: authenticate-me
+  - name: ekin
     user: authenticate-me
     plan: free
     region: oregon
 
 services:
   - type: web
-    name: authenticate-me
+    name: ekin
     plan: free
     region: oregon
     branch: main
