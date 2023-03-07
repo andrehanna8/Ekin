@@ -8,7 +8,7 @@ services:
   - type: web
     name: authenticate-me
     plan: free
-    region: oregon
+    region: ohio
     branch: main
     env: ruby
     buildCommand: "./bin/render-build.sh"
@@ -18,5 +18,5 @@ services:
         fromDatabase:
           name: authenticate-me
           property: connectionString
-      - key: 48db612a49e4c855412c5a653decffad
+      - key: RAILS_MASTER_KEY
         sync: false
