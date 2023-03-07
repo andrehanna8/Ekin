@@ -98,10 +98,8 @@ export const updateReview = (review) => async (dispatch) => {
 
 export default function reviewsReducer(state = {}, action) {
     const newState = { ...state };
-    // debugger
     switch (action.type) {
         case RECIEVE_PRODUCT:
-        // debugger
             if (action.payload.reviews) {
                 return action.payload.reviews
             } else {

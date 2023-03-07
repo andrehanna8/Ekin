@@ -11,7 +11,6 @@ export default function ReviewIndexItem({review}) {
     }
 
     const handleEdit = () => {
-        console.log("edit")
         return(
             <div className="edit-review-form-div"> 
                 <form className="edit-review-form">

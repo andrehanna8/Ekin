@@ -10,28 +10,24 @@ import "./NavBar.css";
 export default function NavBar() {
     const dispatch = useDispatch();
     const currentUser = useSelector(state => state.session.user)
-    console.log("current user", currentUser)
     const [showForm, setShowForm] = useState(false);
     const [showLoginForm, setShowLoginForm] = useState(false);
     
 
     const hideLoginShowSignup = (e) => {
         e.preventDefault()
-        console.log("clicked join us")
         setShowLoginForm(false)
         setShowForm(true)
     }
 
     const hideSignupShowLogin = (e) => {
         e.preventDefault()
-        console.log("clicked sign in")
         setShowForm(false)
         setShowLoginForm(true)
     }
     
     const handleLogout = (e) => {
         e.preventDefault()
-        console.log(currentUser ? currentUser : "no user")
         dispatch(logout())
 
         

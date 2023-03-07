@@ -16,14 +16,12 @@ export default function ProductShowPage() {
 
     const reviews = useSelector(state => Object.values(state.reviews))
     const product = useSelector(getProduct(productId))//wrong 
-    console.log(product) // undefined
     const [size, setSize] = useState("")
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const [rating, setRating] = useState(0)
     
     useEffect(() => {
-        // debugger
         dispatch(fetchProduct(productId))
     },[])
 
@@ -45,7 +43,6 @@ export default function ProductShowPage() {
             options: size,
             quantity: 1
         }
-        console.log(cartItem)
         dispatch(createCartItem(cartItem))
     }
 

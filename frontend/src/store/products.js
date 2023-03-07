@@ -11,7 +11,6 @@ export const recieveProducts = (products) => {
 };
 
 export const recieveProduct = (payload) => {
-    console.log("payload", payload)
     return ({
         type: RECIEVE_PRODUCT,
         payload
@@ -41,7 +40,6 @@ export const fetchProduct = (productId) => async (dispatch) => {
     const response = await fetch(`/api/products/${productId}`);
     if (response.ok) {
         const product = await response.json();
-        // debugger
         dispatch(recieveProduct(product));
     }
 }
@@ -55,10 +53,6 @@ const productsReducer = (state = {}, action) => {
         case RECIEVE_PRODUCTS:
             return action.products;
         case RECIEVE_PRODUCT:
-            console.log("RECIEVE PRODUCT", action.payload)
-            console.log("action.payload.product", action.payload.product)
-
-
             newState[action.payload.product.id] = action.payload.product;
             return newState;
         default:

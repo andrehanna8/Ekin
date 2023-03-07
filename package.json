@@ -1,0 +1,26 @@
+{
+  "name": "ekin-auth",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrehanna8/ekin-auth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrehanna8/ekin-auth/issues"
+  },
+
+  "engines": {
+    "node": "16.18"
+  },
+  "homepage": "https://github.com/andrehanna8/ekin-auth#readme"
+}

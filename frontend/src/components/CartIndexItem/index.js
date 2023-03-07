@@ -43,7 +43,6 @@ export default function CartIndexItem({cartItem}) {
     if (!cartItem) return null;
     return (
         <div className="cart-item">
-        {console.log(product)}
             <h1>{product.name} </h1>
             <h2>{product.category}</h2>
             <h3>{product.color}</h3>
