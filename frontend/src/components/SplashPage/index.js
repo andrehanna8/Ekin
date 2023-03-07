@@ -4,12 +4,14 @@ import NavBar from '../NavBar';
 import SecondNavBar from '../SecondNavBar';
 import Products from '../ProductsIndex';
 import VideoComponent from '../VideoComponent';
+import './SplashPage.css'
+
 export default function SplashPage() {
 return (
 <>
    <VideoComponent />
    <Products />
-   {/* <div className="splash-page"></div> */}
 </>
 )
 }
+

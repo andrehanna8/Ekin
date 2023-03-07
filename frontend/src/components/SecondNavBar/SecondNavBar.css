@@ -5,14 +5,16 @@
   #logo {
     display: flex;
     float: left;
-    max-width: 55px;
+    max-width: 61px;
     margin: 20px;
+    margin-left: 40px;
 }
 
   .category-buttons {
     display: flex;
     justify-content: center;
-    margin-left: 400px;
+    margin-left: 470px;
+    
     /* make buttons as wide as the text inside */
   }
 

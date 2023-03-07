@@ -3,13 +3,15 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { updateCartItem } from "../../store/cartItems";
 import { useSelector } from "react-redux";
+import { getProduct } from "../../store/products";
+import "./CartIndexItem.css"
 
 export default function CartIndexItem({cartItem}) {
 
     const dispatch = useDispatch();
     const [size, setSize] = useState(cartItem.options)
-    const [quantity, setQuantity] = useState(cartItem.quantity)
-
+    const [quantity, setQuantity] = useState(cartItem.quantity) 
+    const product = useSelector(getProduct(cartItem.productId))
     const handleQuantityChange = (e) => {
         const newQuantity = e.target.value;
         setQuantity(newQuantity)
@@ -31,7 +33,7 @@ export default function CartIndexItem({cartItem}) {
         const newCartSize = {
             id: cartItem.id,
             product_id: cartItem.product_id,
-            options: newSize,
+            options: size,
             quantity: cartItem.quantity
     }
 
@@ -40,8 +42,12 @@ export default function CartIndexItem({cartItem}) {
 
     if (!cartItem) return null;
     return (
-        <>
-            <h1> Prod Id: {cartItem.product_id} </h1>
+        <div className="cart-item">
+        {console.log(product)}
+            <h1>{product.name} </h1>
+            <h2>{product.category}</h2>
+            <h3>{product.color}</h3>
+            <h3>{product.price}</h3>
             <label> Size </label>
             <select onChange={handleSizeChange}>
                 <option value="6">6</option>
@@ -68,6 +74,6 @@ export default function CartIndexItem({cartItem}) {
             <br></br>
 
 <button id="delete-cart-item-button" onClick={ () => dispatch(deleteCartItem(cartItem.id)) }> Delete </button>
-        </>
+        </div>
     )
 }

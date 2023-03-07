@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import "./SecondNavBar.css";
+
 export default function SecondNavBar() {
 
     return (

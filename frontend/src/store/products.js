@@ -10,11 +10,13 @@ export const recieveProducts = (products) => {
 })
 };
 
-export const recieveProduct = (product) => {
+export const recieveProduct = (payload) => {
+    console.log("payload", payload)
     return ({
         type: RECIEVE_PRODUCT,
-        product
+        payload
     })
+    
 };
 
 
@@ -23,7 +25,7 @@ export const getProducts = (state) => (
 )
 
 export const getProduct = (productId) => (state) => (
-    state.products ? state.products[productId] :null
+    state.products ? state.products[productId] : null
 )
 
 export const fetchProducts = () => async (dispatch) => {
@@ -39,6 +41,7 @@ export const fetchProduct = (productId) => async (dispatch) => {
     const response = await fetch(`/api/products/${productId}`);
     if (response.ok) {
         const product = await response.json();
+        // debugger
         dispatch(recieveProduct(product));
     }
 }
@@ -52,7 +55,11 @@ const productsReducer = (state = {}, action) => {
         case RECIEVE_PRODUCTS:
             return action.products;
         case RECIEVE_PRODUCT:
-            newState[action.product.id] = action.product;
+            console.log("RECIEVE PRODUCT", action.payload)
+            console.log("action.payload.product", action.payload.product)
+
+
+            newState[action.payload.product.id] = action.payload.product;
             return newState;
         default:
             return state;

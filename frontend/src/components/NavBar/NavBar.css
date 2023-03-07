@@ -1,6 +1,6 @@
 .nav-bar {
 	background-color: #F5F5F5;
-	height: 25px;
+	height: 36px;
 }
 
 .nav-bar img {
@@ -8,6 +8,10 @@
     max-width: 100px;
   }
 
+  .nav-bar button:hover {
+	cursor: pointer;
+  }
+  
   #sign-up {
 	display: flex;
 	float: right;
@@ -19,4 +23,12 @@
 	display: flex;
 	float: right;
 	font-size: 11px;
+}
+
+#greeting {
+	display: flex;
+	float: right;
+	font-size: 11px;
+	background: transparent;
+	border: none;
 }

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-
+import "./ProductIndexItem.css"
 
 export default function ProductsIndexItem({product}) {
 

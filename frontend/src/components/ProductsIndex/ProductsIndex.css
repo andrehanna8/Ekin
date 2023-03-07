@@ -1,0 +1,17 @@
+.product-scroller {
+    overflow: auto;
+    white-space: nowrap
+}
+
+.product-scroller a {
+    display: inline-block;
+  color: green;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none
+}
+
+.product-scroller a:hover {
+  background-color: #ddd;
+  color: black;
+}

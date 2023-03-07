@@ -1,36 +1,61 @@
+import csrfFetch from "./csrf";
+import { RECIEVE_PRODUCT } from "./products";
+
 export const RECIEVE_REVIEWS = 'reviews/RECIEVE_REVIEWS';
 export const RECIEVE_REVIEW = 'reviews/RECIEVE_REVIEW';
 export const REMOVE_REVIEW = 'reviews/REMOVE_REVIEW';
 
-const recieveReviews = (reviews) => ({
-    type: RECIEVE_REVIEWS,
-    reviews
-});
+const recieveReviews = (reviews) => {
+    return ({
+        type: RECIEVE_REVIEWS,
+        reviews
+    })
+};
 
-const recieveReview = (review) => ({
-    type: RECIEVE_REVIEW,
-    review
-});
+const recieveReview = (payload) => {
+    return ({
+        type: RECIEVE_REVIEW,
+        payload
+    })
+};
 
-const removeReview = (reviewId) => ({
-    type: REMOVE_REVIEW,
-    reviewId
-});
+const removeReview = (reviewId) => {
+    return ({
+        type: REMOVE_REVIEW,
+        reviewId
+    })
+};
 
-export const getReviews = () => async (dispatch) => {
-    const response = await fetch('/api/reviews');
-    const reviews = await response.json();
-    dispatch(recieveReviews(reviews));
-}
+export const getReviews = (state) => (
+    state.reviews ? Object.values(state.reviews) : []
+)
 
-export const getReview = (reviewId) => async (dispatch) => {
+export const getReview = (reviewId) => (state) => (
+    state.reviews ? state.reviews[reviewId] : null
+)
+
+
+// export const fetchReviews = () => async (dispatch) => {
+//     const response = await fetch('/api/reviews');
+
+//     if (response.ok) {
+//     const reviews = await response.json();
+//     dispatch(recieveReviews(reviews));
+//     }
+// }
+
+export const fetchReview = (reviewId) => async (dispatch) => {
     const response = await fetch(`/api/reviews/${reviewId}`);
-    const review = await response.json();
-    dispatch(recieveReview(review));
+    
+    if (response.ok) {
+        const review = await response.json();
+        dispatch(recieveReview(review));
+    }
 }
+
 
 export const deleteReview = (reviewId) => async (dispatch) => {
-    const response = await fetch(`/api/reviews/${reviewId}`, {
+    const response = await csrfFetch(`/api/reviews/${reviewId}`, {
         method: 'DELETE'
     });
 
@@ -40,48 +65,57 @@ export const deleteReview = (reviewId) => async (dispatch) => {
 }
 
 export const createReview = (review) => async (dispatch) => {
-    const response = await fetch('/api/reviews', {
+    const response = await csrfFetch('/api/reviews', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(review)
     });
-    const newReview = await response.json();
-    dispatch(recieveReview(newReview));
+
+    if (response.ok) {
+        const newReview = await response.json();
+        dispatch(recieveReview(newReview));
+    } else {
+        const errors = await response.json();
+        return errors;
+    }
 }
 
 export const updateReview = (review) => async (dispatch) => {
-    const response = await fetch(`/api/reviews/${review.id}`, {
-        method: 'PUT',
+    const response = await csrfFetch(`/api/reviews/${review.id}`, {
+        method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(review)
     });
-    const updatedReview = await response.json();
-    dispatch(recieveReview(updatedReview));
+    if (response.ok) {
+        const updatedReview = await response.json();
+        dispatch(recieveReview(updatedReview));
+    }
 }
 
-const initialState = {};
-
-export default function reviewsReducer(state = initialState, action) {
+export default function reviewsReducer(state = {}, action) {
+    const newState = { ...state };
+    // debugger
     switch (action.type) {
+        case RECIEVE_PRODUCT:
+        // debugger
+            if (action.payload.reviews) {
+                return action.payload.reviews
+            } else {
+                return {}
+            }
         case RECIEVE_REVIEWS:
-            const newState = {};
-            action.reviews.forEach(review => {
-                newState[review.id] = review;
-            });
-            return newState;
+            return action.reviews;
         case RECIEVE_REVIEW:
-            return {
-                ...state,
-                [action.review.id]: action.review
-            };
+            newState[action.payload.review.id] = action.payload.review;
+            return newState;
         case REMOVE_REVIEW:
-            const newState2 = { ...state };
-            delete newState2[action.reviewId];
-            return newState2;
+            const reviewId = action.reviewId;
+            delete newState[reviewId];
+            return newState;
         default:
             return state;
     }

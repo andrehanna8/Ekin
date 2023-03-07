@@ -1,38 +1,89 @@
+* {
+  /* border: red solid 1px; */
+}
+#fav-button {
+  background-color: white;
+  color: black;
+  border: 2px solid #CACACA;
+}
 .product-show-page {
-  padding-top: 20vh;
+  /* padding-top: 20vh;
+  padding-bottom: 20vh; */
+  display: flex;
+  justify-content: center;
+  margin: 38px;
 }
 
 .product-show-page img {
   display: flex;
   float: left;
-  
+  margin: 100px;
 }
 
-.product-show-page h1 {
+.product-info {
+  /* border: red solid 1px; */
   display: flex;
-  float: right;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  width: 400px;
+  height: fit-content;
+  font-family: "Helvetica Neue";
+  border-radius: 5px;
+  padding: 20px;
+}
+.product-show-page h1 {
+  /* border: red solid 1px; */
+  display: flex;
+  padding: 10px;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 28px;
+
+}
+.product-show-page h2 {
+  display: flex;
+  /* border: red solid 1px; */
+  padding: 10px;
+  
+  font-family: 'Roboto', sans-serif;
+  flex-wrap: wrap;
 }
 
 .product-show-page h3 {
+  /* border: red solid 1px; */
   display: flex;
-  float: right;
+  padding: 10px;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
+}
+.product-show-page p {
+  /* border: red solid 1px; */
+  display: flex;
+  /* margin: 20px;
+  padding: 10px; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.product-show-page h5 {
+  /* border: red solid 1px; */
+  display: flex;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  margin-left: 20px;
   font-weight: 600;
 }
 
 .size-buttons {
     display: flex;
     flex-wrap: wrap;
-    width: 350px;
+    width: 370px;
     height: 220px;
-    float: right;
     
-    padding: 10px;
-    margin: 10px;
+    padding: 11px;
   }
 
   
@@ -40,7 +91,7 @@
     /* display: flex; */
     margin: 2px;
     height: 50px;
-    width: 65px;
+    width: 70px;
     border: #dcd8d8 solid 1px;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
@@ -48,7 +99,6 @@
     cursor: pointer;
     background-color: white;
   }
-  
   .size-buttons p {
     display: flex;
     font-family: 'Roboto', sans-serif;
@@ -60,18 +110,25 @@
   .size-buttons button:hover {
     border: #111  solid 1px;
   }
-  
-  .add-favorite-show-page-buttons button {
-    
+  #fav-emoji {
+    /* display: flex; */
+    font-size: 20px;
     float: right;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+  .add-favorite-show-page-buttons button {
+    display: flex;
     background-color: #111;
     color: #fff;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 10px;
+    border-radius: 50px;
+    justify-content: center;
+    padding: 20px;
+    height: 65px;
+    width: 375px;
+    margin-left: 10px;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 16px;
     cursor: pointer;
 
 }
@@ -80,9 +137,4 @@
 .add-favorite-show-page-buttons button:hover {
   background-color: #757575;
   color: #ffffff;
-}
-
-.favorite-button {
-  background-color: white;
-  border: #CACACA solid 1px;
 }
