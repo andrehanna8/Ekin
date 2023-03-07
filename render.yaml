@@ -8,7 +8,7 @@ services:
   - type: web
     name: authenticate-me
     plan: free
-    region: ohio
+    region: oregon
     branch: main
     env: ruby
     buildCommand: "./bin/render-build.sh"
