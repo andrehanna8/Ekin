@@ -9,7 +9,9 @@ export default function ReviewsIndex() {
 
     return (
         <>
-            {reviews.map( review => ( <ReviewIndexItem review={review}/> ))}
+            <div className="reviews-dropdown" >
+                {reviews.map( review => ( <ReviewIndexItem review={review}/> ))}
+            </div>
         </>
     )
 }

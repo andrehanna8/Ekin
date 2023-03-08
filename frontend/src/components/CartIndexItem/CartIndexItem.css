@@ -1,4 +1,96 @@
 .cart-item {
     margin: 50px;
     float: left;
+
 }
+
+
+#name-price {
+    margin-left: 220px;
+}
+
+#cart-label{
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+}
+
+.cart-label select {
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+    border: none;
+}
+
+.cart-label select option {
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+}
+
+.cart-item h1 {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none !important;
+    color: black;
+}
+
+.cart-item h2 {
+    color: rgb(117, 117, 117);
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+.cart-item h3 {
+    color: rgb(117, 117, 117);
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+.cart-item label {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cart-item input {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cart-item button {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cart-item img {
+    float: left;
+    margin: 10px;
+    /* height: 200px;
+    width: 200px; */
+}
+
+.cart-item-info {
+    float: right;
+    margin: 10px;
+    
+    margin-left: 20px;
+}
+
+#breakline {
+    height: 1px;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #CACACA;
+  }
+
+  #trashcan {
+    height: 100%;
+    max-width: 35px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* #name-link {
+    
+} */

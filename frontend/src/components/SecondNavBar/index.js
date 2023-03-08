@@ -10,7 +10,7 @@ export default function SecondNavBar() {
                     <img id="logo" src="https://pngimg.com/uploads/nike/nike_PNG11.png"/>
                 </Link>
                 <div className="category-buttons">
-                    <button className="category-button"> New & Featured </button>
+                    <button className="category-button"> New&nbsp;&&nbsp;Featured </button>
                     <button className="category-button"> Men </button>
                     <button className="category-button"> Women </button>
                     <button className="category-button"> Kids </button>

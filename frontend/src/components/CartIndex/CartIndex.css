@@ -1,12 +1,100 @@
+#bag-header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    margin-left: 215px;
+    margin-top: 20px;
+    
+}
+
 .cart-total {
-    display: flex;
+    display: block;
+    
     float: right;
     width: 400px;
     height: 400px;
-    background-color: #F5F5F5;
     border: 1px solid #CACACA;
     border-radius: 5px;
     margin: 20px;
     padding: 20px;
+    /* justify-content: center; */
+    position: absolute;
+    margin-left: 65vw;
+}
+
+.cart-total h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.cart-total h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.cart-total h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.cart-total h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.cart-total h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.cart-total h6 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#checkout-items {
+    display: flex;
+    float: left;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin-left: 358px;
+    height: fit-content;
+    font-family: "Helvetica Neue";
+    border-radius: 5px;
+
+}
+
+#checkout-item {
+    float: right;
+    width: 800px;
+}
+#breakline-cart {
+    height: 1px;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 170% ;
+    background-color: #CACACA;
+  }
+
+  .checkout-button {
+    display: flex;
+    background-color: #111;
+    color: #fff;
+    border-radius: 50px;
     justify-content: center;
+    padding: 20px;
+    height: 65px;
+    width: 375px;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+
 }

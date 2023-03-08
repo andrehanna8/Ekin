@@ -5,6 +5,8 @@ import { updateCartItem } from "../../store/cartItems";
 import { useSelector } from "react-redux";
 import { getProduct } from "../../store/products";
 import "./CartIndexItem.css"
+import { Link } from "react-router-dom";
+import '../CartIndexItem/trashparent.png'
 
 export default function CartIndexItem({cartItem}) {
 
@@ -43,36 +45,47 @@ export default function CartIndexItem({cartItem}) {
     if (!cartItem) return null;
     return (
         <div className="cart-item">
-            <h1>{product.name} </h1>
-            <h2>{product.category}</h2>
-            <h3>{product.color}</h3>
-            <h3>{product.price}</h3>
-            <label> Size </label>
-            <select onChange={handleSizeChange}>
-                <option value="6">6</option>
-                <option value="6.5">6.5</option>
-                <option value="7">7</option>
-                <option value="7.5">7.5</option>
-                <option value="8">8</option>
-                <option value="8.5">8.5</option>
-                <option value="9">9</option>
-                <option value="9.5">9.5</option>
-                <option value="10">10</option>
-                <option value="10.5">10.5</option>
-                <option value="11">11</option>
-                <option value="11.5">11.5</option>
-                <option value="12">12</option>
-                <option value="12.5">12.5</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-            </select>
-            <br></br>
-            <label> Quantity:</label>
-            <input type="number" onChange={handleQuantityChange} value={quantity} />
+            <Link to={`/products/${product.id}`} > 
+                <img src="https://secure-images.nike.com/is/image/DotCom/DV2619_100?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg" alt={product.name} />
+            </Link>
 
-            <br></br>
+                <div className="cart-item-info"> 
 
-<button id="delete-cart-item-button" onClick={ () => dispatch(deleteCartItem(cartItem.id)) }> Delete </button>
+            <Link to={`/products/${product.id}`} style={{ textDecoration: 'none' }}> 
+                    <h1 id="name-link">{product.name}  <span id="name-price">${product.price}</span>   </h1>
+            </ Link>
+            <br></br>
+                    <h2>{product.category}</h2>
+                    
+                    <h3>{product.color}</h3>
+                    
+                    <h3></h3>
+                    
+                    <label id="cart-label"> Size </label>
+                    <select className="cart-label-select" onChange={handleSizeChange} style={{border: 'none'}}>
+                        <option value="6">6</option>
+                        <option value="6.5">6.5</option>
+                        <option value="7">7</option>
+                        <option value="7.5">7.5</option>
+                        <option value="8">8</option>
+                        <option value="8.5">8.5</option>
+                        <option value="9">9</option>
+                        <option value="9.5">9.5</option>
+                        <option value="10">10</option>
+                        <option value="10.5">10.5</option>
+                        <option value="11">11</option>
+                        <option value="11.5">11.5</option>
+                        <option value="12">12</option>
+                        <option value="12.5">12.5</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                    </select>
+                    <label> &nbsp;&nbsp;&nbsp;Quantity:&nbsp;</label>
+                    <input type="number" onChange={handleQuantityChange} value={quantity} style={{border: 'none'}}/>
+                    <br></br>
+                    <img id="trashcan" src="https://t4.ftcdn.net/jpg/03/01/07/99/360_F_301079914_TDcwbIag3uOp7dwNRWb0bqpfWeOzb6Xu.jpg" onClick={ () => dispatch(deleteCartItem(cartItem.id)) }></img>
+            
+            </div>
         </div>
     )
 }

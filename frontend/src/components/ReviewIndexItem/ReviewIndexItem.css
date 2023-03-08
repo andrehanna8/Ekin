@@ -1,6 +1,92 @@
 .review-index-item {
     padding: 20px;
-    border: black solid 1px;
-    border-radius: 20px;
+   
     margin: 10px;
 }
+
+#mini-breakline {
+    display: flex;
+    height: 1px;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 20%;
+    background-color: black;
+}
+
+.delete-review {
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #111;
+    color: white;
+}
+
+.delete-review:hover {
+    background-color: #757575;
+    border: none;
+}
+
+.edit-review {
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #111;
+    color: white;
+}
+
+.edit-review:hover {
+    background-color: #757575;
+    border: none;
+}
+
+.edit-review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+    font-family: "Helvetica Neue";
+    border-radius: 5px;
+}
+
+.edit-review-form h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.edit-review-form input {
+    margin: 10px;
+    height: 30px;
+    width: 350px;
+    border: #CACACA solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.edit-review-form button {
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+    border: #CACACA solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #111;
+    color: white;
+}
+
+.edit-review-form button:hover {
+    background-color: #757575;
+    border: none;
+}
+
+.edit-review-form h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+

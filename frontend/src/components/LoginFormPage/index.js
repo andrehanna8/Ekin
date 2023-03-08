@@ -58,7 +58,7 @@ function LoginFormPage({setShowForm, setShowLoginForm}) {
   return (
     <div className="modal-wrapper" onClick={hideModal}>
       <form className="form-control" onSubmit={handleSubmit} onClick={keepModal}>
-      <button className="close-button" onClick={hideModal}> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png"/> </button>
+      <button className="close-button" onClick={hideModal}> <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt='x-button'/> </button>
         <h2 id="join-nike-now-header"> WELCOME BACK</h2>
         <ul>
           {errors.map(error => <li key={error}>{error}</li>)}

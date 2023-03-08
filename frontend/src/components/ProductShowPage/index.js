@@ -20,10 +20,20 @@ export default function ProductShowPage() {
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const [rating, setRating] = useState(0)
-    
+    const [showReviewIndex, setShowReviewIndex] = useState(false)
+    const [showReviewForm, setShowReviewForm] = useState(false)
+
     useEffect(() => {
         dispatch(fetchProduct(productId))
     },[])
+
+    const toggleShowReviewIndex = () => {
+        setShowReviewIndex(!showReviewIndex)
+    }
+
+    const toggleShowReviewForm = () => {
+        setShowReviewForm(!showReviewForm)
+    }
 
     const handleReviewSubmit = (e) => {
         e.preventDefault()
@@ -35,6 +45,11 @@ export default function ProductShowPage() {
             product_id: productId
         }
         dispatch(createReview(review))
+
+        setTitle("")
+        setBody("")
+        setRating(0)
+        setShowReviewIndex(true)
     }
 
     const shapeItem = (e) => {
@@ -94,21 +109,24 @@ export default function ProductShowPage() {
                         </div>
                     </div>
                     <br></br>
-                    <h3> Free Shipping*</h3>
 
                     <h2>{product.description}</h2>
+                    <div id="breakline"></div>
 
-                    <br></br>
-                    <h5>Reviews</h5>
-                    <ReviewsIndex />
+                    <h3> Free Shipping & Returns</h3>
+                    <div id="breakline"></div>
+                    <button id="review-button" onClick={toggleShowReviewIndex}> <h5>Reviews&nbsp;({reviews.length}) <span id="v">╲╱</span> </h5> </button>
+                    <div id="breakline"></div>
+                    
+                    { showReviewIndex && <ReviewsIndex />}
                     <br></br>
 
                     <form className="create-review">
                         <h5>Write a Review</h5>
                         <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
                         <input type="text" placeholder="Body" value={body} onChange={(e) => setBody(e.target.value)} />
-                        <input type="number" placeholder="Rating" value={rating} onChange={(e) => setRating(e.target.value)} />
-                        <button type="submit" onClick={handleReviewSubmit} >Submit</button>
+                        <input type="number" placeholder="Rating" value={rating} max="5" min="1" onChange={(e) => setRating(Math.min(e.target.value, 5))} />
+                        <button type="submit" placeholder="Choose a number between 1 & 5"  onClick={handleReviewSubmit} >Submit</button>
                     </form>
                     <br></br>
 

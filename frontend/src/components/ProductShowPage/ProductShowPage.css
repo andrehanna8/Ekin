@@ -53,9 +53,9 @@
 .product-show-page h3 {
   /* border: red solid 1px; */
   display: flex;
-  padding: 10px;
+  padding: 4px;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
 }
 .product-show-page p {
   /* border: red solid 1px; */
@@ -70,11 +70,10 @@
 .product-show-page h5 {
   /* border: red solid 1px; */
   display: flex;
-  padding: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 26px;
-  margin-left: 20px;
-  font-weight: 600;
+
+  
 }
 
 .size-buttons {
@@ -137,4 +136,72 @@
 .add-favorite-show-page-buttons button:hover {
   background-color: #757575;
   color: #ffffff;
+}
+
+#review-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#review-button:hover {
+  color: #757575;
+}
+
+#review-button h5 {
+  font-size: 20px;
+}
+
+#v {
+  font-size: 10px;
+  display: flex;
+  margin-top: 9px;
+  margin-left: 275px;
+  font-weight: 999;
+}
+
+#breakline {
+  height: 1px;
+  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: #CACACA;
+}
+
+.create-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: fit-content;
+  font-family: "Helvetica Neue";
+  border-radius: 5px;
+}
+
+.create-review h5 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.create-review input {
+  margin: 10px;
+  height: 30px;
+  width: 350px;
+  border: #CACACA solid 1px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.create-review button {
+  
+  margin: 10px;
+  height: 30px;
+  width: 150px;
+  border: #CACACA solid 1px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #111;
+  color: #fff;
+  cursor: pointer;
 }

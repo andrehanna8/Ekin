@@ -5,66 +5,92 @@ import { useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { useState } from "react"
 
-
-
 export default function ReviewIndexItem({review}) {
     const currentUser = useSelector(state => state.session.user)
     const dispatch = useDispatch()
-    const [title, setTitle] = useState("")
-    const [body, setBody] = useState("")
-    const [rating, setRating] = useState(0)
+    const [showEditForm, setShowEditForm] = useState(false)
+    const [title, setTitle] = useState(review.title)
+    const [body, setBody] = useState(review.body)
+    const [rating, setRating] = useState(review.rating)
 
     const handleDelete = () => {
         dispatch(deleteReview(review.id))
     }
 
-    const showEditForm = () => {
-        const handleEdit = (e) => {
-            e.preventDefault()
-            const review = {
-                title: title,
-                body: body,
-                rating: rating,
-                product_id: review.productId
-            }
-            dispatch(updateReview(review))
+    const handleEdit = (e) => {
+        e.preventDefault()
+        const editedReview = {
+            id: review.id,
+            title: title,
+            body: body,
+            rating: rating,
+            product_id: review.productId
         }
-        
+        dispatch(updateReview(editedReview))
+        setShowEditForm(false)
+    }
 
-        if (currentUser.id === review.userId) {
-            return (
-            <div className="edit-review-form-div"> 
-                <form className="edit-review-form">
-                    <input type="text" placeholder="title" />
-                    <input type="text" placeholder="body" />
-                    <input type="number" placeholder="rating" />
-                    <button type="submit" onClick={handleEdit}>Edit</button>
-                </form>
-            </div>
-        ) 
-            } else {
-            return null
+    const starRating = (rating) => {
+        const maxRating = 5
+        const fullStars = Math.floor(rating)
+        const emptyStars = maxRating - fullStars
+        const halfStar = (rating - fullStars) >= 0.5 ? 1 : 0
+        const stars = []
+        for (let i = 0; i < fullStars; i++) {
+            stars.push(<i className="fas fa-star" key={`full-${i}`} />)
         }
+        if (halfStar) {
+            stars.push(<i className="fas fa-star-half-alt" key="half" />)
+        }
+        for (let i = 0; i < emptyStars; i++) {
+            stars.push(<i className="far fa-star" key={`empty-${i}`} />)
+        }
+        return stars
     }
 
     if (currentUser.id === review.userId) {
         return (
-            
-                <div className="review-index-item">
-                    <h4> {review.title}</h4>
-                    <p> {review.body} </p>
-                    <p> {review.rating} </p>
-    
-                    <button className="delete-review" onClick={handleDelete} >Delete</button>
-                    <button className="edit-review" onClick={showEditForm} >Edit</button>
-                </div>
+            <div className="review-index-item">
+                {showEditForm ? (
+                    <div className="edit-review-form-div">
+                        <form className="edit-review-form">
+                            <h1>Edit Review</h1>
+                            <input type="text" placeholder="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+                            <input type="text" placeholder="body" value={body} onChange={(e) => setBody(e.target.value)} />
+                            <input type="number" placeholder="rating" min="1" max="5" value={rating} onChange={(e) => setRating(e.target.value)} />
+                            <div className="star-rating">{starRating(rating)}</div>
+                            <button type="submit" onClick={handleEdit}>Edit</button>
+                            <button type="button" onClick={() => setShowEditForm(false)}>Cancel</button>
+                        </form>
+                    </div>
+                ) : (
+                    <>
+                        <h4>{review.title}</h4>
+                        <br></br>
+                        <div className="star-rating">{starRating(review.rating)}</div>
+                        <br></br>
+                        <p>{review.body}</p>
+                        <br></br>
+                        <button className="delete-review" onClick={handleDelete}>Delete</button>
+                        <button className="edit-review" onClick={() => setShowEditForm(true)}>Edit</button>
+                    <div id="mini-breakline"></div>
+
+                    </>
+                )}
+            </div>
         )
     } else {
         return (
             <div className="review-index-item">
-                <h4> {review.title}</h4>
-                <p> {review.body} </p>
-                <p> {review.rating} </p>
+                {/* <h4>{reviewAuthor.name}</h4> */}
+                <h4>{review.title}</h4>
+                <br></br>
+                <div className="star-rating">{starRating(review.rating)}</div>
+                <br></br>
+                <p>{review.body}</p>
+                <br></br>
+                <div id="mini-breakline"></div>
+
             </div>
         )
     }
