@@ -45,7 +45,7 @@
         description: Faker::Lorem.paragraph,
         price: Faker::Commerce.price,
         category: Faker::Commerce.department,
-        size: Faker::Commerce.size,
+        size: "M"
         color: Faker::Commerce.color,
         # photo: Faker::LoremFlickr.image(size: "300x300", search_terms: ['product'])
       })
