@@ -19,7 +19,7 @@ require "open-uri"
     ApplicationRecord.connection.reset_pk_sequence!('products')
     ApplicationRecord.connection.reset_pk_sequence!('reviews')
   
-    puts "Creating users..."
+    puts "Creating demo user..."
     # Create one user with an easy to remember username, email, and password:
     User.create!(
       username: 'Demo-lition', 
@@ -28,7 +28,8 @@ require "open-uri"
       last_name: 'User',
       password: 'password'
     )
-  
+
+    puts "Creating users..."
     # More users
     10.times do 
       User.create!({
@@ -40,6 +41,7 @@ require "open-uri"
       }) 
     end
 
+    puts "Creating products..."
     10.times do
       Product.create!({
         name: Faker::Commerce.product_name,
@@ -52,6 +54,7 @@ require "open-uri"
       })
     end
 
+    puts "Creating reviews..."
     10.times do
       Review.create!({
         title: "please work",

@@ -48,6 +48,10 @@
     cursor: pointer;
 }
 
+.thank-you-modal-content button:hover {
+    cursor: pointer;
+}
+
 .thank-you-modal-content a i{
     justify-content: center;
     font-size: 100px;
