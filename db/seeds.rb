@@ -28,6 +28,8 @@ require "open-uri"
       last_name: 'User',
       password: 'password'
     )
+    puts "done creating demo user"
+    puts ""
 
     puts "Creating users..."
     # More users
@@ -40,19 +42,35 @@ require "open-uri"
         password: 'password'
       }) 
     end
+    puts "done creating users"
+    puts ""
 
     puts "Creating products..."
-    10.times do
-      Product.create!({
-        name: Faker::Commerce.product_name,
-        description: Faker::Lorem.paragraph,
-        price: Faker::Commerce.price,
-        category: Faker::Commerce.department,
-        size: "M",
-        color: Faker::Commerce.color,
-        # photo: Faker::LoremFlickr.image(size: "300x300", search_terms: ['product'])
-      })
-    end
+    # 10.times do
+    #   Product.create!({
+    #     name: Faker::Commerce.product_name,
+    #     description: Faker::Lorem.paragraph,
+    #     price: Faker::Commerce.price,
+    #     category: Faker::Commerce.department,
+    #     size: "M",
+    #     color: Faker::Commerce.color,
+    #     # photo: Faker::LoremFlickr.image(size: "300x300", search_terms: ['product'])
+    #   })
+    # end
+
+    p1 = Product.create!({
+      name: "Nike Air Force 1 '07",
+      description: "The Nike Air Force 1 '07 is a modern take on the iconic AF-1. It features a leather upper with a padded collar for comfort and a durable rubber outsole with a Nike Air unit in the heel for cushioning.",
+      price: 100,
+      category: "Shoes",
+      size: "M",
+      color: "White",
+    })
+
+    p1.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/nike-just-do-it-block-1-top.jpg'), filename: 'nike-just-do-it-block-1-top.jpg')
+
+    puts "done creating products"
+    puts ""
 
     puts "Creating reviews..."
     10.times do
@@ -64,6 +82,8 @@ require "open-uri"
         body: Faker::Lorem.paragraph
       })
     end
+    puts "done creating reviews"
+    puts ""
 
     
   

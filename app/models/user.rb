@@ -9,8 +9,8 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  first_name      :string
-#  last_name       :string
+#  first_name      :string           not null
+#  last_name       :string           not null
 #
 class User < ApplicationRecord
   before_validation :ensure_session_token

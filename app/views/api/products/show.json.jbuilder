@@ -1,6 +1,7 @@
 
 json.product do 
     json.extract! @product, :name, :description, :price, :category, :size, :color, :id
+    json.photoUrl url_for(@product.photo)
 end
 
 json.reviews do

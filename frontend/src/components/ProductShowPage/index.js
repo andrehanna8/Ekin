@@ -68,7 +68,7 @@ export default function ProductShowPage() {
     return  product ?  (
         <div className="product-show-page"> 
             <div className="image-container">
-                <img src="https://i.pinimg.com/600x315/cb/9a/0b/cb9a0bd78fbf6ff2c39d0c9c9f40443e.jpg" />
+                <img src={product.photoUrl} />
             </div>
 
             <div className="product-info">
