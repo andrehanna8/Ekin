@@ -19,7 +19,7 @@ export default function SecondNavBar() {
 
                 <div className="searchbar-favorite-cart" >
                     <input id="searchbar" type="text" placeholder="Search"/>
-                    <img id="favorites" src="https://cdn.iconscout.com/icon/free/png-256/favorite-border-1781521-1513841.png"/>
+                    {/* <img id="favorites" src="https://cdn.iconscout.com/icon/free/png-256/favorite-border-1781521-1513841.png"/> */}
                     <Link to="/cart"> 
                         <img id="bag" src="https://www.svgrepo.com/show/43071/shopping-bag.svg"/>
                     </Link>

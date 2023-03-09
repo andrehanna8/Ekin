@@ -17,6 +17,7 @@
 	float: right;
 	background: transparent;
 	border: none;
+	margin: 5px;
 }
 
 #sign-up p {
@@ -31,4 +32,5 @@
 	font-size: 11px;
 	background: transparent;
 	border: none;
+	margin: 5px;
 }

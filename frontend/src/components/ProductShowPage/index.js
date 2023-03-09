@@ -8,12 +8,14 @@ import "./ProductShowPage.css";
 import ReviewsIndex from "../ReviewsIndex";
 import { createReview, fetchReview, updateReview } from "../../store/reviews";
 import { useHistory } from "react-router-dom";
+import LoginFormPage from "../LoginFormPage";
 
 export default function ProductShowPage() {
     const [errors, setErrors] = useState([]);
     const dispatch = useDispatch()
     const {productId} = useParams()
 
+    const currentUser = useSelector(state => state.session.user)
     const reviews = useSelector(state => Object.values(state.reviews))
     const product = useSelector(getProduct(productId))//wrong 
     const [size, setSize] = useState("")
@@ -37,7 +39,6 @@ export default function ProductShowPage() {
 
     const handleReviewSubmit = (e) => {
         e.preventDefault()
-
         const review = {
             title: title,
             body: body,
@@ -53,6 +54,8 @@ export default function ProductShowPage() {
     }
 
     const shapeItem = (e) => {
+        e.preventDefault()
+
         const cartItem = {
             product_id: productId,
             options: size,

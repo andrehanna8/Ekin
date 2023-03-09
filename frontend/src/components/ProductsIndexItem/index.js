@@ -10,7 +10,7 @@ export default function ProductsIndexItem({product}) {
                 {/* <h1> {product.name}</h1>
                 <h2> {product.description} </h2>
                 <h3> {product.price} </h3> */}
-                <img src="https://pixy.org/download/4274607/" alt="bruh" />
+                <img src="https://pixy.org/download/4274607/" alt="" />
             </div>
         </Link>
     

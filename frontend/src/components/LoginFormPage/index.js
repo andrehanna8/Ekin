@@ -86,7 +86,22 @@ function LoginFormPage({setShowForm, setShowLoginForm}) {
           />
         </label>
         <button className='signup-button' type="submit" onClick={handleSubmit}>Log In</button>
-        <p>Don't have an account?  <button onClick={showSignUpForm} >Sign Up</button></p>
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <button className='signup-button' type='submit' onClick={() => dispatch(sessionActions.login({ credential: 'Demo-lition', password: 'password' }))}>Demo Login</button>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
+        <p >Don't have an account?  <button id="modal-login" onClick={showSignUpForm} >Sign Up</button></p>
 
       </form>
     </div>

@@ -1,3 +1,4 @@
+require "open-uri"
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -39,7 +40,7 @@
       }) 
     end
 
-    30.times do
+    10.times do
       Product.create!({
         name: Faker::Commerce.product_name,
         description: Faker::Lorem.paragraph,
@@ -50,6 +51,25 @@
         # photo: Faker::LoremFlickr.image(size: "300x300", search_terms: ['product'])
       })
     end
+
+    Product.create!({
+      name: "Nike Air Force 1",
+      description: "The Nike Air Force 1 is a classic basketball shoe that has been around since 1982. It was the first basketball shoe to feature Nike Air technology, which provides lightweight cushioning. The Air Force 1 is also known for its iconic silhouette, which features a low-cut collar and a midsole that wraps up from the toebox. The shoe is available in a variety of colors and materials, including leather, suede, and canvas. The Air Force 1 is a staple in sneaker culture and has been worn by many famous athletes and musicians.",
+      price: 100,
+      category: "Shoes",
+      size: "M",
+      color: "White"
+    })
+
+    Product.create!({
+      name: "Nike Air Max 90",
+      description: "The Nike Air Max 90 is a classic running shoe that was first released in 1990. It features a visible Air unit in the heel, which provides lightweight cushioning. The shoe is available in a variety of colors and materials, including leather, suede, and canvas. The Air Max 90 is a staple in sneaker culture and has been worn by many famous athletes and musicians.",
+      price: 100,
+      category: "Shoes",
+      size: "M",
+      color: "White"
+    })
+    
 
     10.times do
       Review.create!({

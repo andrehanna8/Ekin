@@ -13,7 +13,6 @@ class Api::CartItemsController < ApplicationController
     end
     
     def create
-        
         @cart_item = CartItem.new(cart_item_params)
         @cart_item.user_id = current_user.id
         if @cart_item.save

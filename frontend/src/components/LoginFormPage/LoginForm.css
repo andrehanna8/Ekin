@@ -4,9 +4,29 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(128, 128, 128, 0.808);
-    /* position: absolute; */
+    background-color: rgba(128, 128, 128, 0.514);
+    position: absolute;
+    top: 0;
+    z-index: 9999
 }
+
+.modal-wrapper p {
+  margin-top: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#modal-login {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* .modal-show {
+  background-color: transparent;
+} */
 
 .form-control {
     height: 60vh;
@@ -16,7 +36,7 @@
     padding-left: 100px;
     padding-right: 100px;
     max-width: 250px;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .close-button {
@@ -64,14 +84,16 @@
 
       .signup-button {
         display: flex;
-        justify-content: center;
+        margin-bottom: 30px;
+        /* justify-content: center; */
         background-color: #111;
         color: #fff;
-        padding: 12px 32px;
+        /* padding: 12px 32px; */
         font-size: 18px;
         border: none;
         border-radius: 10px;
         cursor: pointer;
+        margin-right: 300px;
         text-align: center;
         text-decoration: none;
         margin: 0 auto;

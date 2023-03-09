@@ -136,7 +136,8 @@ function SignupFormModal({ setShowForm, setShowLoginForm }) {
           />
         </label>
         <button className="signup-button" type="submit" onClick={handleSubmit}>JOIN US</button>
-        <p>Already a member? <button onClick={showLoginForm} >Login</button></p>
+        <br></br>
+        <p>Already a member? <button id="modal-login" onClick={showLoginForm} >Login</button></p>
       </form>
     </div>
   );

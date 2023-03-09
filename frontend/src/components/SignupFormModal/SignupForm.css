@@ -8,6 +8,19 @@
     /* position: absolute; */
 }
 
+.modal-wrapper p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#modal-login {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
+
 .form-control {
     height: 60vh;
     border: #111 solid 1px;
