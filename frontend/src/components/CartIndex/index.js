@@ -3,10 +3,12 @@ import { useEffect, useMemo } from "react"
 import { fetchCartItems } from "../../store/cartItems"
 import CartIndexItem from "../CartIndexItem"
 import { getProduct } from "../../store/products"
-
+import ThankYouModal from "../ThankYouModal"
 import "./CartIndex.css"
+import { useState } from "react"
 
 export default function CartIndex() {
+    const [showThankYouModal, setShowThankYouModal] = useState(false)
     const cartItems = useSelector(state => Object.values(state.cartItems))
     const dispatch = useDispatch()
 
@@ -22,9 +24,8 @@ export default function CartIndex() {
       });
     console.log(totalPrice)
 
-
-    const sendBackToHomePage = () => {
-        window.location.href = "/"
+    const displayThankYouModal = () => {
+        setShowThankYouModal(true);
     }
     
     useEffect(() => {
@@ -33,7 +34,8 @@ export default function CartIndex() {
     
     return (
         <>
-        <h1 id="bag-header">Bag &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Summary</h1>
+            {showThankYouModal && <ThankYouModal/>}
+            <h1 id="bag-header">Bag &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Summary</h1>
             <div className="cart-index">
                 <ul id="checkout-items">
                     {cartItems.map(cartItem => 
@@ -47,9 +49,9 @@ export default function CartIndex() {
                         )
                         )
                     }
-
+    
                 </ul>
-
+    
                 <div className="cart-total">
                     {/* <h1>Summary</h1> */}
                     <br></br>
@@ -63,7 +65,7 @@ export default function CartIndex() {
                     <h6>Total: </h6>
                     <div id="breakline"></div>
                     <br></br>
-                    <button className="checkout-button" onClick={sendBackToHomePage} >Checkout</button>
+                    <button className="checkout-button" onClick={displayThankYouModal} >Checkout</button>
                 </div>
             </div>
         </>

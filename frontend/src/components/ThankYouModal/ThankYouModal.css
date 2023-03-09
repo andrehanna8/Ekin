@@ -1,0 +1,80 @@
+.thank-you-modal {
+    /* border: red solid 1px; */
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.455);
+    border-radius: 5px;
+    /* border: #111 solid 1px; */
+}
+.thank-you-modal-content {
+    justify-content: center;
+    border-radius: 10px;
+    padding: 30px;
+    border: black solid 1px;
+    background-color: white;
+}
+
+.thank-you-modal h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.thank-you-modal h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.thank-you-modal a {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #111;
+}
+
+.thank-you-modal a:hover {
+    cursor: pointer;
+}
+
+.thank-you-modal-content a i{
+    justify-content: center;
+    font-size: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 30px ;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.thank-you-modal button {
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}

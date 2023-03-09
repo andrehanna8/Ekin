@@ -14,10 +14,12 @@ function LoginFormPage({setShowForm, setShowLoginForm}) {
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return <Redirect to="/" />;
 
+  if (sessionUser) return <Redirect to="/" />;
+  let demoOrPleaseWait = "Demo Login"
   const handleSubmit = (e) => {
     e.preventDefault();
+    demoOrPleaseWait = "Please Wait"
     setErrors([]);
     return dispatch(sessionActions.login({ credential, password }))
       .catch(async (res) => {
@@ -31,6 +33,7 @@ function LoginFormPage({setShowForm, setShowLoginForm}) {
         if (data?.errors) setErrors(data.errors);
         else if (data) setErrors([data]);
         else setErrors([res.statusText]);
+        demoOrPleaseWait = "Demo Login"
       });
   }
 
@@ -90,7 +93,7 @@ function LoginFormPage({setShowForm, setShowLoginForm}) {
         <br></br>
         <br></br>
 
-        <button className='signup-button' type='submit' onClick={() => dispatch(sessionActions.login({ credential: 'Demo-lition', password: 'password' }))}>Demo Login</button>
+        <button className='signup-button' type='submit' onClick={() => dispatch(sessionActions.login({ credential: 'Demo-lition', password: 'password' }))}>{demoOrPleaseWait="Demo Login"}</button>
         <br></br>
         <br></br>
         <br></br>
