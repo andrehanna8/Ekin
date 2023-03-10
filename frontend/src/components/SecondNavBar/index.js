@@ -10,12 +10,20 @@ export default function SecondNavBar() {
                     <img id="logo" src="https://pngimg.com/uploads/nike/nike_PNG11.png"/>
                 </Link>
                 <div className="category-buttons">
-                    <button className="category-button"> New&nbsp;&&nbsp;Featured </button>
-                    <button className="category-button"> Men </button>
-                    <button className="category-button"> Women </button>
-                    <button className="category-button"> Kids </button>
-                    <button className="category-button"> Accessories </button>
-                    <button className="category-button"> Sale </button>
+                    <a href="#block-img"><button className="category-button"> New&nbsp;&&nbsp;Featured </button></a> 
+                    
+                    <a href="#block-img"> <button className="category-button"> Men </button></a>
+                    {/* <button className="category-button"> Women </button> */}
+                    <a href="#block-img"> <button className="category-button"> Women </button></a>
+                    
+                    {/* <button className="category-button"> Kids </button> */}
+                    <a href="#block-img"> <button className="category-button"> Kids </button></a>
+
+                    {/* <button className="category-button"> Accessories </button> */}
+                    <a href="#block-img"> <button className="category-button"> Accessories </button></a>
+
+                    {/* <button className="category-button"> Sale </button> */}
+                    <a href="#block-img"> <button className="category-button"> Sale </button></a>
 
                 <div className="searchbar-favorite-cart" >
                     <input id="searchbar" type="text" placeholder="Search"/>

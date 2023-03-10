@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     margin-left: 470px;
+
     
     /* make buttons as wide as the text inside */
   }
@@ -31,6 +32,10 @@
     border: none;
     width: fit-content;
     height: fit-content;
+  }
+
+  .category-buttons a {
+    text-decoration: none;
   }
 
   .category-button:hover {

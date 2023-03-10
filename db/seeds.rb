@@ -147,16 +147,16 @@ require "open-uri"
 
     p9.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/am97-womens-gold.webp'), filename: 'air-max-97-womens-gold-black.webp')
 
-    # p10 = Product.create!({
-    #   name: "Men's Tank Top",
-    #   description: "tank top",
-    #   price: 25,
-    #   category: "Men's Clothing",
-    #   size: "M",
-    #   color: "White",
-    # })
+    p10 = Product.create!({
+      name: "Air Max 270",
+      description: "Nike's first lifestyle Air Max brings you style, comfort and big attitude in the Nike Air Max 270. The design draws inspiration from Air Max icons, showcasing Nike's greatest innovation with its large window and fresh array of colors.",
+      price: 160,
+      category: "Women's Shoes",
+      size: "M",
+      color: "White/Pink",
+    })
 
-    # p10.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/dri-fit-primary-mens-tank-beige.webp'), filename: 'mens-tank-top.webp')
+    p10.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/air-max-270-mens-shoes-KkLcGR.png'), filename: 'air-max-270-womens-shoes-KkLcGR.png')
 
     # p11 = Product.create!({
     #   name: "Dri-Fit Totality Shorts",
