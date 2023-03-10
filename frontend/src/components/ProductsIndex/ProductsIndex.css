@@ -41,6 +41,10 @@
     
 }
 
+.double-blocks a:hover {
+  /* background-color: #ddd;
+  color: black; */
+}
 .double-blocks img {
     width: 100px;
     height: 100px;
@@ -55,3 +59,7 @@
   width: 100%
 }
 
+/* #prod-ind-pic a div img {
+    width: 100px;
+    height: 100px;
+    /* object-fit: cover; */

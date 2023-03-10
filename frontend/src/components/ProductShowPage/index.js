@@ -17,7 +17,7 @@ export default function ProductShowPage() {
 
     const currentUser = useSelector(state => state.session.user)
     const reviews = useSelector(state => Object.values(state.reviews))
-    const product = useSelector(getProduct(productId))//wrong 
+    const product = useSelector(getProduct(productId))
     const [size, setSize] = useState("")
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
@@ -68,6 +68,7 @@ export default function ProductShowPage() {
     return  product ?  (
         <div className="product-show-page"> 
             <div className="image-container">
+                {console.log("product FROM SHOW PAGE", product)}
                 <img src={product.photoUrl} />
             </div>
 

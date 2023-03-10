@@ -12,6 +12,7 @@ export default function ReviewIndexItem({review}) {
     const [title, setTitle] = useState(review.title)
     const [body, setBody] = useState(review.body)
     const [rating, setRating] = useState(review.rating)
+    // const reviewAuthor = useSelector(state => state.users[review.userId])
 
     const handleDelete = () => {
         dispatch(deleteReview(review.id))
@@ -83,6 +84,7 @@ export default function ReviewIndexItem({review}) {
         return (
             <div className="review-index-item">
                 {/* <h4>{reviewAuthor.name}</h4> */}
+
                 <h4>{review.title}</h4>
                 <br></br>
                 <div className="star-rating">{starRating(review.rating)}</div>

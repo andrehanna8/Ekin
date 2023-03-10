@@ -21,7 +21,7 @@ export default function Products() {
     return (
         <>
             <div className="double-blocks">
-                {doubleBlocks.map( product => ( <a> <ProductsIndexItem product={product}/> </a>  ))}
+                {doubleBlocks.map( product => ( <a> <ProductsIndexItem id="prod-ind-pic" product={product}/> </a>  ))}
             </div>
             <br></br>
             <br></br>
