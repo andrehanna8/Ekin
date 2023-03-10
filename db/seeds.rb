@@ -101,7 +101,7 @@ require "open-uri"
       color: "White/Grey",
     })
 
-    p5.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/air-max-720-green.webp'), filename: 'air-jordan-6-white.webp')
+    p5.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/aj6-mens-cool-grey.webp'), filename: 'air-jordan-6-white.webp')
 
     p6 = Product.create!({
       name: "Blazer Mid '77",
