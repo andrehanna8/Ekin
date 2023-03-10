@@ -149,7 +149,7 @@ require "open-uri"
 
     p10 = Product.create!({
       name: "Men's Tank Top",
-      description: "",
+      description: "tank top",
       price: 25,
       category: "Men's Clothing",
       size: "M",
@@ -160,7 +160,7 @@ require "open-uri"
 
     p11 = Product.create!({
       name: "Dri-Fit Totality Shorts",
-      description: "",
+      description: "shorts",
       price: 40,
       category: "Men's Clothing",
       size: "M",
