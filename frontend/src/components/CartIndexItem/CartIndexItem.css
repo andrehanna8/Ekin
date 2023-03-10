@@ -4,6 +4,13 @@
 
 }
 
+.cart-item img {
+    float: left;
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+}
+
 
 #name-price {
     margin-left: 220px;

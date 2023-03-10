@@ -46,7 +46,7 @@ export default function CartIndexItem({cartItem}) {
     return (
         <div className="cart-item">
             <Link to={`/products/${product.id}`} > 
-                <img src="https://secure-images.nike.com/is/image/DotCom/DV2619_100?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg" alt={product.name} />
+                <img src={product.photoUrl} alt={product.name} />
             </Link>
 
                 <div className="cart-item-info"> 
