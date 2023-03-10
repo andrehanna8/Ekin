@@ -5,15 +5,16 @@
 
 .product-scroller a {
     display: inline-block;
-  color: green;
+  /* color: green; */
   text-align: center;
-  padding: 14px;
+  margin: 5px;
+  /* padding: 14px; */
   text-decoration: none;
-  border: black solid 1px;
+  /* border: black solid 1px; */
 }
 
 .product-scroller a:hover {
-  background-color: #ddd;
+  /* background-color: #ddd; */
   color: black;
 }
 
@@ -23,21 +24,24 @@
 }
 
 .double-blocks {
-  border: black solid 1px;
+  /* border: black solid 1px; */
     display: flex;
-    justify-content: space-between;
-    margin: 20px;
+    /* justify-content: space-between; */
+    /* margin: 20px; */
     
 }
 
 .double-blocks a {
     /* display: inline-block; */
-    border: red solid 1px;
+    /* border: red solid 1px; */
     width: 45dvw;
     height: 500px;
     text-align: center;
     padding: 14px;
-    margin: 10px;
+    /* margin: 20px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* margin-left: 20px; */
     
 }
 
@@ -48,7 +52,7 @@
 .double-blocks img {
     width: 100px;
     height: 100px;
-    border: black solid 1px;
+    /* border: black solid 1px; */
     
 }
 

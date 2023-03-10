@@ -147,27 +147,27 @@ require "open-uri"
 
     p9.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/am97-womens-gold.webp'), filename: 'air-max-97-womens-gold-black.webp')
 
-    p10 = Product.create!({
-      name: "Men's Tank Top",
-      description: "tank top",
-      price: 25,
-      category: "Men's Clothing",
-      size: "M",
-      color: "White",
-    })
+    # p10 = Product.create!({
+    #   name: "Men's Tank Top",
+    #   description: "tank top",
+    #   price: 25,
+    #   category: "Men's Clothing",
+    #   size: "M",
+    #   color: "White",
+    # })
 
-    p10.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/dri-fit-primary-mens-tank-beige.webp'), filename: 'mens-tank-top.webp')
+    # p10.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/dri-fit-primary-mens-tank-beige.webp'), filename: 'mens-tank-top.webp')
 
-    p11 = Product.create!({
-      name: "Dri-Fit Totality Shorts",
-      description: "shorts",
-      price: 40,
-      category: "Men's Clothing",
-      size: "M",
-      color: "Black",
-    })
+    # p11 = Product.create!({
+    #   name: "Dri-Fit Totality Shorts",
+    #   description: "shorts",
+    #   price: 40,
+    #   category: "Men's Clothing",
+    #   size: "M",
+    #   color: "Black",
+    # })
 
-    p11.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/dri-fit-totality-red-shorts.webp'), filename: 'dri-fit-totality-shorts-black.webp')
+    # p11.photo.attach(io: URI.open('https://ekin-seeds.s3.us-west-1.amazonaws.com/dri-fit-totality-red-shorts.webp'), filename: 'dri-fit-totality-shorts-black.webp')
 
     puts "done creating products"
     puts ""

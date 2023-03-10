@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react"
 import { fetchProducts} from "../../store/products"
 import ProductsIndexItem from "../ProductsIndexItem"
+import BlockProductIndexItem from "../BlockProductIndexItem"
 
 import "./ProductsIndex.css"
 
@@ -21,18 +22,32 @@ export default function Products() {
     return (
         <>
             <div className="double-blocks">
-                {doubleBlocks.map( product => ( <a> <ProductsIndexItem id="prod-ind-pic" product={product}/> </a>  ))}
+                {doubleBlocks.map( product => ( <a> <BlockProductIndexItem id="prod-ind-pic" product={product}/> </a>  ))}
             </div>
             <br></br>
             <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
             <div className="product-scroller">
                 {scrollerBlocks.map( product => ( <a> <ProductsIndexItem product={product}/> </a>  ))}
             </div>
             <br></br>   
             <br></br>
             <div className="double-blocks">
-                {bottomDoubleBlocks.map( product => ( <a> <ProductsIndexItem product={product}/> </a>  ))}
+                {bottomDoubleBlocks.map( product => ( <a> <BlockProductIndexItem product={product}/> </a>  ))}
             </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <br></br>
             <br></br>
             <div className="bottom-banner">

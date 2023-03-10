@@ -1,0 +1,10 @@
+#block-img {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 600px;
+    height: 600px;
+    margin: 5px;
+    margin-bottom: 100px;
+    /* object-fit: cover; */
+}
