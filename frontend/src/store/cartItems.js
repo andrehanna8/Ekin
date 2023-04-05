@@ -1,10 +1,10 @@
 import csrfFetch from "./csrf";
-// action types
+
 export const RECIEVE_CART_ITEMS = 'cartItems/RECIEVE_CART_ITEMS';
 export const RECIEVE_CART_ITEM = 'cartItems/RECIEVE_CART_ITEM';
 export const REMOVE_CART_ITEM = 'cartItems/REMOVE_CART_ITEM';
-// action creators
-export const recieveCartItems = (cartItems) => { 
+
+export const recieveCartItems = (cartItems) => {
     return ({
         type: RECIEVE_CART_ITEMS,
         cartItems
@@ -25,7 +25,6 @@ export const removeCartItem = (cartItemId) => {
     })
 };
 
-// return all cartItems
 export const getCartItems = (state) => (
     state.cartItems ? Object.values(state.cartItems) : []
 )
@@ -33,7 +32,7 @@ export const getCartItems = (state) => (
 export const getCartItem = (cartItemId) => (state) => (
     state.cartItems ? state.cartItems[cartItemId] : null
 )
-// thunk action creators
+
 export const fetchCartItems = () => async (dispatch) => {
     const response = await fetch('/api/cart_items');
     if (response.ok) {
@@ -94,7 +93,7 @@ export const updateCartItem = (cartItem) => async (dispatch) => {
     }
 }
 
-// reducer
+
 const cartItemsReducer = (state = {}, action) => {
     const newState = {...state}
     switch (action.type) {
