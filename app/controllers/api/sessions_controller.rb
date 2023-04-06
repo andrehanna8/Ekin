@@ -26,6 +26,7 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
+    CartItem.destroy_all
     logout!
     render json: {message: 'successfully logged out'}
 

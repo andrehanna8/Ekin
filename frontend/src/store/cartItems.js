@@ -3,6 +3,7 @@ import csrfFetch from "./csrf";
 export const RECIEVE_CART_ITEMS = 'cartItems/RECIEVE_CART_ITEMS';
 export const RECIEVE_CART_ITEM = 'cartItems/RECIEVE_CART_ITEM';
 export const REMOVE_CART_ITEM = 'cartItems/REMOVE_CART_ITEM';
+export const CLEAR_CART_ITEMS = 'cartItems/CLEAR_CART_ITEMS';
 
 export const recieveCartItems = (cartItems) => {
     return ({
@@ -24,6 +25,13 @@ export const removeCartItem = (cartItemId) => {
     cartItemId
     })
 };
+
+export const clearCartItems = () => {
+    return ({
+        type: CLEAR_CART_ITEMS
+    })
+};
+
 
 export const getCartItems = (state) => (
     state.cartItems ? Object.values(state.cartItems) : []
@@ -93,6 +101,15 @@ export const updateCartItem = (cartItem) => async (dispatch) => {
     }
 }
 
+export const clearCart = () => async (dispatch) => {
+    const response = await csrfFetch('/api/cart_items/clear', {
+        method: 'DELETE'
+    });
+    if (response.ok) {
+        dispatch(clearCartItems());
+    }
+}
+
 
 const cartItemsReducer = (state = {}, action) => {
     const newState = {...state}
@@ -106,6 +123,9 @@ const cartItemsReducer = (state = {}, action) => {
             const cartItemId = action.cartItemId;
             delete newState[cartItemId];
             return newState;
+        case CLEAR_CART_ITEMS:
+            console.log("Clearing cart items...");
+            return {}
         default:
             return state;
     }

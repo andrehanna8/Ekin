@@ -57,6 +57,7 @@ export default function CartIndex() {
         </ul>
 
         <div className="cart-total">
+        <h1>Summary:</h1>
           <br></br>
           <h3>Subtotal: ${totalPrice(cartItems)}</h3>
           <br></br>

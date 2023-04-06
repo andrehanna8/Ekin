@@ -6,6 +6,8 @@ import SignupFormModal from "../SignupFormModal";
 import LoginFormPage from "../LoginFormPage";
 import { logout } from "../../store/session";
 import "./NavBar.css";
+import { clearCartItems } from "../../store/cartItems";
+
 
 export default function NavBar() {
     const dispatch = useDispatch();
@@ -29,6 +31,7 @@ export default function NavBar() {
     
     const handleLogout = (e) => {
         e.preventDefault()
+        dispatch(clearCartItems());
         dispatch(logout())
 
         
