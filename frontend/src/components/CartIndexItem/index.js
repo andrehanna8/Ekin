@@ -7,6 +7,9 @@ import { getProduct } from "../../store/products";
 import "./CartIndexItem.css"
 import { Link } from "react-router-dom";
 import '../CartIndexItem/trashparent.png'
+import { useEffect } from "react";
+import { fetchProduct } from "../../store/products";
+import { useMemo } from "react";
 
 export default function CartIndexItem({cartItem}) {
 
@@ -14,6 +17,13 @@ export default function CartIndexItem({cartItem}) {
     const [size, setSize] = useState(cartItem.options)
     const [quantity, setQuantity] = useState(cartItem.quantity) 
     const product = useSelector(getProduct(cartItem.productId))
+
+    useEffect(() => {
+        if (cartItem) {
+          dispatch(fetchProduct(cartItem.productId));
+        }
+      }, [dispatch, cartItem]);
+
     const handleQuantityChange = (e) => {
         const newQuantity = e.target.value;
         setQuantity(newQuantity)
@@ -42,9 +52,12 @@ export default function CartIndexItem({cartItem}) {
     dispatch(updateCartItem(newCartSize))
 }
 
-    if (!cartItem) return null;
+if (!cartItem) return null;
+if (!product) return <div className="loader"></div>;
     return (
         <div className="cart-item">
+            {console.log(cartItem, "cartItem")}
+            {console.log(product, "PRRRRRRODDDDDUCTT")}
             <Link to={`/products/${product.id}`} > 
                 <img src={product.photoUrl} alt={product.name} />
             </Link>

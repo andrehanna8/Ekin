@@ -16,16 +16,20 @@ export default function CartIndex() {
     let total = 0;
     items.forEach((item) => {
       const temp = products[item.productId];
-      total += temp.price * item.quantity;
+      if (temp) {
+        total += temp.price * item.quantity;
+      }
     });
     return total;
   };
-
+  
   const totalTax = (items) => {
     let total = 0;
     items.forEach((item) => {
       const temp = products[item.productId];
-      total += temp.price * item.quantity * 0.08;
+      if (temp) {
+        total += temp.price * item.quantity * 0.08;
+      }
     });
     return total;
   };

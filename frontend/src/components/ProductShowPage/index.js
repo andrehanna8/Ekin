@@ -74,6 +74,7 @@ const showSuccessBanner = () => {
 
     const handleReviewSubmit = (e) => {
         e.preventDefault()
+        
         const review = {
             title: title,
             body: body,

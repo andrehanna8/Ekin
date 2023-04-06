@@ -8,6 +8,8 @@ const SearchResultIndexItem = ({ product }) => {
       {/* Display product details as desired */}
       <Link to={`/products/${product.id}`}>
         <h3>{product.name}</h3>
+        {/* product image */}
+        {/* <img src={product.photo} /> */}
       </Link>
     </div>
   );
