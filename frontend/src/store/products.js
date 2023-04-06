@@ -44,7 +44,15 @@ export const fetchProduct = (productId) => async (dispatch) => {
     }
 }
 
-
+export const fetchSearchResults = (searchTerm) => async (dispatch) => {
+    const response = await fetch(`/api/products/search?query=${encodeURIComponent(searchTerm)}`);
+    if (response.ok) {
+      const data = await response.json();
+      console.log("Search response data:", data);
+      dispatch(recieveProducts(data.products));
+    }
+  };
+  
 const productsReducer = (state = {}, action) => {
     let newState = {...state}
 

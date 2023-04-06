@@ -117,7 +117,7 @@ const showSuccessBanner = () => {
         <div className="product-show-page"> 
         {showBanner && (
         <div className="banner">
-            <span>Product successfully added to cart! &nbsp; </span>
+            <span>Product successfully added to cart! &nbsp; &nbsp; </span>
             <div className="loading-bar" style={{ width: `${loadingProgress}%` }}></div>
             <button id="close-banner" onClick={closeBanner}>X</button>
         </div>

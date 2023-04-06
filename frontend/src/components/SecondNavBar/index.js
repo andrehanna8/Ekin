@@ -1,8 +1,29 @@
 import { Link } from "react-router-dom";
 import "./SecondNavBar.css";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { fetchSearchResults } from "../../store/products";
+
 
 export default function SecondNavBar() {
+    const [searchTerm, setSearchTerm] = useState("");
+    const dispatch = useDispatch();
 
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
+      };
+    
+      const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+             console.log("enter key pressed");
+          performSearch();
+        }
+      };
+    
+      const performSearch = () => {
+        console.log("searching for", searchTerm);
+        dispatch(fetchSearchResults(searchTerm));
+      };
     return (
         <>
             <div className="second-nav-bar">
@@ -26,7 +47,21 @@ export default function SecondNavBar() {
                     <a href="#block-img"> <button className="category-button"> Sale </button></a>
 
                 <div className="searchbar-favorite-cart" >
-                    <input id="searchbar" type="text" placeholder="Search"/>
+                <input
+            id="searchbar"
+            type="text"
+            placeholder="Search"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            onKeyDown={handleKeyDown}
+          />
+          <button
+            type="button"
+            onClick={performSearch}
+            className="magnifying-glass-button"
+          >
+            🔍
+          </button>
                     {/* <img id="favorites" src="https://cdn.iconscout.com/icon/free/png-256/favorite-border-1781521-1513841.png"/> */}
                     <Link to="/cart"> 
                         <img id="bag" src="https://www.svgrepo.com/show/43071/shopping-bag.svg"/>
