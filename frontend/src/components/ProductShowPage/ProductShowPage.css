@@ -207,3 +207,37 @@
   color: #fff;
   cursor: pointer;
 }
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #111; /* Updated background-color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  font-family: 'Roboto', sans-serif; /* Updated font-family */
+}
+
+.loading-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: #606462;
+  width: 0;
+  transition: width 0.1s linear;
+}
+
+#close-banner {
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: none;
+  
+}

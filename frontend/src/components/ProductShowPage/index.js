@@ -26,6 +26,31 @@ export default function ProductShowPage() {
     const [showReviewForm, setShowReviewForm] = useState(false)
     const [selectedSize, setSelectedSize] = useState("");
     const [showLoginForm, setShowLoginForm] = useState(false);
+    const [showBanner, setShowBanner] = useState(false);
+const [bannerTimeoutId, setBannerTimeoutId] = useState(null);
+const [loadingProgress, setLoadingProgress] = useState(0);
+
+const showSuccessBanner = () => {
+    setShowBanner(true);
+    setLoadingProgress(0);
+  
+    const timeoutId = setTimeout(() => {
+      setShowBanner(false);
+    }, 5000);
+  
+    setBannerTimeoutId(timeoutId);
+  
+    const intervalId = setInterval(() => {
+      setLoadingProgress((prevProgress) => {
+        return prevProgress >= 100 ? 100 : prevProgress + 1;
+      });
+    }, 50);
+  
+    setTimeout(() => {
+      clearInterval(intervalId);
+    }, 5000);
+  };
+  
 
 
     const handleSizeClick = (newSize) => {
@@ -77,12 +102,27 @@ export default function ProductShowPage() {
             quantity: 1
         };
         dispatch(createCartItem(cartItem));
+        showSuccessBanner();
     };
     
 
+    const closeBanner = () => {
+        setShowBanner(false);
+        clearTimeout(bannerTimeoutId);
+      };
+      
 
     return  product ?  (
+        
         <div className="product-show-page"> 
+        {showBanner && (
+        <div className="banner">
+            <span>Product successfully added to cart! &nbsp; </span>
+            <div className="loading-bar" style={{ width: `${loadingProgress}%` }}></div>
+            <button id="close-banner" onClick={closeBanner}>X</button>
+        </div>
+        )}
+
             <div className="image-container">
                 {console.log("product FROM SHOW PAGE", product)}
                 <img src={product.photoUrl} />
