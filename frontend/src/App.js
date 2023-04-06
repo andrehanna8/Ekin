@@ -8,6 +8,8 @@ import SecondNavBar from "./components/SecondNavBar";
 import SlideShowBar from "./components/SlideShowBar";
 import './components/SlideShowBar/SlideShowBar.css'
 import CartIndex from "./components/CartIndex";
+import SearchResultsIndex from "./components/SearchResultsIndex";
+
 // import "./components/ProductShowPage/ProductShowPage.css";
 
 function App() {
@@ -25,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <LoginFormPage />
+          </Route>
+          <Route exact path="/search">
+            <SearchResultsIndex />
           </Route>
           <Route exact path="/">
             <SplashPage />

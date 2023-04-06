@@ -3,11 +3,13 @@ import "./SecondNavBar.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchSearchResults } from "../../store/products";
+import { useHistory } from "react-router-dom";
 
 
 export default function SecondNavBar() {
     const [searchTerm, setSearchTerm] = useState("");
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
@@ -23,7 +25,9 @@ export default function SecondNavBar() {
       const performSearch = () => {
         console.log("searching for", searchTerm);
         dispatch(fetchSearchResults(searchTerm));
+        history.push(`/search?q=${encodeURIComponent(searchTerm)}`);
       };
+
     return (
         <>
             <div className="second-nav-bar">
