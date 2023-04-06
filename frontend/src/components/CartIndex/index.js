@@ -21,7 +21,7 @@ export default function CartIndex() {
             const temp = products[item.productId] 
             total += temp.price * item.quantity
         })
-        return total
+        return Math.floor(total)
     }
 
     const totalTax = (items) => {

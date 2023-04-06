@@ -62,7 +62,7 @@ export default function CartIndexItem({cartItem}) {
                     <h3></h3>
                     
                     <label id="cart-label"> Size </label>
-                    <select className="cart-label-select" onChange={handleSizeChange} style={{border: 'none'}}>
+                    <select className="cart-label-select" onChange={handleSizeChange} style={{border: 'none'}} value={size}>
                         <option value="6">6</option>
                         <option value="6.5">6.5</option>
                         <option value="7">7</option>

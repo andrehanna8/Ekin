@@ -24,6 +24,16 @@ export default function ProductShowPage() {
     const [rating, setRating] = useState(0)
     const [showReviewIndex, setShowReviewIndex] = useState(false)
     const [showReviewForm, setShowReviewForm] = useState(false)
+    const [selectedSize, setSelectedSize] = useState("");
+    const [showLoginForm, setShowLoginForm] = useState(false);
+
+
+    const handleSizeClick = (newSize) => {
+        setSize(newSize);
+        setSelectedSize(newSize);
+      };
+
+
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
@@ -54,15 +64,21 @@ export default function ProductShowPage() {
     }
 
     const shapeItem = (e) => {
-        e.preventDefault()
-
+        e.preventDefault();
+    
+        if (!currentUser) {
+            const signUpButton = document.getElementById('sign-up');
+            signUpButton?.click();
+        }
+    
         const cartItem = {
             product_id: productId,
             options: size,
             quantity: 1
-        }
-        dispatch(createCartItem(cartItem))
-    }
+        };
+        dispatch(createCartItem(cartItem));
+    };
+    
 
 
     return  product ?  (
@@ -81,24 +97,85 @@ export default function ProductShowPage() {
                 <br></br>
                     <p> Select Size</p>
                     <div className="size-buttons">
-                        
-                        <button onClick={(e) => setSize(6)}>6</button>
-                        <button onClick={(e) => setSize(6.5)}>6.5</button>
-                        <button onClick={(e) => setSize(7)}>7</button>
-                        <button onClick={(e) => setSize(7.5)}>7.5</button>
-                        <button onClick={(e) => setSize(8)}>8</button>
-                        <button onClick={(e) => setSize(8.5)}>8.5</button>
-                        <button onClick={(e) => setSize(9)}>9</button>
-                        <button onClick={(e) => setSize(9.5)}>9.5</button>
-                        <button onClick={(e) => setSize(10)}>10</button>
-                        <button onClick={(e) => setSize(10.5)}>10.5</button>
-                        <button onClick={(e) => setSize(11)}>11</button>
-                        <button onClick={(e) => setSize(11.5)}>11.5</button>
-                        <button onClick={(e) => setSize(12)}>12</button>
-                        <button onClick={(e) => setSize(12.5)}>12.5</button>
-                        <button onClick={(e) => setSize(13)}>13</button>
-                        <button onClick={(e) => setSize(14)}>14</button>
+                    <button style={ selectedSize === 6
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(6)}> 6 </button>
 
+                        <button style={ selectedSize === 6.5
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(6.5)}> 6.5 </button>
+
+                        <button style={ selectedSize === 7
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(7)}> 7 </button>
+
+                        <button style={ selectedSize === 7.5
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(7.5)}> 7.5 </button>
+
+                        <button style={ selectedSize === 8
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(8)}> 8 </button>
+
+                        <button style={ selectedSize === 8.5
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(8.5)}> 8.5 </button>
+
+                        <button style={ selectedSize === 9
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(9)}> 9 </button>
+
+                        <button style={ selectedSize === 9.5
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(9.5)}> 9.5 </button>
+
+                        <button style={ selectedSize === 10
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(10)}> 10 </button>
+
+                        <button style={ selectedSize === 10.5
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(10.5)}> 10.5 </button>
+
+                        <button style={ selectedSize === 11
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(11)}> 11 </button>
+
+                        <button style={ selectedSize === 11.5
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(11.5)}> 11.5 </button>
+
+                        <button style={ selectedSize === 12
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(12)}> 12 </button>
+
+                        <button style={ selectedSize === 12.5
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(12.5)}> 12.5 </button>
+
+                        <button style={ selectedSize === 13
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(13)}> 13 </button>
+
+                        <button style={ selectedSize === 14
+            ? { border: "1px solid #111" }
+            : { border: "#dcd8d8 solid 1px" }
+        } onClick={() => handleSizeClick(14)}> 14 </button>
 
                     </div>
                     <br></br>
@@ -135,6 +212,10 @@ export default function ProductShowPage() {
                     <br></br>
 
             </div>
+            {showLoginForm && (
+    <LoginFormPage setShowLoginForm={setShowLoginForm} />
+)}
+
         </div>
     ) : null
 }
