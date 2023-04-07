@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 const categories = ["All", "Men's", "Women's", "Kids", "Accessories", "Sale"];
-const productTypes = ["All", "Shoes", "Tops", "Bottoms"];
+const productTypes = ["All", "Shoes", "Tops", "Bottoms", "Accessories"];
 
 export default function SearchResultsIndex() {
     const products = useSelector((state) => Object.values(state.products));

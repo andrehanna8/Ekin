@@ -168,7 +168,7 @@ p11 = Product.create!({
   color: "Black/White",
 })
 
-p11.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/40dc8e57-0fbc-48f3-964b-6a8db73e9d6e/air-zoom-pegasus-38-running-shoe-6PzQfV.png'), filename: 'pegasus-38.png')
+# p11.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/40dc8e57-0fbc-48f3-964b-6a8db73e9d6e/air-zoom-pegasus-38-running-shoe-6PzQfV.png'), filename: 'pegasus-38.png')
 
 # Product 12
 p12 = Product.create!({
@@ -180,7 +180,7 @@ p12 = Product.create!({
   color: "Black/White",
 })
 
-p12.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8f941b39-26d2-4642-8fbc-6a9a6a75a6c7/react-infinity-run-flyknit-2-running-shoe-JK0mtq.png'), filename: 'react-infinity-flyknit-2.png')
+# p12.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8f941b39-26d2-4642-8fbc-6a9a6a75a6c7/react-infinity-run-flyknit-2-running-shoe-JK0mtq.png'), filename: 'react-infinity-flyknit-2.png')
 
 # Product 13
 p13 = Product.create!({
@@ -192,7 +192,7 @@ p13 = Product.create!({
   color: "Blue/White",
 })
 
-p13.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/3d1b6e91-6f7d-43a3-b3a9-9b763bf40a84/air-zoom-superrep-2-training-shoe-14dVQ2.png'), filename: 'superrep-2.png')
+# p13.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/3d1b6e91-6f7d-43a3-b3a9-9b763bf40a84/air-zoom-superrep-2-training-shoe-14dVQ2.png'), filename: 'superrep-2.png')
 
 # Product 14
 p14 = Product.create!({
@@ -204,7 +204,7 @@ p14 = Product.create!({
   color: "Black/Grey",
 })
 
-p14.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/3bf3b3f3-1a71-4e87-9d6e-c2a9b2d2425b/metcon-7-training-shoe-7cG1DM.png'), filename: 'metcon-7.png')
+# p14.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/3bf3b3f3-1a71-4e87-9d6e-c2a9b2d2425b/metcon-7-training-shoe-7cG1DM.png'), filename: 'metcon-7.png')
 
 # Product 15
 p15 = Product.create!({
@@ -216,7 +216,7 @@ p15 = Product.create!({
   color: "Blue/White",
 })
 
-p15.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/3ff3bc9e-afbe-420a-9831-f8edbae18d50/zoomx-invincible-run-flyknit-running-shoe-4Ccsd4.png'), filename: 'zoomx-invincible-flyknit.png')
+# p15.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/3ff3bc9e-afbe-420a-9831-f8edbae18d50/zoomx-invincible-run-flyknit-running-shoe-4Ccsd4.png'), filename: 'zoomx-invincible-flyknit.png')
 
 # Product 16
 p16 = Product.create!({
@@ -228,7 +228,7 @@ p16 = Product.create!({
   color: "Black",
 })
 
-p16.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/gsuin11ptg6irqxw0u4m/dri-fit-mens-short-sleeve-training-top-9SDLrn.png'), filename: 'dri-fit-mens-training-tshirt.png')
+# p16.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/gsuin11ptg6irqxw0u4m/dri-fit-mens-short-sleeve-training-top-9SDLrn.png'), filename: 'dri-fit-mens-training-tshirt.png')
 
 # Product 17
 p17 = Product.create!({
@@ -240,7 +240,7 @@ p17 = Product.create!({
   color: "White",
 })
 
-p17.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/qrrkcqdfrrjuhqlo0zhz/pro-mens-short-sleeve-top-KkLd2v.png'), filename: 'pro-mens-short-sleeve-top.png')
+# p17.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/qrrkcqdfrrjuhqlo0zhz/pro-mens-short-sleeve-top-KkLd2v.png'), filename: 'pro-mens-short-sleeve-top.png')
 
 # Product 18
 p18 = Product.create!({
@@ -252,7 +252,7 @@ p18 = Product.create!({
   color: "Grey",
 })
 
-p18.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/ed6a5d6f-7e12-4dac-a270-6d02fb6c0a2a/sportswear-club-fleece-pullover-hoodie-8xJMN3.png'), filename: 'club-fleece-pullover-hoodie.png')
+# p18.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/ed6a5d6f-7e12-4dac-a270-6d02fb6c0a2a/sportswear-club-fleece-pullover-hoodie-8xJMN3.png'), filename: 'club-fleece-pullover-hoodie.png')
 
 # Product 19
 p19 = Product.create!({
@@ -264,7 +264,7 @@ p19 = Product.create!({
   color: "Blue",
 })
 
-p19.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/56f6a838-6a88-419b-bd6a-0876bfcf2d45/therma-mens-training-hoodie-dLcJbR.png'), filename: 'therma-mens-training-hoodie.png')
+# p19.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/56f6a838-6a88-419b-bd6a-0876bfcf2d45/therma-mens-training-hoodie-dLcJbR.png'), filename: 'therma-mens-training-hoodie.png')
 
 # Product 20
 p20 = Product.create!({
@@ -276,7 +276,7 @@ p20 = Product.create!({
   color: "Black/White",
 })
 
-p20.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/94e6f0e0-ee7f-407d-b88d-81d1cfa0e7e7/sportswear-windrunner-mens-jacket-9R1RMM.png'), filename: 'windrunner-jacket.png')
+# p20.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/94e6f0e0-ee7f-407d-b88d-81d1cfa0e7e7/sportswear-windrunner-mens-jacket-9R1RMM.png'), filename: 'windrunner-jacket.png')
 
 # Product 21
 p21 = Product.create!({
@@ -288,7 +288,7 @@ p21 = Product.create!({
   color: "Black",
 })
 
-p21.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/e0f9cb68-0e62-43f7-af64-8d3e3f3a3e80/sportswear-club-fleece-joggers-2xjDn1.png'), filename: 'club-fleece-joggers.png')
+# p21.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/e0f9cb68-0e62-43f7-af64-8d3e3f3a3e80/sportswear-club-fleece-joggers-2xjDn1.png'), filename: 'club-fleece-joggers.png')
 
 # Product 22
 p22 = Product.create!({
@@ -300,7 +300,7 @@ p22 = Product.create!({
   color: "Grey",
 })
 
-p22.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/edfa58f1-7f83-48d9-9d33-4e70cc7d05d0/dri-fit-mens-training-pants-4bLbwD.png'), filename: 'dri-fit-mens-training-pants.png')
+# p22.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/edfa58f1-7f83-48d9-9d33-4e70cc7d05d0/dri-fit-mens-training-pants-4bLbwD.png'), filename: 'dri-fit-mens-training-pants.png')
 
 # Product 23
 p23 = Product.create!({
@@ -312,7 +312,7 @@ p23 = Product.create!({
   color: "Black",
 })
 
-p23.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/5b6e833f-1c30-4525-95e5-06fa26c9f333/flex-stride-mens-7-brief-running-shorts-KlhlQD.png'), filename: 'flex-stride-running-shorts.png')
+# p23.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/5b6e833f-1c30-4525-95e5-06fa26c9f333/flex-stride-mens-7-brief-running-shorts-KlhlQD.png'), filename: 'flex-stride-running-shorts.png')
 
 # Product 24
 p24 = Product.create!({
@@ -324,7 +324,7 @@ p24 = Product.create!({
   color: "Olive",
 })
 
-p24.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/722b665d-5c5b-4ccf-9c94-c9d9b3ea3b3d/sportswear-club-mens-cargo-pants-nGZSTh.png'), filename: 'club-cargo-pants.png')
+# p24.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/722b665d-5c5b-4ccf-9c94-c9d9b3ea3b3d/sportswear-club-mens-cargo-pants-nGZSTh.png'), filename: 'club-cargo-pants.png')
 
 # Product 25
 p25 = Product.create!({
@@ -336,7 +336,7 @@ p25 = Product.create!({
   color: "Black",
 })
 
-p25.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/35c3d1a3-3fc5-4f80-9b38-89fbcf603d21/pro-mens-tights-2YJ8Qv.png'), filename: 'pro-mens-tights.png')
+# p25.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/35c3d1a3-3fc5-4f80-9b38-89fbcf603d21/pro-mens-tights-2YJ8Qv.png'), filename: 'pro-mens-tights.png')
 
 # Product 26
 p26 = Product.create!({
@@ -348,7 +348,7 @@ p26 = Product.create!({
   color: "Black",
 })
 
-p26.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/gsuin1ecihotz6gqtswk/sportswear-heritage86-cap-MfvtTz.png'), filename: 'heritage86-cap.png')
+# p26.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/gsuin1ecihotz6gqtswk/sportswear-heritage86-cap-MfvtTz.png'), filename: 'heritage86-cap.png')
 
 # Product 27
 p27 = Product.create!({
@@ -360,7 +360,7 @@ p27 = Product.create!({
   color: "Black",
 })
 
-p27.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/da7a94a0-71ee-4a5a-9065-5c5b8ca7a1b5/sportswear-essentials-hip-pack-xM4Zb9.png'), filename: 'essentials-hip-pack.png')
+# p27.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/da7a94a0-71ee-4a5a-9065-5c5b8ca7a1b5/sportswear-essentials-hip-pack-xM4Zb9.png'), filename: 'essentials-hip-pack.png')
 
 p28 = Product.create!({
   name: "Nike Elite Basketball Crew Socks",
@@ -371,7 +371,7 @@ p28 = Product.create!({
   color: "White/Black",
 })
 
-p28.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/1db24340-48a2-48a8-b8d0-47ec3f3ac9e9/elite-basketball-crew-socks-knQGxR.png'), filename: 'elite-basketball-crew-socks.png')
+# p28.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/1db24340-48a2-48a8-b8d0-47ec3f3ac9e9/elite-basketball-crew-socks-knQGxR.png'), filename: 'elite-basketball-crew-socks.png')
 
 # Product 29
 p29 = Product.create!({
@@ -383,7 +383,7 @@ p29 = Product.create!({
   color: "Black/White",
 })
 
-p29.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/60e7a0f3-36ec-4d61-8d63-6a3bb3f3e9ac/vapor-knit-3-football-gloves-2QcRzn.png'), filename: 'vapor-knit-football-gloves.png')
+# p29.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/60e7a0f3-36ec-4d61-8d63-6a3bb3f3e9ac/vapor-knit-3-football-gloves-2QcRzn.png'), filename: 'vapor-knit-football-gloves.png')
 
 p30 = Product.create!({
   name: "Nike Sportswear Tech Fleece Scarf",
@@ -394,7 +394,7 @@ p30 = Product.create!({
   color: "Black",
 })
 
-p30.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/271d5b8e-4bf4-4e6d-8d76-8a3a3c50b3cd/sportswear-tech-fleece-scarf-5D5R5J.png'), filename: 'tech-fleece-scarf.png')
+# p30.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/271d5b8e-4bf4-4e6d-8d76-8a3a3c50b3cd/sportswear-tech-fleece-scarf-5D5R5J.png'), filename: 'tech-fleece-scarf.png')
 
 # Women's Accessories
 # Product 31
@@ -407,7 +407,7 @@ p31 = Product.create!({
   color: "Pink",
 })
 
-p31.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8f8baff9-0e27-4e0d-8d71-1a1ff2e1737d/sportswear-heritage86-futura-washed-cap-7ZvRtg.png'), filename: 'heritage86-futura-washed-cap-pink.png')
+# p31.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8f8baff9-0e27-4e0d-8d71-1a1ff2e1737d/sportswear-heritage86-futura-washed-cap-7ZvRtg.png'), filename: 'heritage86-futura-washed-cap-pink.png')
 
 # Product 32
 p32 = Product.create!({
@@ -419,7 +419,7 @@ p32 = Product.create!({
   color: "Black",
 })
 
-p32.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8d1e0e89-0c3f-4a6a-a3b3-0d4e01db4ba4/womens-lightweight-training-gloves-cGJ1ZX.png'), filename: 'womens-lightweight-training-gloves.png')
+# p32.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8d1e0e89-0c3f-4a6a-a3b3-0d4e01db4ba4/womens-lightweight-training-gloves-cGJ1ZX.png'), filename: 'womens-lightweight-training-gloves.png')
 
 # Product 33
 p33 = Product.create!({
@@ -431,7 +431,7 @@ p33 = Product.create!({
   color: "White",
 })
 
-p33.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/4f4e29c9-4d71-4f20-81e0-d27e8cb11f16/everyday-max-cushioned-training-crew-socks-3-pairs-3m6b3q.png'), filename: 'womens-training-crew-socks.png')
+# p33.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/4f4e29c9-4d71-4f20-81e0-d27e8cb11f16/everyday-max-cushioned-training-crew-socks-3-pairs-3m6b3q.png'), filename: 'womens-training-crew-socks.png')
 
 p34 = Product.create!({
   name: "Nike Gym Club Training Duffel Bag",
@@ -442,7 +442,7 @@ p34 = Product.create!({
   color: "Black",
 })
 
-p34.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/gb5zk5j5l5udajkkf8pg/gym-club-training-duffel-bag-2BXd8R.png'), filename: 'gym-club-training-duffel-bag.png')
+# p34.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/gb5zk5j5l5udajkkf8pg/gym-club-training-duffel-bag-2BXd8R.png'), filename: 'gym-club-training-duffel-bag.png')
 
 # Product 35
 p35 = Product.create!({
@@ -454,7 +454,7 @@ p35 = Product.create!({
   color: "Black",
 })
 
-p35.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/qb0kgtwiyzufdruyfkjf/womens-essential-running-jacket-B1qrKb.png'), filename: 'womens-essential-running-jacket.png')
+# p35.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/qb0kgtwiyzufdruyfkjf/womens-essential-running-jacket-B1qrKb.png'), filename: 'womens-essential-running-jacket.png')
 
     puts "done creating products"
     puts ""
