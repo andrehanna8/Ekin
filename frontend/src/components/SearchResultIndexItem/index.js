@@ -5,12 +5,12 @@ import './SearchResultIndexItem.css';
 const SearchResultIndexItem = ({ product }) => {
   return (
     <div className="search-result-index-item">
-      {/* Display product details as desired */}
       <Link to={`/products/${product.id}`}>
+        <img src={product.photoURL} alt={product.name} />
         <h3>{product.name}</h3>
-        {/* product image */}
-        {/* <img src={product.photo} /> */}
       </Link>
+      <p className="product-category">{product.category}</p>
+      <p className="product-price">${product.price}</p>
     </div>
   );
 };

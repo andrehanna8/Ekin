@@ -1,0 +1,33 @@
+.search-results {
+    display: flex;
+    margin: 20px;
+  }
+  
+  .search-results-controls {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  
+  .sort-options,
+  .category-options {
+    margin-bottom: 20px;
+  }
+  
+  .category-options label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .category-options input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .search-results-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  
