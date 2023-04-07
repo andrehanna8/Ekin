@@ -45,7 +45,7 @@ export default function CartIndexItem({cartItem}) {
         const newCartSize = {
             id: cartItem.id,
             product_id: cartItem.product_id,
-            options: size,
+            options: newSize,
             quantity: cartItem.quantity
     }
 

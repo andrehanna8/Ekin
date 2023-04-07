@@ -4,7 +4,6 @@ import './SearchResultIndexItem.css';
 
 
 const SearchResultIndexItem = ({ product }) => {
-  console.log(product, 'product BUT NOW WE IN DA ITEM');
   return (
     <div className="search-result-index-item">
       <Link to={`/products/${product.id}`}> 

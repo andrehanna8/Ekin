@@ -124,7 +124,6 @@ const cartItemsReducer = (state = {}, action) => {
             delete newState[cartItemId];
             return newState;
         case CLEAR_CART_ITEMS:
-            console.log("Clearing cart items...");
             return {}
         default:
             return state;

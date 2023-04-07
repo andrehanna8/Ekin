@@ -76,7 +76,6 @@ const productsToDisplayByColor = filterColor === "All"
   
 
   useEffect(() => {
-    console.log("useEffect executed");
     if (searchTerm) {
       dispatch(fetchSearchResults(searchTerm));
       dispatch(fetchProducts());
@@ -150,7 +149,6 @@ const productsToDisplayByColor = filterColor === "All"
       <div className="search-results-items">
         {productsToDisplayByType.map((product) => (
           <a key={product.id}>
-            {console.log('Product in SearchResultsIndex:', product)}
             <SearchResultIndexItem product={product} />
           </a>
         ))}

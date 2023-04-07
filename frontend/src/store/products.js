@@ -28,11 +28,9 @@ export const getProduct = (productId) => (state) => (
 )
 
 export const fetchProducts = () => async (dispatch) => {
-    console.log('fetchProducts executed');
     const response = await fetch('/api/products');
     if (response.ok) {
         const products = await response.json();
-        console.log('Products from API AAAAAAHHHHHHHHHHh:', products);
         dispatch(recieveProducts(products));
     }
     
