@@ -103,7 +103,9 @@ const showSuccessBanner = () => {
             quantity: 1
         };
         dispatch(createCartItem(cartItem));
-        showSuccessBanner();
+        if (currentUser) {
+            showSuccessBanner();
+        }
     };
     
 
