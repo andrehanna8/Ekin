@@ -125,7 +125,6 @@ const showSuccessBanner = () => {
         )}
 
             <div className="image-container">
-                {console.log("product FROM SHOW PAGE", product)}
                 <img src={product.photoUrl} />
             </div>
 

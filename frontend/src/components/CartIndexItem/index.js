@@ -56,8 +56,6 @@ if (!cartItem) return null;
 if (!product) return <div className="loader"></div>;
     return (
         <div className="cart-item">
-            {console.log(cartItem, "cartItem")}
-            {console.log(product, "PRRRRRRODDDDDUCTT")}
             <Link to={`/products/${product.id}`} > 
                 <img src={product.photoUrl} alt={product.name} />
             </Link>

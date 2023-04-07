@@ -17,13 +17,11 @@ export default function SecondNavBar() {
     
       const handleKeyDown = (e) => {
         if (e.key === "Enter") {
-             console.log("enter key pressed");
           performSearch();
         }
       };
     
       const performSearch = () => {
-        console.log("searching for", searchTerm);
         dispatch(fetchSearchResults(searchTerm));
         history.push(`/search?q=${encodeURIComponent(searchTerm)}`);
       };

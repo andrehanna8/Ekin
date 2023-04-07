@@ -35,10 +35,12 @@ export default function SearchResultsIndex() {
 
 
   const filteredProducts = searchTerm
-    ? products.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    : products;
+  ? products.filter(
+      (product) =>
+        product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  : products;
+
 
   const sortedProducts = filteredProducts.sort((a, b) => {
     if (sortOrder === "priceLowToHigh") {
@@ -74,8 +76,10 @@ const productsToDisplayByColor = filterColor === "All"
   
 
   useEffect(() => {
+    console.log("useEffect executed");
     if (searchTerm) {
       dispatch(fetchSearchResults(searchTerm));
+      dispatch(fetchProducts());
     } else {
       dispatch(fetchProducts());
     }
@@ -146,6 +150,7 @@ const productsToDisplayByColor = filterColor === "All"
       <div className="search-results-items">
         {productsToDisplayByType.map((product) => (
           <a key={product.id}>
+            {console.log('Product in SearchResultsIndex:', product)}
             <SearchResultIndexItem product={product} />
           </a>
         ))}
