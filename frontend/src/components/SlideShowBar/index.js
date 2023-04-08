@@ -20,7 +20,7 @@ export default function SlideShowBar() {
       !
     </>,
     <>
-    'WHY WAIT? TRY STORE PICKUP	Buy online and find a store near you for pick up in less than 2 hours. Shop now.'
+    WHY WAIT? TRY STORE PICKUP	Buy online and find a store near you for pick up in less than 2 hours. Shop now.
     </>,
 
     // Add more messages here
