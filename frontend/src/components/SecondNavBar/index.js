@@ -33,20 +33,17 @@ export default function SecondNavBar() {
                     <img id="logo" src="https://pngimg.com/uploads/nike/nike_PNG11.png"/>
                 </Link>
                 <div className="category-buttons">
-                    <a href="#block-img"><button className="category-button"> New&nbsp;&&nbsp;Featured </button></a> 
-                    
-                    <a href="#block-img"> <button className="category-button"> Men </button></a>
-                    {/* <button className="category-button"> Women </button> */}
-                    <a href="#block-img"> <button className="category-button"> Women </button></a>
-                    
-                    {/* <button className="category-button"> Kids </button> */}
-                    <a href="#block-img"> <button className="category-button"> Kids </button></a>
+                    <Link to="/search?q="> <button className="category-button"> New&nbsp;&&nbsp;Featured </button></Link>
+                  
+                    <Link to="/search?q=men">  <button className="category-button"> Men </button> </Link>
+  
+                    <Link to="/search?q=women">  <button className="category-button"> Women </button> </Link>
+                    <Link to="/search?q=kids"> <button className="category-button"> Kids </button></Link>
+                  
 
                     {/* <button className="category-button"> Accessories </button> */}
-                    <a href="#block-img"> <button className="category-button"> Accessories </button></a>
-
-                    {/* <button className="category-button"> Sale </button> */}
-                    <a href="#block-img"> <button className="category-button"> Sale </button></a>
+                    <Link to="/search?q=accessories"> <button className="category-button"> Accessories </button></Link>
+                    <Link to="/search?q=Sale"> <button className="category-button"> Sale </button></Link>
 
                 <div className="searchbar-favorite-cart" >
                 <input

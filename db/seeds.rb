@@ -460,7 +460,7 @@ p35 = Product.create!({
     puts ""
 
     puts "Creating reviews..."
-    10.times do
+    20.times do
       Review.create!({
         title: Faker::Lorem.sentence(word_count: 6),
         user_id: User.all.sample.id,

@@ -48,8 +48,7 @@ export default function ReviewIndexItem({review}) {
         }
         return stars
     }
-
-    if (currentUser.id === review.userId) {
+    if (currentUser && currentUser.id === review.userId) {
         return (
             <div className="review-index-item">
                 {showEditForm ? (

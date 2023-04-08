@@ -74,6 +74,11 @@ const showSuccessBanner = () => {
 
     const handleReviewSubmit = (e) => {
         e.preventDefault()
+
+        if (!currentUser) {
+            const signUpButton = document.getElementById('sign-up');
+            signUpButton?.click();
+        }
         
         const review = {
             title: title,
