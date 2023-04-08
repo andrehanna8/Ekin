@@ -25,7 +25,7 @@
 
 .product-scroller h1 {
     
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 500;
     line-height: 28px;
   font-family: 'Roboto', sans-serif;
@@ -59,7 +59,7 @@
 }
 
 .BTC {
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 500;
     line-height: 28px;
   font-family: 'Roboto', sans-serif;
@@ -113,7 +113,7 @@
 }
 
 .always-iconic h1 {
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 500;
     line-height: 28px;
   font-family: 'Roboto', sans-serif;
@@ -190,4 +190,70 @@
 
 .spring-banner button:hover {
   background-color: #757575;
+}
+
+.hap-now {
+  margin: 2.2%;
+}
+
+.hap-now h1{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 0.3%;
+  margin-bottom: 1%; 
+}
+
+.hap-now img {
+  width: 99%;
+  height: auto;
+}
+
+.hap-now-text {
+  position: absolute;
+  margin-top: 4%;
+  margin-left: 2.3%;
+  width: 100%;
+}
+
+.hap-now h2 {
+  /* position: absolute; */
+  font-family: 'Nike', sans-serif;
+  text-align: left;
+  /* margin-top: 4%; */
+  color: white;
+  font-size: 70px;
+  letter-spacing: -3px;
+}
+
+.hap-now h3 {
+  /* position: absolute; */
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  /* margin-top: 4%; */
+  color: white;
+}
+
+.hap-now button {
+  /* position: absolute; */
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  /* width: 50%; */
+  margin-top: 3%;
+}
+
+.hap-now button:hover {
+  background-color: #9e9d9d;
 }

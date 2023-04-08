@@ -107,6 +107,18 @@ export default function Products({ searchTerm }) {
           <br></br>
           <br></br>
 
+          <div className="hap-now">
+            <h1>Happening Now</h1>
+            <div className="hap-now-text">
+            <h2>SAVE UP TO 50%</h2>
+            <br></br>
+            <h3>Save big on limited-time markdowns--no code required. Exclusions apply.</h3>
+            <Link to="/search?q=">
+              <button>Shop</button>
+            </Link>
+            </div>
+            <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_1423,c_limit/f816410e-64c6-43fc-9f7f-c0d1eb622cb1/nike-just-do-it.jpg" />
+          </div>
           
           
          
