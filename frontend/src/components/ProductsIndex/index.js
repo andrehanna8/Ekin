@@ -37,34 +37,20 @@ export default function Products({ searchTerm }) {
         </div>
       ) : (
         <>
+         
         <div className="spring-banner">
               <h1>Introducting Nike Pegasus 40</h1>
+              {/* <br></br> */}
               <h2>A SPRINGY RIDE FOR EVERY RUN</h2>
+              <br></br>
               <h3>Back in its fourth decade, the Nike Pegasus 40 is springier than ever and offers runners of all kinds a perfect fit.</h3>
               <Link to="/search?q=Pegasus">
               <button>Shop</button>
 
               </Link>
             </div>  
-
-          <div className="double-blocks">
-            {doubleBlocks.map((product) => (
-              <a key={product.id}>
-                <BlockProductIndexItem id="prod-ind-pic" product={product} />
-              </a>
-            ))}
-          </div>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-
-          <div className="always-iconic">
+        
+            <div className="always-iconic">
             <h1>Always Iconic</h1>
             <div className="alwaysiconic-images">
                   <div className="alwaysiconic-jordan">
@@ -90,8 +76,9 @@ export default function Products({ searchTerm }) {
 
                   </div>
           </div>
-          
+
           <div className="product-scroller">
+            <h1>New Arrivals</h1>
             {scrollerBlocks.map((product) => (
               <a key={product.id}>
                 <ProductsIndexItem product={product} />
@@ -100,6 +87,29 @@ export default function Products({ searchTerm }) {
           </div>
           <br></br>
           <br></br>
+
+          <h1 className="BTC">Back To The Classics</h1>
+          <div className="double-blocks">
+            <br></br>
+            {doubleBlocks.map((product) => (
+              <a key={product.id}>
+                <BlockProductIndexItem id="prod-ind-pic" product={product} />
+              </a>
+            ))}
+          </div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
+          
+          
+         
           <div className="double-blocks">
             {bottomDoubleBlocks.map((product) => (
               <a key={product.id}>
