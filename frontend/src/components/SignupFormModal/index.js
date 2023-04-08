@@ -22,6 +22,11 @@ function SignupFormModal({ setShowForm, setShowLoginForm }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!email || !username || !password || !firstName || !lastName) {
+      setErrors(["Please fill out all fields"]);
+      return;
+    }
+
     if (password === confirmPassword) {
       setErrors([]);
       return dispatch(sessionActions.signup({ email, username, firstName, lastName, password }))
@@ -137,6 +142,8 @@ function SignupFormModal({ setShowForm, setShowLoginForm }) {
           />
         </label>
         <button className="signup-button" type="submit" onClick={handleSubmit}>JOIN US</button>
+        <br></br>
+        {/* <p>By joining you agree to Nike's <a href="https://www.nike.com/help/privacy-policy">Privacy Policy</a> and <a href="https://www.nike.com/help/terms-of-use">Terms of Use</a>.</p> */}
         <br></br>
         <p>Already a member? <button id="modal-login" onClick={showLoginForm} >Login</button></p>
       </form>

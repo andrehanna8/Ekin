@@ -31,13 +31,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
+    width: 400px; /* Set the fixed width */
+    height: 650px; /* Set the fixed height */
     padding: 40px;
     border: #111 solid 1px;
     border-radius: 5px;
     background-color: white;
     box-sizing: border-box;
   }
+  
   
   .close-button {
     align-self: flex-end;
@@ -48,6 +50,10 @@
   .close-button img {
     max-width: 20px;
     max-height: 20px;
+  }
+
+  .close-button img:hover {
+    cursor: pointer;
   }
   
   #join-nike-now-header {
@@ -93,16 +99,23 @@
     font-weight: 600;
     margin-bottom: 15px;
   }
+
+  .signup-button:hover {
+    background-color: #353535;
+  }
   
   .modal-wrapper ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     max-height: 100px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    height: fit-content;
+    margin-bottom: 5px;
   }
   
   .modal-wrapper li {
     color: red;
   }
+  
   

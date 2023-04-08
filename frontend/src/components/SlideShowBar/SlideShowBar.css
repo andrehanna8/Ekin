@@ -10,6 +10,8 @@
   .message-container {
     display: flex;
     align-items: center;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
   }
   
   .message-wrapper {

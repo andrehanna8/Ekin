@@ -89,19 +89,11 @@ function LoginFormPage({setShowForm, setShowLoginForm}) {
             required
           />
         </label>
+        <br></br>
+        <br></br>
         <button className='signup-button' type="submit" onClick={handleSubmit}>Log In</button>
         <br></br>
-        <br></br>
-        <br></br>
-
         <button className='signup-button' type='submit' onClick={() => dispatch(sessionActions.login({ credential: 'Demo-lition', password: 'password' }))}>{demoOrPleaseWait="Demo Login"}</button>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
         <br></br>
         <br></br>
         
