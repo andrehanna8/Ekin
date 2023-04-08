@@ -54,7 +54,7 @@ export default function SecondNavBar() {
       onChange={handleSearchChange}
       onKeyDown={handleKeyDown}
       onClick={performSearch}
-    />
+    />  
   
                     {/* <img id="favorites" src="https://cdn.iconscout.com/icon/free/png-256/favorite-border-1781521-1513841.png"/> */}
                     <Link to="/cart"> 

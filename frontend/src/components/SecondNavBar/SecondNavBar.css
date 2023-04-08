@@ -100,3 +100,9 @@ margin-right: 30px;
   background-position: right 12px center; /* Position the icon on the right side */
   cursor: pointer; /* Change the cursor to a pointer */
 }
+
+.search-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+}
