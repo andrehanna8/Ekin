@@ -12,6 +12,7 @@ export default function ReviewIndexItem({review}) {
     const [title, setTitle] = useState(review.title)
     const [body, setBody] = useState(review.body)
     const [rating, setRating] = useState(review.rating)
+    const [errorMessage, setErrorMessage] = useState(""); // Add this line
     // const reviewAuthor = useSelector(state => state.users[review.userId])
 
     const handleDelete = () => {
@@ -19,17 +20,23 @@ export default function ReviewIndexItem({review}) {
     }
 
     const handleEdit = (e) => {
-        e.preventDefault()
-        const editedReview = {
-            id: review.id,
-            title: title,
-            body: body,
-            rating: rating,
-            product_id: review.productId
+        e.preventDefault();
+        if (!title || !body || !rating) {
+          setErrorMessage("Please fill out all fields"); // Set the error message
+          return;
         }
-        dispatch(updateReview(editedReview))
-        setShowEditForm(false)
-    }
+        setErrorMessage(""); // Clear the error message
+        const editedReview = {
+          id: review.id,
+          title: title,
+          body: body,
+          rating: rating,
+          product_id: review.productId,
+        };
+        dispatch(updateReview(editedReview));
+        setShowEditForm(false);
+      };
+    
 
     const starRating = (rating) => {
         const maxRating = 5
@@ -61,6 +68,11 @@ export default function ReviewIndexItem({review}) {
                             <div className="star-rating">{starRating(rating)}</div>
                             <button type="submit" onClick={handleEdit}>Edit</button>
                             <button type="button" onClick={() => setShowEditForm(false)}>Cancel</button>
+                            {errorMessage && (
+                <p style={{ color: "red", fontSize: "12px" }}>
+                  {errorMessage}
+                </p>
+              )}
                         </form>
                     </div>
                 ) : (

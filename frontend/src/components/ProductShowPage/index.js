@@ -21,7 +21,7 @@ export default function ProductShowPage() {
     const [size, setSize] = useState("")
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
-    const [rating, setRating] = useState(0)
+    const [rating, setRating] = useState(1)
     const [showReviewIndex, setShowReviewIndex] = useState(false)
     const [showReviewForm, setShowReviewForm] = useState(false)
     const [selectedSize, setSelectedSize] = useState("");
@@ -29,6 +29,10 @@ export default function ProductShowPage() {
     const [showBanner, setShowBanner] = useState(false);
 const [bannerTimeoutId, setBannerTimeoutId] = useState(null);
 const [loadingProgress, setLoadingProgress] = useState(0);
+const [titleError, setTitleError] = useState("");
+const [bodyError, setBodyError] = useState("");
+const [ratingError, setRatingError] = useState("");
+
 
 const showSuccessBanner = () => {
     setShowBanner(true);
@@ -72,8 +76,39 @@ const showSuccessBanner = () => {
         setShowReviewForm(!showReviewForm)
     }
 
+    const validateReview = () => {
+        let hasErrors = false;
+        if (title.trim() === "") {
+            setTitleError("Title is required");
+            hasErrors = true;
+        } else {
+            setTitleError("");
+        }
+        if (body.trim() === "") {
+            setBodyError("Body is required");
+            hasErrors = true;
+        } else {
+            setBodyError("");
+        }
+        if (rating === 0 || rating > 5 || rating < 1) {
+            setRatingError("Rating must be between 1 and 5");
+            hasErrors = true;
+        } else {
+            setRatingError("");
+        }
+        return hasErrors;
+    };
+    
+
     const handleReviewSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        const hasErrors = validateReview();
+        if (hasErrors) {
+            setShowReviewIndex(false)
+            return;
+        } else {
+            setShowReviewIndex(true)
+        }
 
         if (!currentUser) {
             const signUpButton = document.getElementById('sign-up');
@@ -91,7 +126,7 @@ const showSuccessBanner = () => {
         setTitle("")
         setBody("")
         setRating(0)
-        setShowReviewIndex(true)
+        
     }
 
     const shapeItem = (e) => {
@@ -121,7 +156,6 @@ const showSuccessBanner = () => {
       
 
     return  product ?  (
-        
         <div className="product-show-page"> 
         {showBanner && (
         <div className="banner">
@@ -248,14 +282,33 @@ const showSuccessBanner = () => {
                     
                     { showReviewIndex && <ReviewsIndex />}
                     <br></br>
+                    {errors.length > 0 && (
+                <div className="errors">
+                    <ul>
+                        {errors.map((error, idx) => (
+                            <li key={idx}>{error}</li>
+                        ))}
+                    </ul>
+                </div>
+            )}
 
-                    <form className="create-review">
-                        <h5>Write a Review</h5>
-                        <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-                        <input type="text" placeholder="Body" value={body} onChange={(e) => setBody(e.target.value)} />
-                        <input type="number" placeholder="Rating" value={rating} max="5" min="1" onChange={(e) => setRating(Math.min(e.target.value, 5))} />
-                        <button type="submit" placeholder="Choose a number between 1 & 5"  onClick={handleReviewSubmit} >Submit</button>
-                    </form>
+<form className="create-review">
+    <h5>Write a Review</h5>
+    {titleError && (
+        <div style={{ color: "red" }}>{titleError}</div>
+    )}
+    <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+    {bodyError && (
+        <div style={{ color: "red" }}>{bodyError}</div>
+    )}
+    <input type="text" placeholder="Body" value={body} onChange={(e) => setBody(e.target.value)} />
+    {ratingError && (
+        <div style={{ color: "red" }}>{ratingError}</div>
+    )}
+    <input type="number" placeholder="Rating" value={rating} max="5" min="1" onChange={(e) => setRating(Math.min(e.target.value, 5))} />
+    <button type="submit" onClick={handleReviewSubmit}>Submit</button>
+</form>
+
                     <br></br>
 
             </div>
