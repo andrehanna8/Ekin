@@ -56,3 +56,40 @@
   width: 100%
 }
 
+.spring-banner {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: red solid 1px;
+  /* height: 43vh; */
+  /* width: 100% */
+}
+
+.spring-banner h1, h2, h3 {
+  text-align: center;
+  
+} 
+
+.spring-banner h1 {
+  font-size: 14px;
+  /* color: white; */
+  font-family: 'Roboto', sans-serif;
+}
+
+.spring-banner h2 {
+  font-size: 50px;
+  /* color: white; */
+  font-family: 'Nike', sans-serif;
+  width: 40%;
+}
+
+
+.spring-banner h3 {
+  font-size: 14px;
+  /* color: white; */
+  font-family: 'Roboto', sans-serif;
+  width: 29%;
+  align-items: center;
+  text-align: center;
+  
+}

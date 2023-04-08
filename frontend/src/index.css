@@ -74,4 +74,8 @@ table {
 
   
 
-  
+    @font-face {
+      font-family: 'Nike';
+      src: url('../../app/assets/fonts/futura-nd-for-nike-365-cn-xbd-monospaced-numerals.otf') format('opentype');
+    }
+    

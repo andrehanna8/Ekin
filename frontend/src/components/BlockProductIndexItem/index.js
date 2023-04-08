@@ -6,11 +6,13 @@ export default function BlockProductIndexItem({product}) {
     // const productObj = useSelector(getProduct(product.id))
     return (
         
-        <Link to={`/products/${product.id}`}> 
+        
             <div className="block-product-index-item">
+                <Link to={`/products/${product.id}`}> 
                 <img id="block-img" src={product.photoUrl} alt="" />
+                </Link>
             </div>
-        </Link>
+        
     
     )
 }

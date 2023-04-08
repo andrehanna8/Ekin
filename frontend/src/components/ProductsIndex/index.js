@@ -5,6 +5,7 @@ import ProductsIndexItem from "../ProductsIndexItem";
 import BlockProductIndexItem from "../BlockProductIndexItem";
 import SearchResultIndexItem from "../SearchResultIndexItem";
 import "./ProductsIndex.css";
+import { Link } from "react-router-dom";
 
 export default function Products({ searchTerm }) {
   const products = useSelector((state) => Object.values(state.products));
@@ -36,6 +37,16 @@ export default function Products({ searchTerm }) {
         </div>
       ) : (
         <>
+        <div className="spring-banner">
+              <h1>Introducting Nike Pegasus 40</h1>
+              <h2>A SPRINGY RIDE FOR EVERY RUN</h2>
+              <h3>Back in its fourth decade, the Nike Pegasus 40 is springier than ever and offers runners of all kinds a perfect fit.</h3>
+              <Link to="/search?q=Pegasus">
+              <button>Shop</button>
+
+              </Link>
+            </div>  
+
           <div className="double-blocks">
             {doubleBlocks.map((product) => (
               <a key={product.id}>
@@ -53,6 +64,33 @@ export default function Products({ searchTerm }) {
           <br></br>
           <br></br>
 
+          <div className="always-iconic">
+            <h1>Always Iconic</h1>
+            <div className="alwaysiconic-images">
+                  <div className="alwaysiconic-jordan">
+                  <Link to="/search?q=jordan">
+                  <img src="https://static.nike.com/a/images/f_auto/dpr_1.6,cs_srgb/h_600,c_limit/c57c85fd-5b12-4a69-92fb-7b2b84680f27/nike-just-do-it.jpg" alt="aj1" />
+                  </Link>
+
+                  <h2>Jordan</h2>
+                  </div>
+                  <div className="alwaysiconic-cortez">
+                <Link to="/search?q=cortez">
+                  <img src="https://static.nike.com/a/images/f_auto/dpr_1.6,cs_srgb/w_592,c_limit/01ee9453-ef32-4ddf-846e-47c72b921c06/nike-just-do-it.jpg" alt="cortez" />
+                </Link>
+                <h2>Cortez</h2>
+                  </div>
+
+                  <div className="alwaysiconic-airmax">
+                <Link to="/search?q=air%20max">
+                  <img src="https://static.nike.com/a/images/f_auto/dpr_1.6,cs_srgb/h_600,c_limit/d5f1cb21-4546-411a-b6f5-9343d0d995e9/nike-just-do-it.jpg" alt="am1" />
+                </Link>
+                <h2>Air Max</h2>
+                  </div>  
+
+                  </div>
+          </div>
+          
           <div className="product-scroller">
             {scrollerBlocks.map((product) => (
               <a key={product.id}>
