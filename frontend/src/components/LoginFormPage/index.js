@@ -3,7 +3,8 @@ import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import SignupFormModal from '../SignupFormModal';
-import './LoginForm.css';
+// import './LoginForm.css';
+import './MasterModal.css'
 // import sessionReducer from '../../store/session';
 
 function LoginFormPage({setShowForm, setShowLoginForm}) {

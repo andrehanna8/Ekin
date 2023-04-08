@@ -1,0 +1,108 @@
+/* Master CSS for both SignupFormModal and LoginFormPage */
+
+.modal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.514);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  
+  .modal-wrapper p {
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+  }
+  
+  #modal-login {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    padding: 40px;
+    border: #111 solid 1px;
+    border-radius: 5px;
+    background-color: white;
+    box-sizing: border-box;
+  }
+  
+  .close-button {
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .close-button img {
+    max-width: 20px;
+    max-height: 20px;
+  }
+  
+  #join-nike-now-header {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .input-labels {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  
+  .input-field {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #111;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .signup-button {
+    background-color: #111;
+    color: #fff;
+    padding: 12px 32px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .modal-wrapper ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    max-height: 100px;
+    overflow-y: auto;
+  }
+  
+  .modal-wrapper li {
+    color: red;
+  }
+  
