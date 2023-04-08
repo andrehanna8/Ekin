@@ -1,13 +1,13 @@
 .product-scroller {
     overflow: auto;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .product-scroller a {
     display: inline-block;
   /* color: green; */
   text-align: center;
-  margin: 5px;
+  margin: 2px;
   /* padding: 14px; */
   text-decoration: none;
   /* border: black solid 1px; */
@@ -92,4 +92,51 @@
   align-items: center;
   text-align: center;
   
+}
+
+.always-iconic {
+  margin: 2.2%;
+}
+
+.always-iconic h1 {
+  font-size: 19px;
+  font-weight: 500;
+    line-height: 28px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 0.3%;
+  margin-bottom: 1%; ;
+}
+
+.always-iconic h2 {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  margin-top: 4%;
+}
+
+
+
+.alwaysiconic-images {
+  /* display items in a row */
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.alwaysiconic-images img {
+  /* make the images responsive */
+  width: 100%;
+  height: auto;
+  /* add some spacing between the images */
+}
+
+.alwaysiconic-jordan {
+  margin: 0.3%;
+}
+
+.alwaysiconic-airmax {
+  margin: 0.3%;
+}
+
+.alwaysiconic-cortez {
+  margin: 0.3%;
 }

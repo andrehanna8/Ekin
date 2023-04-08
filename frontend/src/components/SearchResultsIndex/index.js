@@ -88,10 +88,18 @@ const productsToDisplayByColor = filterColor === "All"
   
   return (
     <div className="search-results">
+     
       <div className="search-results-controls">
+      {searchTerm && (
+        <>
+        <h1> Search Results for "{searchTerm}"</h1>
+        <br></br>
+        </>
+      )}
+
         <div className="sort-options">
           <label>
-            Sort by:
+            Sort by: &nbsp;
             <select value={sortOrder} onChange={handleSortChange}>
               <option value="default">Default</option>
               <option value="priceLowToHigh">Price: Low to High</option>
@@ -131,6 +139,7 @@ const productsToDisplayByColor = filterColor === "All"
 </div>
 
 <div className="product-type-options">
+          <br></br>
           <p>Product Type:</p>
           {productTypes.map((type) => (
             <label key={type}>
