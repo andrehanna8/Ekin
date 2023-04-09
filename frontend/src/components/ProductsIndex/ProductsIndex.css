@@ -257,3 +257,84 @@
 .hap-now button:hover {
   background-color: #9e9d9d;
 }
+
+#teeup {
+  font-size: 24px;
+  font-weight: 500;
+    line-height: 28px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 2.3%;
+  margin-bottom: 1%; 
+}
+/* Add the following styles */
+.first-teeup,
+.second-teeup {
+  position: relative;
+}
+
+.first-teeup-text,
+.second-teeup-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 25px;
+}
+
+/* Update the following styles */
+.teeup-blocks {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin: 0 2.2%;
+}
+
+.teeup-blocks img {
+  max-width: 98%;
+  height: auto;
+}
+
+.teeup-blocks h1 {
+  font-size: 17px;
+  font-weight: 500;
+    line-height: 28px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 0.3%;
+  margin-bottom: 1%; 
+  width: 100%;
+}
+
+.teeup-blocks h2 {
+  font-size: 24px;
+  font-weight: 500;
+    line-height: 28px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 0.3%;
+  margin-bottom: 1%; 
+  width: 100%;
+}
+
+.teeup-blocks button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  /* width: 50%; */
+  margin-top: 3%;
+}
+
+.teeup-blocks button:hover {
+  background-color: #9e9d9d;
+}

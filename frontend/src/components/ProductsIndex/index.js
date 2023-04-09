@@ -13,7 +13,7 @@ export default function Products({ searchTerm }) {
 
   const doubleBlocks = products.slice(0, 2);
   const scrollerBlocks = products.slice(2, 10);
-  const bottomDoubleBlocks = products.slice(2, 4);
+  const popNowBlocks = products.slice(11, 20);
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -48,7 +48,7 @@ export default function Products({ searchTerm }) {
               <button>Shop</button>
 
               </Link>
-            </div>  
+      </div>  
         
             <div className="always-iconic">
             <h1>Always Iconic</h1>
@@ -121,14 +121,61 @@ export default function Products({ searchTerm }) {
           </div>
           
           
-         
-          <div className="double-blocks">
-            {bottomDoubleBlocks.map((product) => (
-              <a key={product.id}>
-                <BlockProductIndexItem product={product} />
-              </a>
-            ))}
-          </div>
+          <h1 id="teeup">Tee Up</h1>
+          <div className="teeup-blocks">
+            <br></br>
+              <div className="first-teeup">
+              <Link to="/search?q=golf">
+                <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_706,c_limit/66910ca7-1578-4e69-9c30-91e858a66c3a/nike-just-do-it.jpg" />
+                </Link>
+                  <div className=" first-teeup-text">
+                    <h1>Nike Golf</h1>
+                    <h2>Always Fresh Collection</h2>
+                    <br></br>
+                    <Link to="/search?q=golf%20shoes">
+                    <button>Shop</button>
+                    </Link>
+                  </div>
+              </div>
+
+              <div className="second-teeup">
+              <Link to="/search?q=golf">
+                <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_706,c_limit/818383a5-01a9-4421-83b0-b239f063d6ae/nike-just-do-it.jpg" />
+                </Link>
+                  <div className=" second-teeup-text">
+                    <h2>Tournament Looks</h2>
+                    <br></br>
+                    <Link to="/search?q=golf">
+                      <button>Shop</button>
+                    </Link>
+                  </div>
+                </div>
+            </div>
+
+            <div className="spring-banner">
+              {/* <br></br> */}
+              <h2>AIR IN THE FAMILY</h2>
+              <br></br>
+              <h3>Highlight the unique vibes of each member of the squad in the Air Max 90,
+                Air Max TW, and other energetic styles.</h3>
+                <div className="air-btns">
+                  
+              <Link to="/search?q=mens%20air%20max">
+              <button>Shop Mens</button>
+              </Link> &nbsp;
+              
+              <Link to="/search?q=womens%20air%20max">
+              <button>Shop Women's</button>
+              </Link> &nbsp;
+
+              <Link to="/search?q=kids%20air%20max">
+              <button>Shop Kids'</button>
+              </Link> &nbsp;
+
+                </div>
+      </div>  
+        
+
           <br></br>
           <br></br>
           <br></br>
@@ -138,10 +185,10 @@ export default function Products({ searchTerm }) {
           <br></br>
           <br></br>
           <div className="bottom-banner">
-            <a id="github" href="https://github.com/andrehanna8">
+            <a id="github" target="_blank" href="https://github.com/andrehanna8">
               Github
             </a>
-            <a id="linkedin" href="https://www.linkedin.com/in/andre-hanna-8b1b1b1b1/">
+            <a id="linkedin" target="_blank" href="https://www.linkedin.com/in/andre-hanna-8b1b1b1b1/">
               LinkedIn
             </a>
           </div>

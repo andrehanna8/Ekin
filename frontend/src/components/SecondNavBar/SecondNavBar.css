@@ -99,6 +99,7 @@ margin-right: 30px;
   background-repeat: no-repeat;
   background-position: right 12px center; /* Position the icon on the right side */
   cursor: pointer; /* Change the cursor to a pointer */
+  /* background-size: 5%; */
 }
 
 .search-container {

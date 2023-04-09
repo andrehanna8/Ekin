@@ -26,23 +26,35 @@ export default function SearchResultsIndex() {
 
   const filterByCategoryAndType = (product) => {
     const [productGender, productType] = product.category.split(" ");
-    const categoryMatch = filterCategory === "All" || productGender.trim() === filterCategory.trim();
-    const typeMatch = filterProductType === "All" || productType.trim() === filterProductType.trim();
-    const accessoryMatch = productType.trim() === "Accessories" && searchTerm.toLowerCase() === "accessories";
-    return categoryMatch && (typeMatch || accessoryMatch);
-};
-
+    const categoryMatch =
+      filterCategory === "All" || productGender.trim() === filterCategory.trim();
+    const typeMatch =
+      filterProductType === "All" || productType.trim() === filterProductType.trim();
+    const accessoryMatch =
+      productType.trim() === "Accessories" &&
+      searchTerm.toLowerCase() === "accessories";
+  
+    const searchTermMatch = searchTerm
+      ? product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.category.toLowerCase().split(" ").some((word) => word.includes(searchTerm.toLowerCase()))
+      : true;
+  
+    return categoryMatch && (typeMatch || accessoryMatch) && searchTermMatch;
+  };
+  
   
 
 
-const filteredProducts = searchTerm
-    ? products.filter(
-        (product) =>
-          (product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
-          (product.description && product.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
-          (product.category && product.category.toLowerCase().split(' ').some(word => word.includes(searchTerm.toLowerCase())))
-      )
-    : products;
+  const filteredProducts = searchTerm
+  ? products.filter(
+      (product) =>
+        (product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (product.description && product.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (product.category && product.category.toLowerCase().split(' ').some(word => word.includes(searchTerm.toLowerCase())))
+    )
+  : products;
+
 
 
 console.log("Search term:", searchTerm);
@@ -59,7 +71,8 @@ console.log("Filtered products:", filteredProducts);
   });
 
   
-  const productsToDisplay = sortedProducts;
+  const productsToDisplay = products.filter(filterByCategoryAndType);
+
 const productsToDisplayByColor = filterColor === "All"
   ? productsToDisplay
   : productsToDisplay.filter((product) => product.color === filterColor);
@@ -97,9 +110,11 @@ const productsToDisplayByColor = filterColor === "All"
       setFilterCategory("Women's");
     } else if (searchTerm.toLowerCase() === "sale") {
       setFilterCategory("Sale");
+    } else if (searchTerm.toLowerCase() === "golf shoes") {
+      setFilterProductType("Shoes");
     } else {
       setFilterCategory("All");
-    }
+    } 
   }, [dispatch, searchTerm]);
   
 

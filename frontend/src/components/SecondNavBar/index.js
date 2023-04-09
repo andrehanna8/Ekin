@@ -26,6 +26,11 @@ export default function SecondNavBar() {
         history.push(`/search?q=${encodeURIComponent(searchTerm)}`);
       };
 
+      const clearAndPerformSearch = () => {
+        setSearchTerm("");
+        performSearch();
+      };
+
     return (
         <>
             <div className="second-nav-bar">
@@ -53,7 +58,7 @@ export default function SecondNavBar() {
       value={searchTerm}
       onChange={handleSearchChange}
       onKeyDown={handleKeyDown}
-      onClick={performSearch}
+      onClick={clearAndPerformSearch}
     />  
   
                     {/* <img id="favorites" src="https://cdn.iconscout.com/icon/free/png-256/favorite-border-1781521-1513841.png"/> */}
