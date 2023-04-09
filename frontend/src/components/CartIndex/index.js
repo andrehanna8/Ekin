@@ -4,6 +4,8 @@ import { fetchCartItems } from "../../store/cartItems";
 import CartIndexItem from "../CartIndexItem";
 import ThankYouModal from "../ThankYouModal";
 import "./CartIndex.css";
+import { getSalePrice } from "../CartIndexItem";
+
 
 export default function CartIndex() {
   const [showThankYouModal, setShowThankYouModal] = useState(false);
@@ -11,28 +13,32 @@ export default function CartIndex() {
   const products = useSelector((state) => state.products);
   const cartItems = useSelector((state) => Object.values(state.cartItems));
   const dispatch = useDispatch();
-
   const totalPrice = (items) => {
     let total = 0;
     items.forEach((item) => {
-      const temp = products[item.productId];
-      if (temp) {
-        total += temp.price * item.quantity;
+      const product = products[item.productId];
+      if (product) {
+        const isOnSale = product.category.includes("Sale");
+        const price = isOnSale ? parseFloat(getSalePrice(product.price)) : product.price;
+        total += price * item.quantity;
       }
     });
-    return total;
+    return total.toFixed(2);
   };
   
   const totalTax = (items) => {
     let total = 0;
     items.forEach((item) => {
-      const temp = products[item.productId];
-      if (temp) {
-        total += temp.price * item.quantity * 0.08;
+      const product = products[item.productId];
+      if (product) {
+        const isOnSale = product.category.includes("Sale");
+        const price = isOnSale ? parseFloat(getSalePrice(product.price)) : product.price;
+        total += price * item.quantity * 0.08;
       }
     });
-    return total;
+    return total.toFixed(2);
   };
+  
 
   const displayThankYouModal = () => {
     setShowThankYouModal(true);

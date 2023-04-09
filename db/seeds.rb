@@ -151,7 +151,7 @@ require "open-uri"
       name: "Air Max 270",
       description: "Nike's first lifestyle Air Max brings you style, comfort and big attitude in the Nike Air Max 270. The design draws inspiration from Air Max icons, showcasing Nike's greatest innovation with its large window and fresh array of colors.",
       price: 160,
-      category: "Women's Shoes",
+      category: "Sale Women's Shoes",
       size: "M",
       color: "White/Pink",
     })

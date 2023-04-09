@@ -24,6 +24,9 @@ class Product < ApplicationRecord
         class_name: :Review
 
         def self.search(query)
-            where("name ILIKE :query OR description ILIKE :query OR price ILIKE :query OR category ILIKE :query", query: "%#{query}%")
-          end
+            result = where("name ILIKE :query OR description ILIKE :query OR CAST(price AS TEXT) ILIKE :query OR category ILIKE :query", query: "%#{query}%")
+            puts "Searching for: #{query}"
+            puts "Result: #{result.inspect}"
+            result
+        end
 end

@@ -9,12 +9,16 @@ import ReviewsIndex from "../ReviewsIndex";
 import { createReview, fetchReview, updateReview } from "../../store/reviews";
 import { useHistory } from "react-router-dom";
 import LoginFormPage from "../LoginFormPage";
+import { useMemo } from "react";
+
+const getSalePrice = (price) => {
+    return (price * 0.6).toFixed(2);
+  };
 
 export default function ProductShowPage() {
     const [errors, setErrors] = useState([]);
     const dispatch = useDispatch()
     const {productId} = useParams()
-
     const currentUser = useSelector(state => state.session.user)
     const reviews = useSelector(state => Object.values(state.reviews))
     const product = useSelector(getProduct(productId))
@@ -27,12 +31,21 @@ export default function ProductShowPage() {
     const [selectedSize, setSelectedSize] = useState("");
     const [showLoginForm, setShowLoginForm] = useState(false);
     const [showBanner, setShowBanner] = useState(false);
-const [bannerTimeoutId, setBannerTimeoutId] = useState(null);
-const [loadingProgress, setLoadingProgress] = useState(0);
-const [titleError, setTitleError] = useState("");
-const [bodyError, setBodyError] = useState("");
-const [ratingError, setRatingError] = useState("");
+    const [bannerTimeoutId, setBannerTimeoutId] = useState(null);
+    const [loadingProgress, setLoadingProgress] = useState(0);
+    const [titleError, setTitleError] = useState("");
+    const [bodyError, setBodyError] = useState("");
+    const [ratingError, setRatingError] = useState("");
 
+    const isOnSale = useMemo(() => product.category.includes("Sale"), [product]);
+    const categoryName = useMemo(() => {
+      if (isOnSale) {
+        return product.category.replace("Sale ", "");
+      }
+      return product.category;
+    }, [product, isOnSale]);
+  
+    const displayPrice = isOnSale ? getSalePrice(product.price) : product.price;
 
 const showSuccessBanner = () => {
     setShowBanner(true);
@@ -153,6 +166,60 @@ const showSuccessBanner = () => {
         setShowBanner(false);
         clearTimeout(bannerTimeoutId);
       };
+
+      const renderSizeButtons = () => {
+        if (product.category.includes("Shoes")) {
+            return (
+                <>
+                    {Array.from({ length: 17 }, (_, i) => i * 0.5 + 6).map((size) => (
+                        <button
+                            key={size}
+                            style={
+                                selectedSize === size
+                                    ? { border: "1px solid #111" }
+                                    : { border: "#dcd8d8 solid 1px" }
+                            }
+                            onClick={() => handleSizeClick(size)}
+                        >
+                            {size}
+                        </button>
+                    ))}
+                </>
+            );
+        } else if (product.category.includes("Accessories")) {
+            return (
+                <button
+                    style={
+                        selectedSize === "OS"
+                            ? { border: "1px solid #111" }
+                            : { border: "#dcd8d8 solid 1px" }
+                    }
+                    onClick={() => handleSizeClick("OS")}
+                >
+                    OS
+                </button>
+            );
+        } else if (product.category.includes("Tops") || product.category.includes("Bottoms")) {
+            return (
+                <>
+                    {["XS", "S", "M", "L", "XL", "XXL", "XXXL"].map((size) => (
+                        <button
+                            key={size}
+                            style={
+                                selectedSize === size
+                                    ? { border: "1px solid #111" }
+                                    : { border: "#dcd8d8 solid 1px" }
+                            }
+                            onClick={() => handleSizeClick(size)}
+                        >
+                            {size}
+                        </button>
+                    ))}
+                </>
+            );
+        }
+    };
+
       
 
     return  product ?  (
@@ -170,94 +237,26 @@ const showSuccessBanner = () => {
             </div>
 
             <div className="product-info">
-                <h1>{product.name}</h1>
-                <h3>{product.category}</h3>
-                <h3>{product.price}$ </h3>
+        <h1>{product.name}</h1>
+        <h3>{categoryName}</h3>
+        <h3>
+          {isOnSale ? (
+            <>
+              <span style={{ textDecoration: "line-through" }}>
+                ${product.price}
+              </span>
+              ${displayPrice}
+            </>
+          ) : (
+            `\$${product.price}`
+          )}
+        </h3>
                 <br></br>
                 <br></br>
                 <br></br>
                     <p> Select Size</p>
                     <div className="size-buttons">
-                    <button style={ selectedSize === 6
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(6)}> 6 </button>
-
-                        <button style={ selectedSize === 6.5
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(6.5)}> 6.5 </button>
-
-                        <button style={ selectedSize === 7
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(7)}> 7 </button>
-
-                        <button style={ selectedSize === 7.5
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(7.5)}> 7.5 </button>
-
-                        <button style={ selectedSize === 8
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(8)}> 8 </button>
-
-                        <button style={ selectedSize === 8.5
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(8.5)}> 8.5 </button>
-
-                        <button style={ selectedSize === 9
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(9)}> 9 </button>
-
-                        <button style={ selectedSize === 9.5
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(9.5)}> 9.5 </button>
-
-                        <button style={ selectedSize === 10
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(10)}> 10 </button>
-
-                        <button style={ selectedSize === 10.5
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(10.5)}> 10.5 </button>
-
-                        <button style={ selectedSize === 11
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(11)}> 11 </button>
-
-                        <button style={ selectedSize === 11.5
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(11.5)}> 11.5 </button>
-
-                        <button style={ selectedSize === 12
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(12)}> 12 </button>
-
-                        <button style={ selectedSize === 12.5
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(12.5)}> 12.5 </button>
-
-                        <button style={ selectedSize === 13
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(13)}> 13 </button>
-
-                        <button style={ selectedSize === 14
-            ? { border: "1px solid #111" }
-            : { border: "#dcd8d8 solid 1px" }
-        } onClick={() => handleSizeClick(14)}> 14 </button>
-
+                        {renderSizeButtons()}
                     </div>
                     <br></br>
                     <div className="add-favorite-show-page-buttons"> 

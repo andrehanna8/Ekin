@@ -7,7 +7,7 @@ import { fetchProducts, fetchSearchResults } from "../../store/products";
 import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-const categories = ["All", "Men's", "Women's", "Kids", "Accessories", "Sale"];
+const categories = ["All", "Men's", "Women's", "Kids", "Sale"];
 const productTypes = ["All", "Shoes", "Tops", "Bottoms", "Accessories"];
 
 export default function SearchResultsIndex() {
@@ -28,18 +28,25 @@ export default function SearchResultsIndex() {
     const [productGender, productType] = product.category.split(" ");
     const categoryMatch = filterCategory === "All" || productGender.trim() === filterCategory.trim();
     const typeMatch = filterProductType === "All" || productType.trim() === filterProductType.trim();
-    return categoryMatch && typeMatch;
-  };
-  
+    const accessoryMatch = productType.trim() === "Accessories" && searchTerm.toLowerCase() === "accessories";
+    return categoryMatch && (typeMatch || accessoryMatch);
+};
+
   
 
 
-  const filteredProducts = searchTerm
-  ? products.filter(
-      (product) =>
-        product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  : products;
+const filteredProducts = searchTerm
+    ? products.filter(
+        (product) =>
+          (product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+          (product.description && product.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+          (product.category && product.category.toLowerCase().split(' ').some(word => word.includes(searchTerm.toLowerCase())))
+      )
+    : products;
+
+
+console.log("Search term:", searchTerm);
+console.log("Filtered products:", filteredProducts);
 
 
   const sortedProducts = filteredProducts.sort((a, b) => {
@@ -82,10 +89,22 @@ const productsToDisplayByColor = filterColor === "All"
     } else {
       dispatch(fetchProducts());
     }
+  
+    // Set category filter based on the search term
+    if (searchTerm.toLowerCase() === "men") {
+      setFilterCategory("Men's");
+    } else if (searchTerm.toLowerCase() === "women") {
+      setFilterCategory("Women's");
+    } else if (searchTerm.toLowerCase() === "sale") {
+      setFilterCategory("Sale");
+    } else {
+      setFilterCategory("All");
+    }
   }, [dispatch, searchTerm]);
+  
 
   const productsToDisplayByType = productsToDisplayByColor.filter(filterByCategoryAndType);
-  
+  console.log("Products to display by type:", productsToDisplayByType);
   return (
     <div className="search-results">
      
