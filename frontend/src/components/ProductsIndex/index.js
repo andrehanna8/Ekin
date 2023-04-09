@@ -7,13 +7,25 @@ import SearchResultIndexItem from "../SearchResultIndexItem";
 import "./ProductsIndex.css";
 import { Link } from "react-router-dom";
 
+
 export default function Products({ searchTerm }) {
   const products = useSelector((state) => Object.values(state.products));
   const dispatch = useDispatch();
+  const currentUser = useSelector((state) => state.session.user);
 
   const doubleBlocks = products.slice(0, 2);
-  const scrollerBlocks = products.slice(2, 10);
-  const popNowBlocks = products.slice(11, 20);
+  const scrollerBlocks = products.slice(2, 15);
+  const popNowBlocks = products.slice(16, 20);
+
+  const clickSignUp = () => {
+    const signUp = document.getElementById("sign-up");
+    if (!currentUser) {
+      signUp?.click();
+    }
+  }
+
+
+
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -174,6 +186,28 @@ export default function Products({ searchTerm }) {
 
                 </div>
       </div>  
+
+      <div className="hap-now">
+            <h1>Nike Membership</h1>
+            <div className="hap-now-text">
+            <h2>BECOME A MEMBER</h2>
+            <br></br>
+            <h3>Sign up for free. Join the Community.</h3>
+            
+              <button onClick={clickSignUp}>Join Us</button>
+        
+            </div>
+            <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_1423,c_limit/5e4a0ef7-a2c9-483a-8e5b-45d8277db19d/nike-just-do-it.jpg" />
+      </div>
+
+      <div className="pop-now">
+            <h1>Popular Now</h1>
+            {popNowBlocks.map((product) => (
+              <a key={product.id}>
+                <ProductsIndexItem product={product} />
+              </a>
+            ))}
+      </div>
         
 
           <br></br>
