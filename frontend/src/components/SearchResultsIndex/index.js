@@ -11,12 +11,14 @@ const categories = ["All", "Men's", "Women's", "Kids", "Sale"];
 const productTypes = ["All", "Shoes", "Tops", "Bottoms", "Accessories"];
 
 export default function SearchResultsIndex() {
-    const products = useSelector((state) => Object.values(state.products));
-    const dispatch = useDispatch();
-    const location = useLocation();
+  const products = useSelector((state) => Object.values(state.products));
+  const dispatch = useDispatch();
+  const location = useLocation();
 
   const searchParams = new URLSearchParams(location.search);
   const searchTerm = searchParams.get("q") || "";
+  const genderFilter = searchParams.get("gender") || "";
+
 
   const [sortOrder, setSortOrder] = useState("default");
   const [filterCategory, setFilterCategory] = useState("All");
@@ -24,7 +26,7 @@ export default function SearchResultsIndex() {
   const [filterColor, setFilterColor] = useState("All");
   const [filterProductType, setFilterProductType] = useState("All");
 
-  const filterByCategoryAndType = (product) => {
+  const filterByCategoryAndType = (product, searchTerm) => {
     const [productGender, productType] = product.category.split(" ");
     const categoryMatch =
       filterCategory === "All" || productGender.trim() === filterCategory.trim();
@@ -33,35 +35,26 @@ export default function SearchResultsIndex() {
     const accessoryMatch =
       productType.trim() === "Accessories" &&
       searchTerm.toLowerCase() === "accessories";
-  
+
     const searchTermMatch = searchTerm
       ? product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.category.toLowerCase().split(" ").some((word) => word.includes(searchTerm.toLowerCase()))
+        product.category
+          .toLowerCase()
+          .split(" ")
+          .some((word) => word.includes(searchTerm.toLowerCase())) ||
+        (productGender.trim().toLowerCase() === searchTerm.split(" ")[0].toLowerCase() &&
+         product.name.toLowerCase().includes(searchTerm.split(" ")[1].toLowerCase()))
       : true;
-  
-    return categoryMatch && (typeMatch || accessoryMatch) && searchTermMatch;
+
+    return (
+      categoryMatch && (typeMatch || accessoryMatch) && searchTermMatch
+    );
   };
-  
-  
 
+  const productsToDisplay = products.filter((product) => filterByCategoryAndType(product, searchTerm));
 
-  const filteredProducts = searchTerm
-  ? products.filter(
-      (product) =>
-        (product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        (product.description && product.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        (product.category && product.category.toLowerCase().split(' ').some(word => word.includes(searchTerm.toLowerCase())))
-    )
-  : products;
-
-
-
-console.log("Search term:", searchTerm);
-console.log("Filtered products:", filteredProducts);
-
-
-  const sortedProducts = filteredProducts.sort((a, b) => {
+  const sortedProducts = productsToDisplay.sort((a, b) => {
     if (sortOrder === "priceLowToHigh") {
       return a.price - b.price;
     } else if (sortOrder === "priceHighToLow") {
@@ -70,12 +63,10 @@ console.log("Filtered products:", filteredProducts);
     return 0;
   });
 
-  
-  const productsToDisplay = products.filter(filterByCategoryAndType);
-
-const productsToDisplayByColor = filterColor === "All"
-  ? productsToDisplay
-  : productsToDisplay.filter((product) => product.color === filterColor);
+  const productsToDisplayByColor =
+    filterColor === "All"
+      ? sortedProducts
+      : sortedProducts.filter((product) => product.color === filterColor);
 
   const handleSortChange = (e) => {
     setSortOrder(e.target.value);
@@ -88,12 +79,10 @@ const productsToDisplayByColor = filterColor === "All"
   const handleColorChange = (e) => {
     setFilterColor(e.target.value);
   };
-  
+
   const handleProductTypeChange = (e) => {
     setFilterProductType(e.target.value);
   };
-
-  
 
   useEffect(() => {
     if (searchTerm) {
@@ -103,8 +92,12 @@ const productsToDisplayByColor = filterColor === "All"
       dispatch(fetchProducts());
     }
   
+    if (genderFilter) {
+      setFilterCategory(genderFilter);
+    }
+
     // Set category filter based on the search term
-    if (searchTerm.toLowerCase() === "men") {
+        if (searchTerm.toLowerCase() === "men") {
       setFilterCategory("Men's");
     } else if (searchTerm.toLowerCase() === "women") {
       setFilterCategory("Women's");
@@ -114,22 +107,18 @@ const productsToDisplayByColor = filterColor === "All"
       setFilterProductType("Shoes");
     } else {
       setFilterCategory("All");
-    } 
-  }, [dispatch, searchTerm]);
-  
+    }
+  }, [dispatch, searchTerm, genderFilter]);
 
-  const productsToDisplayByType = productsToDisplayByColor.filter(filterByCategoryAndType);
-  console.log("Products to display by type:", productsToDisplayByType);
   return (
     <div className="search-results">
-     
       <div className="search-results-controls">
-      {searchTerm && (
-        <>
-        <h1> Search Results for "{searchTerm}"</h1>
-        <br></br>
-        </>
-      )}
+        {searchTerm && (
+          <>
+            <h1> Search Results for "{searchTerm}"</h1>
+            <br></br>
+          </>
+        )}
 
         <div className="sort-options">
           <label>
@@ -156,23 +145,23 @@ const productsToDisplayByColor = filterColor === "All"
           ))}
         </div>
         <div>
-  <label>Color:</label>
-  {colors.map((color) => (
-    <div key={color}>
-      <input
-        type="radio"
-        id={color}
-        name="color"
-        value={color}
-        checked={filterColor === color}
-        onChange={handleColorChange}
-      />
-      <label htmlFor={color}>{color}</label>
-    </div>
-  ))}
-</div>
+          <label>Color:</label>
+          {colors.map((color) => (
+            <div key={color}>
+              <input
+                type="radio"
+                id={color}
+                name="color"
+                value={color}
+                checked={filterColor === color}
+                onChange={handleColorChange}
+              />
+              <label htmlFor={color}>{color}</label>
+            </div>
+          ))}
+        </div>
 
-<div className="product-type-options">
+        <div className="product-type-options">
           <br></br>
           <p>Product Type:</p>
           {productTypes.map((type) => (
@@ -187,10 +176,9 @@ const productsToDisplayByColor = filterColor === "All"
             </label>
           ))}
         </div>
-
       </div>
       <div className="search-results-items">
-        {productsToDisplayByType.map((product) => (
+        {productsToDisplayByColor.map((product) => (
           <a key={product.id}>
             <SearchResultIndexItem product={product} />
           </a>
@@ -199,3 +187,4 @@ const productsToDisplayByColor = filterColor === "All"
     </div>
   );
 }
+

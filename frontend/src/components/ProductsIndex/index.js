@@ -160,15 +160,15 @@ export default function Products({ searchTerm }) {
                 Air Max TW, and other energetic styles.</h3>
                 <div className="air-btns">
                   
-              <Link to="/search?q=mens%20air%20max">
+              <Link to="/search?q=men%27s%20air%20max">
               <button>Shop Mens</button>
               </Link> &nbsp;
               
-              <Link to="/search?q=womens%20air%20max">
+              <Link to="/search?q=women%27s%20air%20max">
               <button>Shop Women's</button>
               </Link> &nbsp;
 
-              <Link to="/search?q=kids%20air%20max">
+              <Link to="/search?q=kid%27s%20air%20max">
               <button>Shop Kids'</button>
               </Link> &nbsp;
 

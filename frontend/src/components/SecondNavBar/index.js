@@ -22,9 +22,22 @@ export default function SecondNavBar() {
       };
     
       const performSearch = () => {
-        dispatch(fetchSearchResults(searchTerm));
-        history.push(`/search?q=${encodeURIComponent(searchTerm)}`);
+        let modifiedSearchTerm = searchTerm;
+        const searchTermPrefix = searchTerm.split(" ")[0].toLowerCase();
+      
+        if (searchTermPrefix === "mens" || searchTermPrefix === "men" ) {
+          modifiedSearchTerm = searchTerm.replace(/^(mens|men)\s+/i, "");
+          history.push(`/search?q=${encodeURIComponent(modifiedSearchTerm)}&gender=Men's`);
+        } else if (searchTermPrefix === "womens" || searchTermPrefix === "women") {
+          modifiedSearchTerm = searchTerm.replace(/^(womens|women)\s+/i, "");
+          history.push(`/search?q=${encodeURIComponent(modifiedSearchTerm)}&gender=Women's`);
+        } else {
+          history.push(`/search?q=${encodeURIComponent(searchTerm)}`);
+        }
+      
+        dispatch(fetchSearchResults(modifiedSearchTerm));
       };
+      
 
       const clearAndPerformSearch = () => {
         setSearchTerm("");
