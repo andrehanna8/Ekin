@@ -1,17 +1,18 @@
 .search-result-index-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    margin: 10px;
-    padding: 10px;
-    /* border: 1px solid #ddd; */
-    background-color: #fff;
-    text-align: center;
-    font-size: 14px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 10px;
+  /* border: 1px solid #ddd; */
+  background-color: #fff;
+  text-align: center;
+  font-size: 14px;
+  width: 250px; /* Set a fixed width for each item */
+  height: 450px; /* Set a fixed height for each item */
+}
   .search-result-index-item a {
     text-decoration: none;
     color: inherit;
@@ -29,9 +30,10 @@
   .search-result-index-item h3 {
     font-size: 16px;
     font-weight: 600;
-    margin: 0 0 10px;
-    line-height: 1.2;
-    min-height: 42px; /* Adjust based on font-size and line-height */
+    height: 40px; /* Set a fixed height for the product name */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis; /* Add an ellipsis if the text overflows */
+    white-space: nowrap; /* Prevent the text from wrapping */
   }
   
   .product-category,
@@ -44,4 +46,17 @@
     font-weight: 600;
     margin-top: 5px;
   }
+
+  .sr-product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sr-product-info h3, p {
+    font-family: 'Roboto', sans-serif;
+    
+  }
+
+ 
   

@@ -15,8 +15,9 @@ const SearchResultIndexItem = ({ product }) => {
     <div className="search-result-index-item">
       <Link to={`/products/${product.id}`}>
         <img src={product.photoUrl} alt={product.name} />
-        <h3>{product.name}</h3>
       </Link>
+      <div className='sr-product-info'>
+        <h3>{product.name}</h3>
       <p className="product-category">{getCleanCategory(product.category)}</p>
       {isOnSale(product.category) ? (
         <>
@@ -30,6 +31,7 @@ const SearchResultIndexItem = ({ product }) => {
       ) : (
         <p className="product-price">${product.price}</p>
       )}
+      </div>
     </div>
   );
 };
