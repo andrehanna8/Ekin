@@ -116,26 +116,17 @@ export default function Products({ searchTerm }) {
               </div>
 
               <div className="second-teeup">
-              <Link to="/search?q=golf">
-                <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_706,c_limit/818383a5-01a9-4421-83b0-b239f063d6ae/nike-just-do-it.jpg" />
+              <Link to="/products/2">
+                <img src="https://ekin-seeds.s3.us-west-1.amazonaws.com/dd27bfb2-7fce-45f9-af2d-bd409d8ca70b-top-block-1.webp" />
                 </Link>
                   <div className=" second-teeup-text">
                     <br></br>
-                    <Link to="/search?q=golf">
+                    <Link to="/products/2">
                       <button>Shop</button>
                     </Link>
                   </div>
                 </div>
             </div>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
 
           <div className="hap-now">
             <h1>Happening Now</h1>

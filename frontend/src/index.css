@@ -80,3 +80,11 @@ table {
     }
 
    
+    #root {
+      overflow-x: hidden;;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+    
