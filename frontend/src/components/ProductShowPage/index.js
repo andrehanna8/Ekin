@@ -37,15 +37,16 @@ export default function ProductShowPage() {
     const [bodyError, setBodyError] = useState("");
     const [ratingError, setRatingError] = useState("");
 
-    const isOnSale = useMemo(() => product.category.includes("Sale"), [product]);
-    const categoryName = useMemo(() => {
-      if (isOnSale) {
-        return product.category.replace("Sale ", "");
-      }
-      return product.category;
-    }, [product, isOnSale]);
+    const isOnSale = useMemo(() => product?.category.includes("Sale"), [product]);
+const categoryName = useMemo(() => {
+  if (isOnSale) {
+    return product?.category.replace("Sale ", "");
+  }
+  return product?.category;
+}, [product, isOnSale]);
   
-    const displayPrice = isOnSale ? getSalePrice(product.price) : product.price;
+const displayPrice = product && (isOnSale ? getSalePrice(product.price) : product.price);
+
 
 const showSuccessBanner = () => {
     setShowBanner(true);
@@ -242,9 +243,9 @@ const showSuccessBanner = () => {
         <h3>
           {isOnSale ? (
             <>
-              <span style={{ textDecoration: "line-through" }}>
-                ${product.price}
-              </span>
+              <span id="sale-price" style={{ textDecoration: "line-through" }}> 
+                ${product.price} 
+              </span>&nbsp;
               ${displayPrice}
             </>
           ) : (

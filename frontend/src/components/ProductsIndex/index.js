@@ -101,14 +101,32 @@ export default function Products({ searchTerm }) {
           <br></br>
 
           <h1 className="BTC">Back To The Classics</h1>
-          <div className="double-blocks">
+          <div className="teeup-blocks">
             <br></br>
-            {doubleBlocks.map((product) => (
-              <a key={product.id}>
-                <BlockProductIndexItem id="prod-ind-pic" product={product} />
-              </a>
-            ))}
-          </div>
+              <div className="first-teeup">
+              <Link to="/products/1">
+                <img src="https://ekin-seeds.s3.us-west-1.amazonaws.com/af1-scroller.webp" />
+                </Link>
+                  <div className=" first-teeup-text">
+                    <br></br>
+                    <Link to="/products/1">
+                    <button>Shop</button>
+                    </Link>
+                  </div>
+              </div>
+
+              <div className="second-teeup">
+              <Link to="/search?q=golf">
+                <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_706,c_limit/818383a5-01a9-4421-83b0-b239f063d6ae/nike-just-do-it.jpg" />
+                </Link>
+                  <div className=" second-teeup-text">
+                    <br></br>
+                    <Link to="/search?q=golf">
+                      <button>Shop</button>
+                    </Link>
+                  </div>
+                </div>
+            </div>
           <br></br>
           <br></br>
           <br></br>
