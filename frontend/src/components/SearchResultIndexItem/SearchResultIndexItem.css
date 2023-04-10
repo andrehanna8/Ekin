@@ -12,10 +12,12 @@
   font-size: 14px;
   width: 250px; /* Set a fixed width for each item */
   height: 450px; /* Set a fixed height for each item */
+  margin: 5px;
 }
   .search-result-index-item a {
     text-decoration: none;
     color: inherit;
+    left: 0;
   }
   
   .search-result-index-item img {
@@ -24,7 +26,7 @@
     /* height: auto; */
     height: 350px; /* Adjust to preferred max image height */
     /* object-fit: cover; */
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   
   .search-result-index-item h3 {
@@ -34,6 +36,7 @@
     overflow: hidden; /* Hide any overflowing text */
     text-overflow: ellipsis; /* Add an ellipsis if the text overflows */
     white-space: nowrap; /* Prevent the text from wrapping */
+    flex-wrap: wrap;
   }
   
   .product-category,
@@ -51,6 +54,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    width: 250px
   }
 
   .sr-product-info h3, p {
