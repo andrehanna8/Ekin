@@ -116,12 +116,12 @@ export default function Products({ searchTerm }) {
               </div>
 
               <div className="second-teeup">
-              <Link to="/products/2">
+              <Link to="/products/6">
                 <img src="https://ekin-seeds.s3.us-west-1.amazonaws.com/dd27bfb2-7fce-45f9-af2d-bd409d8ca70b-top-block-1.webp" />
                 </Link>
                   <div className=" second-teeup-text">
                     <br></br>
-                    <Link to="/products/2">
+                    <Link to="/products/6">
                       <button>Shop</button>
                     </Link>
                   </div>
@@ -218,25 +218,14 @@ export default function Products({ searchTerm }) {
             ))}
       </div>
         
-
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
           <div className="bottom-banner">
             <a id="github" target="_blank" href="https://github.com/andrehanna8">
               Github
             </a>
-            <a id="linkedin" target="_blank" href="https://www.linkedin.com/in/andre-hanna-8b1b1b1b1/">
+            <a id="linkedin" target="_blank" href="https://www.linkedin.com/in/andre-hanna/">
               LinkedIn
             </a>
           </div>
-          <br></br>
-          <br></br>
         </>
       )}
     </>

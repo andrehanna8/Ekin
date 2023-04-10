@@ -48,7 +48,8 @@
   justify-content: center;
   background-color: black;
   height: 43vh;
-  /* width: 100% */
+  width: 100%;
+  bottom: 0;
 }
 
 .spring-banner {
@@ -279,6 +280,7 @@ height: auto;
   flex-direction: row;
   align-items: center;
   margin: 0 2.2%;
+  justify-content: space-between;
 
 }
 
