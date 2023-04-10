@@ -111,16 +111,19 @@ export default function SearchResultsIndex() {
   }, [dispatch, searchTerm, genderFilter]);
 
   return (
-    <div className="search-results">
-      <div className="search-results-controls">
-        {searchTerm && (
+    <>
+    <div className="search-results-header"> 
+      <div className="search-results-header-left">
+      {searchTerm && (
           <>
             <h1> Search Results for "{searchTerm}"</h1>
             <br></br>
           </>
         )}
+        </div> 
 
-        <div className="sort-options">
+      <div className="search-results-header-right">
+      <div className="sort-options">
           <label>
             Sort by: &nbsp;
             <select value={sortOrder} onChange={handleSortChange}>
@@ -130,6 +133,14 @@ export default function SearchResultsIndex() {
             </select>
           </label>
         </div>
+        </div>
+    </div>
+
+    <div className="search-results">
+
+      <div className="search-results-controls">
+      
+    
         <div className="category-options">
           <p>Category:</p>
           {categories.map((category, index) => (
@@ -185,6 +196,7 @@ export default function SearchResultsIndex() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
