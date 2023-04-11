@@ -6,6 +6,8 @@ import ThankYouModal from "../ThankYouModal";
 import ErrorModal from "../ErrorModal"; // 5. Import the ErrorModal component
 import "./CartIndex.css";
 import { getSalePrice } from "../CartIndexItem";
+import ProductsClicker from "../ProductsClicker";
+import BottomBanner from "../BottomBanner";
 
 export default function CartIndex() {
   const [showThankYouModal, setShowThankYouModal] = useState(false);
@@ -157,6 +159,7 @@ onClose={() => setShowErrorModal(false)}
       </button>
     </div>
   </div>
+ <BottomBanner />
 </>
 );
 }

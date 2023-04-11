@@ -9,6 +9,7 @@ import SlideShowBar from "./components/SlideShowBar";
 import './components/SlideShowBar/SlideShowBar.css'
 import CartIndex from "./components/CartIndex";
 import SearchResultsIndex from "./components/SearchResultsIndex";
+import BottomBanner from "./components/BottomBanner";
 
 // import "./components/ProductShowPage/ProductShowPage.css";
 
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/products/:productId">
           <SlideShowBar />
             <ProductShowPage/>
+            <BottomBanner />
           </Route>
           <Route exact path="/cart">
             <CartIndex />

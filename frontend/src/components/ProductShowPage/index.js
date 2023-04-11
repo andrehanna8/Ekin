@@ -10,6 +10,7 @@ import { createReview, fetchReview, updateReview } from "../../store/reviews";
 import { useHistory } from "react-router-dom";
 import LoginFormPage from "../LoginFormPage";
 import { useMemo } from "react";
+import BottomBanner from "../BottomBanner";
 
 const getSalePrice = (price) => {
     return (price * 0.6).toFixed(2);
@@ -313,9 +314,10 @@ const showSuccessBanner = () => {
 
             </div>
             {showLoginForm && (
-    <LoginFormPage setShowLoginForm={setShowLoginForm} />
-)}
+                <LoginFormPage setShowLoginForm={setShowLoginForm} />
+                )}
 
         </div>
     ) : null
+    // <BottomBanner />
 }

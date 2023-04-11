@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { fetchProducts, fetchSearchResults } from "../../store/products";
 import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useMemo } from "react";
 
 const categories = ["All", "Men's", "Women's", "Kids", "Sale"];
 const productTypes = ["All", "Shoes", "Tops", "Bottoms", "Accessories"];
@@ -15,10 +16,14 @@ export default function SearchResultsIndex() {
   const dispatch = useDispatch();
   const location = useLocation();
 
-  const searchParams = new URLSearchParams(location.search);
+  const searchParams = useSearchParamsMemo(location);
+
   const searchTerm = searchParams.get("q") || "";
   const genderFilter = searchParams.get("gender") || "";
 
+  function useSearchParamsMemo(location) {
+    return useMemo(() => new URLSearchParams(location.search), [location.search]);
+  }
 
   const [sortOrder, setSortOrder] = useState("default");
   const [filterCategory, setFilterCategory] = useState("All");

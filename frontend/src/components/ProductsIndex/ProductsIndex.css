@@ -44,13 +44,6 @@
   margin-bottom: 1%; 
 }
 
-.bottom-banner {
-  justify-content: center;
-  background-color: black;
-  height: 43vh;
-  width: 100%;
-  bottom: 0;
-}
 
 .spring-banner {
   display: flex;
