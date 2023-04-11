@@ -59,7 +59,7 @@ export default function NavBar() {
             <>
                 <div className="nav-bar-flip">
                 <div className="nav-bar">
-                    <button id="sign-up" onClick={hideLoginShowSignup}> <p> Join Us </p>  </button>
+                    <button id="sign-up" onClick={hideLoginShowSignup}> <p> Join Us</p></button> 
                     <button id="sign-up" onClick={hideSignupShowLogin}> <p>Sign In</p> </button>
                     <button id="greeting"> {currentUser ? ` Hi, ${currentUser.firstName}`  : ""} </button>
                 </div>

@@ -1,6 +1,8 @@
 .search-results {
   display: flex;
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   justify-content: space-between;
   overflow-y: hidden;
 }
@@ -13,9 +15,9 @@
   /* Add a light background color for distinction */
   width: 200px; /* Set a fixed width for the controls */
   overflow-y: auto; /* Add this line to set the overflow-y property to auto */
-  max-height: calc(70vh ); /* Adjust this value according to your header/footer height */
+  max-height: 70vh ; /* Adjust this value according to your header/footer height */
   overflow-x: hidden;
-  padding-left: 10px;
+  padding-left: 20px;
   padding-right: 10px;
 }
 
@@ -42,11 +44,10 @@
   width: calc(100% - 320px);
   grid-gap: 15px;
   overflow-y: auto; /* Add this line to set the overflow-y property to auto */
-  max-height: calc(70vh ); /* Adjust this value according to your header/footer height */
+  max-height: 69vh ; /* Adjust this value according to your header/footer height */
   overflow-x: hidden; /* Add this line to set the overflow-x property to hidden */
+  padding-right: 10px;
 }
-
-
 
 
 .product-type-options p {
@@ -126,7 +127,7 @@ input[type="radio"]:focus {
     linear-gradient(90deg, gray 1px, transparent 1px),
     linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px);
-  background-size: 5px 5px;
+  background-size: 10px 11px;
 
 }
 
@@ -186,6 +187,7 @@ input[type="radio"]:focus {
   padding-right: 10px;
   padding-top: 10px;
   overflow: hidden !important;
+  /* height: fit-content; */
 }
 
 .hide-main-scrollbar {
@@ -225,4 +227,30 @@ input[type="radio"]:focus {
 .icon:hover {
   cursor: pointer;
     color: #9d9999;
+}
+
+
+.sort-options {
+  cursor: pointer;
+}
+
+.search-results-header-left h1 {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  left: 0;
+}
+
+.search-results-header-left h2 {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  left: 0;
+}
+
+.search-for {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  margin-bottom: 14px;
 }

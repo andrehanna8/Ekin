@@ -29,7 +29,14 @@ export default function SearchResultsIndex() {
   const [isCategoryCollapsed, setIsCategoryCollapsed] = useState(true);
   const [isProductTypeCollapsed, setIsProductTypeCollapsed] = useState(true);
   const [isColorCollapsed, setIsColorCollapsed] = useState(true);
+  const [isSortOptionsVisible, setIsSortOptionsVisible] = useState(false);
+  const [resultsCount, setResultsCount] = useState(0);
 
+
+  const toggleSortOptions = () => {
+    setIsSortOptionsVisible(!isSortOptionsVisible);
+  };
+  
   
   const toggleCategoryCollapse = () => {
     setIsCategoryCollapsed(!isCategoryCollapsed);
@@ -42,6 +49,7 @@ export default function SearchResultsIndex() {
   const toggleColorCollapse = () => {
     setIsColorCollapsed(!isColorCollapsed);
   };
+
 
   const filterByCategoryAndType = (product, searchTerm) => {
     const [productGender, productType] = product.category.split(" ");
@@ -127,16 +135,22 @@ export default function SearchResultsIndex() {
     }
   }, [dispatch, searchTerm, genderFilter]);
 
+   useEffect(() => {
+    setResultsCount(productsToDisplayByColor.length);
+  }, [productsToDisplayByColor]);
+  
+
   return (
     <div className="sr-wrapper  hide-main-scrollbar">
     <div className="search-results-header"> 
       <div className="search-results-header-left">
       {searchTerm && (
-          <>
-            <h1> Search Results for "{searchTerm}"</h1>
-            <br></br>
-          </>
-        )}
+    <div className="search-for">
+      <h1>Search Results for </h1>
+      <h2> {searchTerm} ({resultsCount})</h2>
+    </div>
+)}
+
         </div> 
 
       <div className="search-results-header-right">
