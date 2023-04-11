@@ -180,7 +180,7 @@ p12 = Product.create!({
   color: "Black/White",
 })
 
-# p12.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8f941b39-26d2-4642-8fbc-6a9a6a75a6c7/react-infinity-run-flyknit-2-running-shoe-JK0mtq.png'), filename: 'react-infinity-flyknit-2.png')
+p12.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f66c6551-4f46-41df-86d8-a3c0dcd7c449/react-infinity-2-mens-road-running-shoes-DttDF2.png'), filename: 'react-infinity-flyknit-2.png')
 
 # Product 13
 p13 = Product.create!({
@@ -192,7 +192,7 @@ p13 = Product.create!({
   color: "Blue/White",
 })
 
-# p13.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/3d1b6e91-6f7d-43a3-b3a9-9b763bf40a84/air-zoom-superrep-2-training-shoe-14dVQ2.png'), filename: 'superrep-2.png')
+p13.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4e4773e9-0038-4cf2-aaf4-70c1d803a08a/air-zoom-superrep-3-womens-hiit-class-shoes-4p1pwz.png'), filename: 'superrep-2.png')
 
 # Product 14
 p14 = Product.create!({
@@ -204,7 +204,7 @@ p14 = Product.create!({
   color: "Black/Grey",
 })
 
-# p14.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/3bf3b3f3-1a71-4e87-9d6e-c2a9b2d2425b/metcon-7-training-shoe-7cG1DM.png'), filename: 'metcon-7.png')
+p14.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4a8062cc-2332-4746-983a-7d9a2d28bdf2/metcon-7-amp-training-shoes-gJT8QZ.png'), filename: 'metcon-7.png')
 
 # Product 15
 p15 = Product.create!({
@@ -216,7 +216,7 @@ p15 = Product.create!({
   color: "Blue/White",
 })
 
-# p15.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/3ff3bc9e-afbe-420a-9831-f8edbae18d50/zoomx-invincible-run-flyknit-running-shoe-4Ccsd4.png'), filename: 'zoomx-invincible-flyknit.png')
+p15.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/80baedf0-d6f5-4d35-b912-c7c40eeb0be0/invincible-3-womens-road-running-shoes-kC40R9.png'), filename: 'zoomx-invincible-flyknit.png')
 
 # Product 16
 p16 = Product.create!({
@@ -228,7 +228,7 @@ p16 = Product.create!({
   color: "Black",
 })
 
-# p16.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/gsuin11ptg6irqxw0u4m/dri-fit-mens-short-sleeve-training-top-9SDLrn.png'), filename: 'dri-fit-mens-training-tshirt.png')
+p16.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cdc3b393-20e0-47aa-a4a0-c421d4a7b11c/dri-fit-mens-training-t-shirt-1Hh6cz.png'), filename: 'dri-fit-mens-training-tshirt.png')
 
 # Product 17
 p17 = Product.create!({
@@ -240,7 +240,7 @@ p17 = Product.create!({
   color: "White",
 })
 
-# p17.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/qrrkcqdfrrjuhqlo0zhz/pro-mens-short-sleeve-top-KkLd2v.png'), filename: 'pro-mens-short-sleeve-top.png')
+p17.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cdbd490b-6e76-49f8-bbfe-4f4c7a43bf7b/pro-dri-fit-mens-slim-fit-short-sleeve-top-H7B5f3.png'), filename: 'pro-mens-short-sleeve-top.png')
 
 # Product 18
 p18 = Product.create!({
@@ -252,7 +252,7 @@ p18 = Product.create!({
   color: "Grey",
 })
 
-# p18.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/ed6a5d6f-7e12-4dac-a270-6d02fb6c0a2a/sportswear-club-fleece-pullover-hoodie-8xJMN3.png'), filename: 'club-fleece-pullover-hoodie.png')
+p18.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b6c51b92-2d96-4c39-9266-593d81b5ccff/sportswear-club-fleece-pullover-hoodie-Gw4Nwq.png'), filename: 'club-fleece-pullover-hoodie.png')
 
 # Product 19
 p19 = Product.create!({
@@ -264,7 +264,7 @@ p19 = Product.create!({
   color: "Blue",
 })
 
-# p19.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/56f6a838-6a88-419b-bd6a-0876bfcf2d45/therma-mens-training-hoodie-dLcJbR.png'), filename: 'therma-mens-training-hoodie.png')
+p19.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c79b0d4d-f837-4beb-96a1-08ec72a22f0d/therma-mens-therma-fit-hooded-fitness-pullover-X9fVm2.png'), filename: 'therma-mens-training-hoodie.png')
 
 # Product 20
 p20 = Product.create!({
@@ -276,7 +276,7 @@ p20 = Product.create!({
   color: "Black/White",
 })
 
-# p20.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/94e6f0e0-ee7f-407d-b88d-81d1cfa0e7e7/sportswear-windrunner-mens-jacket-9R1RMM.png'), filename: 'windrunner-jacket.png')
+p20.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a52dc894-7459-4e47-b651-7197cfa04d6a/storm-fit-windrunner-mens-primaloft-insulated-vest-lMmN5v.png'), filename: 'windrunner-jacket.png')
 
 # Product 21
 p21 = Product.create!({
@@ -288,7 +288,7 @@ p21 = Product.create!({
   color: "Black",
 })
 
-# p21.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/e0f9cb68-0e62-43f7-af64-8d3e3f3a3e80/sportswear-club-fleece-joggers-2xjDn1.png'), filename: 'club-fleece-joggers.png')
+p21.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/eaf227ef-f494-478b-9430-d31428ecd680/sportswear-club-fleece-joggers-KflRdQ.png'), filename: 'club-fleece-joggers.png')
 
 # Product 22
 p22 = Product.create!({
@@ -300,7 +300,7 @@ p22 = Product.create!({
   color: "Grey",
 })
 
-# p22.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/edfa58f1-7f83-48d9-9d33-4e70cc7d05d0/dri-fit-mens-training-pants-4bLbwD.png'), filename: 'dri-fit-mens-training-pants.png')
+p22.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c13e59b5-81ea-4847-a176-29719973949f/dri-fit-mens-training-pants-41n6G2.png'), filename: 'dri-fit-mens-training-pants.png')
 
 # Product 23
 p23 = Product.create!({
@@ -312,7 +312,7 @@ p23 = Product.create!({
   color: "Black",
 })
 
-# p23.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/5b6e833f-1c30-4525-95e5-06fa26c9f333/flex-stride-mens-7-brief-running-shorts-KlhlQD.png'), filename: 'flex-stride-running-shorts.png')
+p23.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-2a47c708-32a9-41bc-9082-d0c8890b1cb4/flex-stride-mens-7-brief-running-shorts-BvCXmh.png'), filename: 'flex-stride-running-shorts.png')
 
 # Product 24
 p24 = Product.create!({
@@ -324,7 +324,7 @@ p24 = Product.create!({
   color: "Olive",
 })
 
-# p24.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/722b665d-5c5b-4ccf-9c94-c9d9b3ea3b3d/sportswear-club-mens-cargo-pants-nGZSTh.png'), filename: 'club-cargo-pants.png')
+p24.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a1dc8682-1cba-4cc1-8834-5be5d9017c54/jordan-essentials-mens-utility-pants-F0MNZ6.png'), filename: 'club-cargo-pants.png')
 
 # Product 25
 p25 = Product.create!({
@@ -336,7 +336,7 @@ p25 = Product.create!({
   color: "Black",
 })
 
-# p25.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/35c3d1a3-3fc5-4f80-9b38-89fbcf603d21/pro-mens-tights-2YJ8Qv.png'), filename: 'pro-mens-tights.png')
+p25.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/be161238-0126-4a14-91a0-86881f24347c/pro-warm-mens-tights-jK57mH.png'), filename: 'pro-mens-tights.png')
 
 # Product 26
 p26 = Product.create!({
@@ -348,7 +348,7 @@ p26 = Product.create!({
   color: "Black",
 })
 
-# p26.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/gsuin1ecihotz6gqtswk/sportswear-heritage86-cap-MfvtTz.png'), filename: 'heritage86-cap.png')
+p26.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/107bcc9c-f6ed-4104-9f80-809f0be6fb92/sportswear-heritage86-womens-cap-vg1VNf.png'), filename: 'heritage86-cap.png')
 
 # Product 27
 p27 = Product.create!({
@@ -360,7 +360,7 @@ p27 = Product.create!({
   color: "Black",
 })
 
-# p27.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/da7a94a0-71ee-4a5a-9065-5c5b8ca7a1b5/sportswear-essentials-hip-pack-xM4Zb9.png'), filename: 'essentials-hip-pack.png')
+p27.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/79362ee5-35e5-462a-a4db-f0d3c3e1ccb2/sportswear-essentials-sling-bag-8l-2gM57K.png'), filename: 'essentials-hip-pack.png')
 
 p28 = Product.create!({
   name: "Nike Elite Basketball Crew Socks",
@@ -371,7 +371,7 @@ p28 = Product.create!({
   color: "White/Black",
 })
 
-# p28.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/1db24340-48a2-48a8-b8d0-47ec3f3ac9e9/elite-basketball-crew-socks-knQGxR.png'), filename: 'elite-basketball-crew-socks.png')
+p28.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c65858d8-72f0-4061-8202-ec3142eb4d2e/elite-kay-yow-basketball-crew-socks-0jpqqV.png'), filename: 'elite-basketball-crew-socks.png')
 
 # Product 29
 p29 = Product.create!({
@@ -383,7 +383,7 @@ p29 = Product.create!({
   color: "Black/White",
 })
 
-# p29.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/60e7a0f3-36ec-4d61-8d63-6a3bb3f3e9ac/vapor-knit-3-football-gloves-2QcRzn.png'), filename: 'vapor-knit-football-gloves.png')
+p29.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a9951729-c004-45f2-ac74-89c5693d6060/vapor-jet-7-football-gloves-1-pair-ShhnmB.png'), filename: 'vapor-knit-football-gloves.png')
 
 p30 = Product.create!({
   name: "Nike Sportswear Tech Fleece Scarf",
@@ -394,7 +394,7 @@ p30 = Product.create!({
   color: "Black",
 })
 
-# p30.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/271d5b8e-4bf4-4e6d-8d76-8a3a3c50b3cd/sportswear-tech-fleece-scarf-5D5R5J.png'), filename: 'tech-fleece-scarf.png')
+p30.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fd7c9754-4951-40b8-bd45-a47628705883/sport-scarf-3hkHf7.png'), filename: 'tech-fleece-scarf.png')
 
 # Women's Accessories
 # Product 31
@@ -407,7 +407,7 @@ p31 = Product.create!({
   color: "Pink",
 })
 
-# p31.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8f8baff9-0e27-4e0d-8d71-1a1ff2e1737d/sportswear-heritage86-futura-washed-cap-7ZvRtg.png'), filename: 'heritage86-futura-washed-cap-pink.png')
+p31.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8645801f-3570-4366-91c6-64f78714215c/sportswear-heritage86-futura-washed-hat-9xDxge.png'), filename: 'heritage86-futura-washed-cap-pink.png')
 
 # Product 32
 p32 = Product.create!({
@@ -419,11 +419,11 @@ p32 = Product.create!({
   color: "Black",
 })
 
-# p32.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8d1e0e89-0c3f-4a6a-a3b3-0d4e01db4ba4/womens-lightweight-training-gloves-cGJ1ZX.png'), filename: 'womens-lightweight-training-gloves.png')
+p32.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e21582b9-2a79-43b5-aad0-d9fa029e26b0/accelerate-womens-running-gloves-8VK3XC.png'), filename: 'womens-lightweight-training-gloves.png')
 
 # Product 33
 p33 = Product.create!({
-  name: "Nike Women's Everyday Max Cushioned Training Crew Socks (3 Pairs)",
+  name: "Nike Women's Everyday Training Socks",
   description: "The Nike Women's Everyday Max Cushioned Training Crew Socks feature sweat-wicking fabric and cushioning for all-day comfort during your workouts.",
   price: 20,
   category: "Women's Accessories",
@@ -431,7 +431,7 @@ p33 = Product.create!({
   color: "White",
 })
 
-# p33.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/4f4e29c9-4d71-4f20-81e0-d27e8cb11f16/everyday-max-cushioned-training-crew-socks-3-pairs-3m6b3q.png'), filename: 'womens-training-crew-socks.png')
+p33.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4d6c67c0-7d6c-47c9-b610-d816c8b42bff/everyday-plus-cushioned-training-crew-socks-3-pairs-kt8drs.png'), filename: 'womens-training-crew-socks.png')
 
 p34 = Product.create!({
   name: "Nike Gym Club Training Duffel Bag",
@@ -442,7 +442,7 @@ p34 = Product.create!({
   color: "Black",
 })
 
-# p34.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/gb5zk5j5l5udajkkf8pg/gym-club-training-duffel-bag-2BXd8R.png'), filename: 'gym-club-training-duffel-bag.png')
+p34.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/36387f61-5a00-42cf-b053-b4cf7908140f/one-club-womens-training-duffel-bag-24l-sMgH5x.png'), filename: 'gym-club-training-duffel-bag.png')
 
 # Product 35
 p35 = Product.create!({
@@ -454,7 +454,118 @@ p35 = Product.create!({
   color: "Black",
 })
 
-# p35.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/qb0kgtwiyzufdruyfkjf/womens-essential-running-jacket-B1qrKb.png'), filename: 'womens-essential-running-jacket.png')
+p35.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e8e30c64-0ec8-4adc-8e6b-a6a4c9d2f55f/essential-womens-running-jacket-JzkDMn.png'), filename: 'womens-essential-running-jacket.png')
+
+p36 = Product.create!({
+  name: "Nike Air Zoom Victory Tour 3 NRG Men's Golf Shoes",
+  description: "The Nike Air Zoom Victory Tour 3 NRG Men's Golf Shoes offer exceptional comfort and support on the course. With a Zoom Air unit and React cushioning, these shoes provide a responsive and stable ride.",
+  price: 200,
+  category: "Men's Golf Shoes",
+  size: "M",
+  color: "Multi-Color",
+})
+
+p36.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8b2d1313-3a3d-4cc9-b877-865f5a13be03/air-zoom-victory-tour-3-nrg-mens-golf-shoes-pgZWf5.png'), filename: 'air-zoom-victory-tour-3-nrg.png')
+
+p37 = Product.create!({
+  name: "Nike Air Zoom Infinity Tour NEXT% NRG Golf Shoes",
+  description: "The Nike Air Zoom Infinity Tour NEXT% NRG Golf Shoes are designed for maximum performance on the golf course. Featuring a responsive Zoom Air unit and innovative traction pattern, these shoes provide exceptional stability and grip.",
+  price: 180,
+  category: "Golf Shoes",
+  size: "M",
+  color: "Yellow",
+})
+
+p37.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e3ffb91f-6db1-49b3-b756-a8353e163101/air-zoom-infinity-tour-next-nrg-golf-shoes-Qz3VFg.png'), filename: 'air-zoom-infinity-tour-next-nrg.png')
+
+p38 = Product.create!({
+  name: "Nike Dri-FIT Tour Men's Golf Polo",
+  description: "Stay comfortable and stylish on the golf course with the Nike Dri-FIT Tour Men's Golf Polo. Made with moisture-wicking Dri-FIT technology, this polo keeps you dry and cool throughout your round.",
+  price: 80,
+  category: "Men's Golf Apparel",
+  size: "M",
+  color: "Green",
+})
+
+p38.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fa3d98b6-758b-4c6d-81ac-7228d05bba11/dri-fit-tour-mens-golf-polo-TZ9f24.png'), filename: 'dri-fit-tour-mens-golf-polo.png')
+
+p39 = Product.create!({
+  name: "Nike Dri-FIT Repel Men's 5-Pocket Slim Fit Golf Pants",
+  description: "The Nike Dri-FIT Repel Men's 5-Pocket Slim Fit Golf Pants provide a sleek and modern look for the golf course. With Dri-FIT technology and a water-repellent finish, these pants offer both comfort and functionality.",
+  price: 95,
+  category: "Men's Golf Apparel",
+  size: "M",
+  color: "Black",
+})
+
+p39.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/80100db3-a5e8-414e-adb4-93f0c015d665/dri-fit-repel-mens-5-pocket-slim-fit-golf-pants-CL61FV.png'), filename: 'dri-fit-repel-mens-golf-pants.png')
+
+p40 = Product.create!({
+  name: "Nike Infinity Ace Next Nature NRG Golf Shoes",
+  description: "The Nike Infinity Ace Next Nature NRG Golf Shoes are crafted with sustainable materials and offer excellent traction and support on the golf course. The unique design provides a comfortable fit for all-day wear.",
+  price: 120,
+  category: "Golf Shoes",
+  size: "M",
+  color: "White",
+})
+
+p40.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/739e01eb-64da-4a03-a072-c72ef711fe12/infinity-ace-next-nature-nrg-golf-shoes-p010rD.png'), filename: 'infinity-ace-next-nature-nrg.png')
+
+p41 = Product.create!({
+  name: "Nike Air Max 1 '86 OG G NRG Men's Golf Shoes",
+  description: "The Nike Air Max 1 '86 OG G NRG Men's Golf Shoes offer a classic look with modern performance. Featuring Air Max cushioning and a durable outsole, these shoes provide exceptional comfort and traction on the course.",
+  price: 170,
+  category: "Men's Golf Shoes",
+  size: "M",
+  color: "Multi-Color",
+})
+
+p41.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/70bc17fe-951a-439a-8641-a3f9a4208a56/air-max-1-86-og-g-nrg-mens-golf-shoes-Hgntt1.png'), filename: 'air-max-1-86-og-g-nrg.png')
+
+p42 = Product.create!({
+  name: "Nike Air Hybrid Energy Golf Bag",
+  description: "The Nike Air Hybrid Energy Golf Bag offers ample storage and organization for all your golfing essentials. With a lightweight design and comfortable carrying system, this bag is perfect for the golfer on the go.",
+  price: 295,
+  category: "Golf Bags",
+  size: "One Size",
+  color: "Multi-Color",
+})
+
+p42.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5953af83-5757-470b-9b73-71a51b273286/air-hybrid-energy-golf-bag-k492nJ.png'), filename: 'air-hybrid-energy-golf-bag.png')
+
+p43 = Product.create!({
+  name: "Jordan Fadeaway 6-Way Golf Bag",
+  description: "The Jordan Fadeaway 6-Way Golf Bag provides stylish storage for all your golf gear. With a six-way top divider and multiple pockets, this golf bag offers organized storage and easy access to your essentials.",
+  price: 360,
+  category: "Golf Bags",
+  size: "One Size",
+  color: "Black",
+})
+
+p43.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/40c8fac6-a09d-4d36-acae-cc8581142b27/jordan-fadeaway-6-way-golf-bag-h8qqBv.png'), filename: 'jordan-fadeaway-6-way-golf-bag.png')
+
+p44 = Product.create!({
+  name: "Nike G-Flex Stretch Woven Belt",
+  description: "The Nike G-Flex Stretch Woven Belt offers a comfortable fit and a stylish look for any golfer. With its stretchy woven design and G-Flex technology, this belt moves with you for ultimate comfort and performance.",
+  price: 55,
+  category: "Golf Accessories",
+  size: "One Size",
+  color: "Gray",
+})
+
+p44.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/17e7087d-4667-489d-9e72-894a059f30a2/g-flex-stretch-woven-belt-9Kv97g.png'), filename: 'g-flex-stretch-woven-belt.png')
+
+p45 = Product.create!({
+  name: "Air Jordan 1 Low G Golf Shoes",
+  description: "The Air Jordan 1 Low G Golf Shoes combine iconic style with performance features for the golf course. With a responsive cushioning system and a durable outsole, these shoes provide excellent comfort and traction during your round.",
+  price: 140,
+  category: "Golf Shoes",
+  size: "M",
+  color: "Black",
+})
+
+p45.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/1398e462-df70-41ac-8ac9-865153dd7325/air-jordan-1-low-g-golf-shoes-jChrQ3.png'), filename: 'air-jordan-1-low-g-golf-shoes.png')
+
 
     puts "done creating products"
     puts ""

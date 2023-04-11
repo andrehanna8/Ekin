@@ -61,7 +61,7 @@ export default function CartIndexItem({cartItem}) {
       } else if (category.includes("Accessories")) {
         return ["OS"];
       } else if (category.includes("Tops") || category.includes("Bottoms")) {
-        return ["XS", "S", "M", "L", "XL", "XXL", "XXXL"];
+        return ["XS", "S", "M", "L", "XL"];
       } else {
         return []; // Return an empty array in case no condition matches
       }

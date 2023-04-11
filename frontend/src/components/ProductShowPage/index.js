@@ -204,7 +204,7 @@ const showSuccessBanner = () => {
         } else if (product.category.includes("Tops") || product.category.includes("Bottoms")) {
             return (
                 <>
-                    {["XS", "S", "M", "L", "XL", "XXL", "XXXL"].map((size) => (
+                    {["XS", "S", "M", "L", "XL"].map((size) => (
                         <button
                             key={size}
                             style={
