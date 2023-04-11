@@ -79,7 +79,8 @@ export default function CartIndex() {
         <ErrorModal
           title="Error"
           message="Sorry,
-        the code entered is incorrect or invalid. Please try again, or enter another code. Hint: You should HIREME :)"
+        the code entered is incorrect or invalid. Please try again, or enter another code. 
+        &nbsp;&nbsp;&nbsp;&nbsp; Hint: You should ''HIREME'' :)"
 errorCode="Code: 4CB0532B"
 onClose={() => setShowErrorModal(false)}
 />

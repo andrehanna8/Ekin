@@ -15,9 +15,12 @@ const ErrorModal = ({ title, message, errorCode, onClose }) => {
         <button className="close-button" onClick={onClose}>
           &times;
         </button>
-        <h2>{title}</h2>
+        <div className="em-info">
+        <h2 id="em-title">{title}</h2>
         <p>{message}</p>
-        <p>{errorCode}</p>
+        <p id="bold">[&nbsp;{errorCode}&nbsp;]</p>
+
+        </div>
         <button className="ok-button" onClick={onClose}>
           Ok
         </button>

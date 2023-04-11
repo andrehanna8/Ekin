@@ -53,3 +53,14 @@
     line-height: 1.4;
     margin-bottom: 10px;
     }  
+
+    #em-title {
+        font-family: 'Roboto', sans-serif !important;
+    }
+
+    .em-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    

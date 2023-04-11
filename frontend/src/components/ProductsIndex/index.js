@@ -89,8 +89,8 @@ export default function Products({ searchTerm }) {
                   </div>
           </div>
 
+            <h1 id="na">New Arrivals</h1>
           <div className="product-scroller">
-            <h1>New Arrivals</h1>
             {scrollerBlocks.map((product) => (
               <a key={product.id}>
                 <ProductsIndexItem product={product} />
