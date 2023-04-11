@@ -17,24 +17,28 @@ function App() {
     <>
     <NavBar />
     <SecondNavBar />
-    <SlideShowBar />
+    
         <Switch>
           <Route exact path="/products/:productId">
+          <SlideShowBar />
             <ProductShowPage/>
           </Route>
           <Route exact path="/cart">
             <CartIndex />
           </Route>
           <Route exact path="/login">
+            <SlideShowBar />
             <LoginFormPage />
           </Route>
           
           <Route exact path="/search">
           <div className="whole-search">
+          <SlideShowBar />
             <SearchResultsIndex />
             </div>
           </Route>
           <Route exact path="/">
+          <SlideShowBar />
             <SplashPage />
           </Route>
         </Switch>

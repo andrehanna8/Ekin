@@ -10,10 +10,27 @@ import '../CartIndexItem/trashparent.png'
 import { useEffect } from "react";
 import { fetchProduct } from "../../store/products";
 import { useMemo } from "react";
+import { format } from "date-fns";
 
 export const getSalePrice = (price) => {
     return (price * 0.6).toFixed(2);
 };
+
+const getDeliveryDate = () => {
+  const currentDate = new Date();
+  const deliveryDate = new Date(currentDate);
+  deliveryDate.setDate(currentDate.getDate() + 7);
+  return format(deliveryDate, "EEE, MMM d");
+};
+
+const deliveryDate = getDeliveryDate();
+
+const getRandomZipCode = () => {
+  const randomZip = 90000 + Math.floor(Math.random() * 10000);
+  return randomZip;
+};
+
+const randomZipCode = getRandomZipCode();
 
 export default function CartIndexItem({cartItem}) {
 
@@ -92,48 +109,80 @@ export default function CartIndexItem({cartItem}) {
 if (!cartItem) return null;
 if (!product) return <div className="loader"></div>;
     return (
+
+    <div className="cart-item-wrapper">
       <div className="cart-item-container"> 
-        <div className="cart-item">
+
+        <div className="left-side-cart">
             <Link to={`/products/${product.id}`} > 
-                <img src="https://secure-images.nike.com/is/image/DotCom/FD0821_100?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg" alt={product.name} />
+                <img src={product.photUrl} alt={product.name} />
             </Link>
-        </div>
-                <div className="cart-item-info"> 
-                <Link
-                  to={`/products/${product.id}`}
-                  style={{ textDecoration: "none" }}
-                >
-                  <h1 id="name-link">
-                    {product.name}{" "}
-                    {isOnSale ? (
-                      <>
-                        <span id="name-price" style={{ textDecoration: "line-through" }}>
-                          ${product.price}
-                        </span>
-                        <span id="name-price">${displayPrice}</span>
-                      </>
-                    ) : (
-                      <span id="name-price">${product.price}</span>
-                    )}
-                  </h1>
-                </Link>
-      <br></br>
-      <h2>{categoryName}</h2>
-                    <h3>{product.color}</h3>
-                    <label id="cart-label"> Size </label>
-                    <select className="cart-label-select" onChange={handleSizeChange} style={{border: 'none'}} value={size}>
-                        {sizeOptions.map((option) => (
-                          <option value={option}>{option}</option>
-                        ))}
-                    </select>
-                    <br></br>
-                    <label> Quantity:&nbsp;</label> &nbsp;
-                    <input type="number" onChange={handleQuantityChange} value={quantity} style={{border: 'none'}}/>
-                    <br></br>
-                    <img id="trashcan" src="https://t4.ftcdn.net/jpg/03/01/07/99/360_F_301079914_TDcwbIag3uOp7dwNRWb0bqpfWeOzb6Xu.jpg" onClick={ () => dispatch(deleteCartItem(cartItem.id)) }></img>
-            
-            </div>
-      
       </div>
+
+      <div className="right-side-cart">
+            <div className="cart-item-info"> 
+                <Link to={`/products/${product.id}`} style={{ textDecoration: "none" }}>
+                  <div className="name-and-price" >
+                    <div className="name">
+                      {product.name}{" "}
+                    </div>
+
+                    <div className="price">
+                      <h1>
+                        {isOnSale ? (
+                          <>
+                            <span style={{ textDecoration: "line-through" }}>
+                              ${product.price}
+                            </span>
+                            <span >${displayPrice}</span>
+                          </>
+                        ) : (
+                          <span >${product.price}</span>
+                        )}
+                      </h1>
+                    </div>
+                  </div>
+                </Link>
+                <br></br>
+                <h4 id="cat-name">{categoryName}</h4>
+                <br></br>
+                    <h4 id="prod-color">{product.color}</h4>
+                    <br></br>
+                    <div className="size-and-quantity"> 
+                      <div className="size">
+                        <label id="cart-label"> Size </label>
+                        <select className="cart-label-select" onChange={handleSizeChange} style={{border: 'none'}} value={size}>
+                            
+                            {sizeOptions.map((option) => (
+                              <option value={option}>{option}</option>
+                            ))}
+                        </select>
+                      </div>
+                      &nbsp;
+                      <div className="quantity">
+                        <label> Quantity:&nbsp;</label> &nbsp;
+                        <input type="number" onChange={handleQuantityChange} value={quantity} style={{border: 'none'}}/>
+                      </div>
+                    </div>
+                    {/* <img id="trashcan" src="https://t4.ftcdn.net/jpg/03/01/07/99/360_F_301079914_TDcwbIag3uOp7dwNRWb0bqpfWeOzb6Xu.jpg" ></img> */}
+                    <i  id="trash-icon" onClick={ () => dispatch(deleteCartItem(cartItem.id)) } class="fa-regular fa-trash-can"></i>
+            </div>
+      </div>
+    </div>
+
+    <div className="under-cart-item">
+        <div className="under-cart-item-left">
+            <div className="UC-ship">
+              <h1>Free Shipping</h1>
+              <h1>Arrives by {deliveryDate} to {randomZipCode}</h1>
+            </div>
+            <br></br>
+            <div className="UC-pick">
+            <h1>Free Pickup</h1>
+            <h1>Available at Nike by San Ramon</h1>
+          </div>
+        </div>
+    </div>  
+</div>
     )
 }

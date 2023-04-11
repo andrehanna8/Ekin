@@ -23,6 +23,10 @@ export default function SlideShowBar() {
     WHY WAIT? TRY STORE PICKUP	Buy online and find a store near you for pick up in less than 2 hours. Shop now.
     </>,
 
+    <>
+      Enter code <span id="promo-code">HIREME</span> for 99% off!
+    </>
+
     // Add more messages here
   ];
 

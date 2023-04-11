@@ -18,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/andrehanna8/ekin-auth/issues"
   },
-
   "engines": {
     "node": "16.18"
   },
