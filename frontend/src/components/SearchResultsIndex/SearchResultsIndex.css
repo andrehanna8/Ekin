@@ -7,15 +7,19 @@
   overflow-y: hidden;
 }
 
+/* remove the scrollbar from the .search-results */
+
+.search-results::-webkit-scrollbar {
+  display: none;
+}
+
 .search-results-controls {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
-  /* border-right: black solid 1px; */
-  /* Add a light background color for distinction */
-  width: 200px; /* Set a fixed width for the controls */
-  overflow-y: auto; /* Add this line to set the overflow-y property to auto */
-  max-height: 70vh ; /* Adjust this value according to your header/footer height */
+  width: 200px; 
+  overflow-y: auto; 
+  max-height: 70vh ; 
   overflow-x: hidden;
   padding-left: 20px;
   padding-right: 10px;
@@ -43,9 +47,9 @@
   grid-template-columns: repeat(3, 1fr);
   width: calc(100% - 320px);
   grid-gap: 15px;
-  overflow-y: auto; /* Add this line to set the overflow-y property to auto */
-  max-height: 69vh ; /* Adjust this value according to your header/footer height */
-  overflow-x: hidden; /* Add this line to set the overflow-x property to hidden */
+  overflow-y: auto; 
+  height: 75vh ;
+  overflow-x: hidden; 
   padding-right: 10px;
 }
 
@@ -76,12 +80,19 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-  background-color: #1e90ff;
-  border: 1px solid #1e90ff;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/61/61141.png");
+  background-size: 14px 14px;
+  border: 1px solid #000000;
 }
 
 input[type="radio"]:focus {
-  border: 1px solid #1e90ff;
+  border: 1px solid #efefef;
+  
+}
+
+input[type="radio"]:hover {
+  border: 1px solid #efefef;
+  cursor: pointer;
 }
 
 .collapsible-content {
@@ -187,7 +198,11 @@ input[type="radio"]:focus {
   padding-right: 10px;
   padding-top: 10px;
   overflow: hidden !important;
-  /* height: fit-content; */
+  overflow-y: hidden;
+}
+
+.sr-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .hide-main-scrollbar {
@@ -253,4 +268,13 @@ input[type="radio"]:focus {
   align-items: flex-start;
   padding-left: 20px;
   margin-bottom: 14px;
+}
+
+/* .whole-search {
+  overflow-y: hidden;
+  overflow-x: hidden;
+} */
+
+.whole-search::-webkit-scrollbar {
+  display: none;
 }

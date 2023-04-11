@@ -46,43 +46,48 @@ export default function SecondNavBar() {
 
     return (
         <>
-            <div className="second-nav-bar">
-                <Link to="/" >
-                    <img id="logo" src="https://pngimg.com/uploads/nike/nike_PNG11.png"/>
-                </Link>
-                <div className="category-buttons">
-                    <Link to="/search?q="> <button className="category-button"> New&nbsp;&&nbsp;Featured </button></Link>
-                  
-                    <Link to="/search?q=men">  <button className="category-button"> Men </button> </Link>
-  
-                    <Link to="/search?q=women">  <button className="category-button"> Women </button> </Link>
-                    <Link to="/search?q=kids"> <button className="category-button"> Kids </button></Link>
-                  
-
-                    {/* <button className="category-button"> Accessories </button> */}
-                    <Link to="/search?q=accessories"> <button className="category-button"> Accessories </button></Link>
-                    <Link to="/search?q=Sale"> <button className="category-button"> Sale </button></Link>
-
-                <div className="searchbar-favorite-cart" >
-                <input
-      id="searchbar"
-      type="text"
-      placeholder="Search"
-      value={searchTerm}
-      onChange={handleSearchChange}
-      onKeyDown={handleKeyDown}
-      onClick={clearAndPerformSearch}
-    />  
-  
-                    {/* <img id="favorites" src="https://cdn.iconscout.com/icon/free/png-256/favorite-border-1781521-1513841.png"/> */}
-                    <Link to="/cart"> 
-                        <img id="bag" src="https://www.svgrepo.com/show/43071/shopping-bag.svg"/>
-                    </Link>
-                </div>
-                
-                </div>
-
+        <div className="second-nav-bar-container">
+          <div className="second-nav-bar">
+            <div className="left-side-nav-bar">
+            <Link to="/" >
+                <img id="logo" src="https://pngimg.com/uploads/nike/nike_PNG11.png"/>
+            </Link>
             </div>
+
+            <div className="middle-nav-bar"> 
+            <div className="category-buttons">
+                <Link to="/search?q="> <button className="category-button"> New&nbsp;&&nbsp;Featured </button></Link>
+              
+                <Link to="/search?q=men">  <button className="category-button"> Men </button> </Link>
+
+                <Link to="/search?q=women">  <button className="category-button"> Women </button> </Link>
+                <Link to="/search?q=kids"> <button className="category-button"> Kids </button></Link>
+              
+
+                {/* <button className="category-button"> Accessories </button> */}
+                <Link to="/search?q=accessories"> <button className="category-button"> Accessories </button></Link>
+                <Link to="/search?q=Sale"> <button className="category-button"> Sale </button></Link>
+            </div>
+            </div>
+
+            <div className="right-side-nav-bar">
+            <div className="search-and-mag">
+              <i class="fas fa-search" onClick={clearAndPerformSearch}></i>
+              <input
+                id="searchbar"
+                type="text"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={handleSearchChange}
+                onKeyDown={handleKeyDown}
+              />  
+            </div>
+                <Link to="/cart"> 
+                  <i  id="bag" class="fas fa-shopping-bag"></i>
+                </Link>
+            </div>
+          </div>
+        </div>
         </>
     )
 }
