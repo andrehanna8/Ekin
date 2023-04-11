@@ -35,7 +35,7 @@ export default function SearchResultsIndex() {
   const [isColorCollapsed, setIsColorCollapsed] = useState(true);
   const [isSortOptionsVisible, setIsSortOptionsVisible] = useState(false);
   const [resultsCount, setResultsCount] = useState(0);
-  
+
 
 
   const toggleSortOptions = () => {
@@ -55,12 +55,7 @@ export default function SearchResultsIndex() {
     setIsColorCollapsed(!isColorCollapsed);
   };
 
-  useEffect(() => {
-    // Reset filters when the searchTerm changes
-    setFilterCategory("All");
-    setFilterProductType("All");
-    setFilterColor("All");
-  }, [searchTerm]);
+
   
 
 
@@ -124,6 +119,9 @@ export default function SearchResultsIndex() {
 
   useEffect(() => {
     if (searchTerm) {
+      setFilterCategory("All");
+      setFilterProductType("All");
+      setFilterColor("All");
       dispatch(fetchSearchResults(searchTerm));
       dispatch(fetchProducts());
     } else {
@@ -132,17 +130,23 @@ export default function SearchResultsIndex() {
   
     if (genderFilter) {
       setFilterCategory(genderFilter);
+      setFilterProductType("All");
+      setFilterColor("All");
     }
   
     const categoryFromUrl = searchParams.get("category");
     if (categoryFromUrl) {
       setFilterCategory(categoryFromUrl);
+      setFilterProductType("All");
+      setFilterColor("All");
     }
 
      const productTypeFilter = searchParams.get("productType") || "";
 
   if (productTypeFilter) {
     setFilterProductType(productTypeFilter);
+    setFilterCategory("All");
+    setFilterColor("All");
   }
 
   }, [dispatch, searchTerm, genderFilter, setFilterCategory, searchParams]);
@@ -152,6 +156,12 @@ export default function SearchResultsIndex() {
     setResultsCount(productsToDisplayByColor.length);
   }, [productsToDisplayByColor]);
   
+  // useEffect(() => {
+  //   // Reset filters when the searchTerm changes
+  //   setFilterCategory("All");
+  //   setFilterProductType("All");
+  //   setFilterColor("All");
+  // }, [searchTerm]);
 
   return (
     <div className="sr-wrapper  hide-main-scrollbar">
