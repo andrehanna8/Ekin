@@ -115,7 +115,7 @@ if (!product) return <div className="loader"></div>;
 
         <div className="left-side-cart">
             <Link to={`/products/${product.id}`} > 
-                <img src="https://secure-images.nike.com/is/image/DotCom/FD0867_133?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg" alt={product.name} />
+                <img src={product.photoUrl} alt={product.name} />
             </Link>
       </div>
 
@@ -161,7 +161,13 @@ if (!product) return <div className="loader"></div>;
                       &nbsp;
                       <div className="quantity">
                         <label> Quantity:&nbsp;</label> &nbsp;
-                        <input type="number" onChange={handleQuantityChange} value={quantity} style={{border: 'none'}}/>
+                        <select value={quantity} onChange={handleQuantityChange} style={{ border: 'none' }}>
+                          {[...Array(10)].map((_, index) => (
+                            <option key={index} value={index + 1}>
+                              {index + 1}
+                            </option>
+                          ))}
+                        </select>
                       </div>
                     </div>
                     {/* <img id="trashcan" src="https://t4.ftcdn.net/jpg/03/01/07/99/360_F_301079914_TDcwbIag3uOp7dwNRWb0bqpfWeOzb6Xu.jpg" ></img> */}

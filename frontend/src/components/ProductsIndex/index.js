@@ -100,7 +100,7 @@ export default function Products({ searchTerm }) {
           <br></br>
           <br></br>
 
-          <h1 className="BTC">Back To The Classics</h1>
+          <h1 id="teeup">Back To The Classics</h1>
           <div className="teeup-blocks">
             <br></br>
               <div className="first-teeup">
