@@ -6,8 +6,8 @@
 }
 
 .left-side-cart img {
-    height: 200px;
-    width: 200px;
+    height: 100%;
+    max-width: 150px;
 }
 
 .cart-item-container {
