@@ -5,6 +5,11 @@
     width: 200px;
 }
 
+.left-side-cart img {
+    height: 200px;
+    width: 200px;
+}
+
 .cart-item-container {
     display: flex;
     flex-direction: row;
@@ -189,7 +194,7 @@
   #trash-icon:hover {
     cursor: pointer;
   }
-  
+
   @import url('https://fonts.googleapis.com/css2?family=Futura:wght@400;500;700&display=swap');
 
  

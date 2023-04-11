@@ -32,6 +32,7 @@ export default function SlideShowBar() {
 
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
+  const [messageAnimation, setMessageAnimation] = useState('');
 
   const resetTimer = () => {
     clearInterval(intervalId);
@@ -46,15 +47,27 @@ export default function SlideShowBar() {
     return () => clearInterval(intervalId);
   }, []);
 
-  const prevMessage = () => {
-    setCurrentMessageIndex((prevIndex) => (prevIndex - 1 + messages.length) % messages.length);
-    resetTimer();
-  };
+  useEffect(() => {
+    if (messageAnimation) {
+      const timer = setTimeout(() => {
+        setMessageAnimation('');
+      }, 500); // Transition duration
+      return () => clearTimeout(timer);
+    }
+  }, [messageAnimation]);
 
-  const nextMessage = () => {
-    setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
-    resetTimer();
-  };
+  
+ const prevMessage = () => {
+  setMessageAnimation('animate-right');
+  setCurrentMessageIndex((prevIndex) => (prevIndex - 1 + messages.length) % messages.length);
+  resetTimer();
+};
+
+const nextMessage = () => {
+  setMessageAnimation('animate-left');
+  setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
+  resetTimer();
+};
 
   return (
     <div className="slide-show-bar">
@@ -62,7 +75,8 @@ export default function SlideShowBar() {
         <button className="slide-nav-button prev-button" onClick={prevMessage}>
           &lt;
         </button>
-        <div className="message-wrapper">{messages[currentMessageIndex]}</div>
+        <div className={`message-wrapper ${messageAnimation}`}>{messages[currentMessageIndex]}</div>
+
         <button className="slide-nav-button next-button" onClick={nextMessage}>
           &gt;
         </button>

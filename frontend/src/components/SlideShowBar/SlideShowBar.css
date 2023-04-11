@@ -14,11 +14,6 @@
     font-family: 'Roboto', sans-serif;
   }
   
-  .message-wrapper {
-    width: 33vw;
-    text-align: center;
-    padding: 5%;
-  }
   
   .join-now-button {
     background: none;
@@ -56,7 +51,7 @@
     color: #111;
   }
 
-    .next-button:hover {
+  .next-button:hover {
         color: #111;
     }
 
@@ -68,3 +63,11 @@
         letter-spacing: 0.08em;
     }
   
+    .message-wrapper {
+  width: 33vw;
+  text-align: center;
+  padding: 5%;
+  position: relative;
+  transition: transform 0.5s;
+}
+
