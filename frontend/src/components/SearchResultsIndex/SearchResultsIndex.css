@@ -1,22 +1,28 @@
 .search-results {
   display: flex;
   margin: 20px;
-  justify-content: flex-start;
+  justify-content: space-between;
+  overflow-y: hidden;
 }
 
 .search-results-controls {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
-  padding: 15px;
   /* border-right: black solid 1px; */
   /* Add a light background color for distinction */
-  width: 300px; /* Set a fixed width for the controls */
+  width: 200px; /* Set a fixed width for the controls */
+  overflow-y: auto; /* Add this line to set the overflow-y property to auto */
+  max-height: calc(70vh ); /* Adjust this value according to your header/footer height */
+  overflow-x: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.sort-options,
-.category-options,
-.product-type-options {
-  margin-bottom: 20px;
+
+.search-results-controls h1 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 
 .category-options label,
@@ -29,13 +35,18 @@
 .product-type-options input[type="radio"] {
   margin-right: 5px;
 }
-
 .search-results-items {
   display: grid;
+  padding: 5px;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: calc(100% - 320px); /* Subtract the width of the controls and margin */
+  width: calc(100% - 320px);
+  grid-gap: 15px;
+  overflow-y: auto; /* Add this line to set the overflow-y property to auto */
+  max-height: calc(70vh ); /* Adjust this value according to your header/footer height */
+  overflow-x: hidden; /* Add this line to set the overflow-x property to hidden */
 }
+
+
 
 
 .product-type-options p {
@@ -44,4 +55,174 @@
 
 .search-results h1, label, p, select, option {
   font-family: "Roboto", sans-serif;
+}
+/* The rest of the CSS remains the same */
+
+.search-results-controls hr {
+  border: none;
+  border-top: 1px solid lightgray;
+  margin: 15px 0;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.1s ease;
+}
+
+input[type="radio"]:checked {
+  background-color: #1e90ff;
+  border: 1px solid #1e90ff;
+}
+
+input[type="radio"]:focus {
+  border: 1px solid #1e90ff;
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  padding: 5px;
+}
+
+.collapsible-content.active {
+  max-height: 500px; /* You can adjust this value based on the actual content height */
+  opacity: 1;
+  height: fit-content;
+  padding: 5px;
+}
+
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.color-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.color-circle.all {
+  border: black solid 1px;
+  background-image: linear-gradient(0deg, gray 1px, transparent 1px),
+    linear-gradient(90deg, gray 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px);
+  background-size: 5px 5px;
+
+}
+
+
+.color-circle.black {
+  background-color: black;
+}
+
+.color-circle.blue {
+  background-color: blue;
+}
+
+.color-circle.brown {
+  background-color: brown;
+}
+
+.color-circle.green {
+  background-color: green;
+}
+
+.color-circle.grey {
+  background-color: grey;
+}
+
+.color-circle.multi-color {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+}
+
+.color-circle.orange {
+  background-color: orange;
+}
+
+.color-circle.pink {
+  background-color: pink;
+}
+
+.color-circle.purple {
+  background-color: purple;
+}
+
+.color-circle.red {
+  background-color: red;
+}
+
+.color-circle.white {
+  background-color: white;
+  border: 1px solid #9d9999;
+}
+
+.color-circle.yellow {
+  background-color: yellow;
+}
+
+
+.sr-wrapper {
+  padding-left: 10px; 
+  padding-right: 10px;
+  padding-top: 10px;
+  overflow: hidden !important;
+}
+
+.hide-main-scrollbar {
+  overflow: hidden !important;
+}
+
+.search-results-controls::-webkit-scrollbar,
+.search-results-items::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-results-controls::-webkit-scrollbar-thumb,
+.search-results-items::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 4px;
+}
+
+.search-results-controls::-webkit-scrollbar-track,
+.search-results-items::-webkit-scrollbar-track {
+  background: none;
+}
+
+.search-results-controls,
+.search-results-items {
+  scrollbar-color: gray transparent;
+  scrollbar-width: thin;
+}
+
+.pt-and-collapse{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+
+
+.icon:hover {
+  cursor: pointer;
+    color: #9d9999;
 }

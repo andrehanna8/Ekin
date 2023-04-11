@@ -22,9 +22,26 @@ export default function SearchResultsIndex() {
 
   const [sortOrder, setSortOrder] = useState("default");
   const [filterCategory, setFilterCategory] = useState("All");
-  const colors = ["All", "White", "Black", "Blue", "Red", "Green", "Yellow"];
+  const colors = [ "All","Black","Blue","Brown","Green","Grey", "Multi-Color", 
+  "Orange", "Pink", "Purple", "Red", "White", "Yellow", ];
   const [filterColor, setFilterColor] = useState("All");
   const [filterProductType, setFilterProductType] = useState("All");
+  const [isCategoryCollapsed, setIsCategoryCollapsed] = useState(true);
+  const [isProductTypeCollapsed, setIsProductTypeCollapsed] = useState(true);
+  const [isColorCollapsed, setIsColorCollapsed] = useState(true);
+
+  
+  const toggleCategoryCollapse = () => {
+    setIsCategoryCollapsed(!isCategoryCollapsed);
+  };
+
+  const toggleProductTypeCollapse = () => {
+    setIsProductTypeCollapsed(!isProductTypeCollapsed);
+  };
+
+  const toggleColorCollapse = () => {
+    setIsColorCollapsed(!isColorCollapsed);
+  };
 
   const filterByCategoryAndType = (product, searchTerm) => {
     const [productGender, productType] = product.category.split(" ");
@@ -43,9 +60,9 @@ export default function SearchResultsIndex() {
           .toLowerCase()
           .split(" ")
           .some((word) => word.includes(searchTerm.toLowerCase())) ||
-        (productGender.trim().toLowerCase() === searchTerm.split(" ")[0].toLowerCase() &&
-         product.name.toLowerCase().includes(searchTerm.split(" ")[1].toLowerCase()))
-      : true;
+          (productGender.trim().toLowerCase() === searchTerm.split(" ")[0].toLowerCase() &&
+          product.name.toLowerCase().includes(searchTerm.split(" ")[1].toLowerCase()))
+          : true;
 
     return (
       categoryMatch && (typeMatch || accessoryMatch) && searchTermMatch
@@ -111,7 +128,7 @@ export default function SearchResultsIndex() {
   }, [dispatch, searchTerm, genderFilter]);
 
   return (
-    <>
+    <div className="sr-wrapper  hide-main-scrollbar">
     <div className="search-results-header"> 
       <div className="search-results-header-left">
       {searchTerm && (
@@ -137,12 +154,20 @@ export default function SearchResultsIndex() {
     </div>
 
     <div className="search-results">
-
-      <div className="search-results-controls">
-      
-    
-        <div className="category-options">
-          <p>Category:</p>
+        
+    <div className="search-results-controls">
+      <div className="category-options">
+        <p onClick={toggleCategoryCollapse}>
+        <div className="pt-and-collapse">
+          <h1> Category: </h1>
+          <h1>{isCategoryCollapsed ? <span className="icon">
+          <i className="fas fa-chevron-up"></i>
+        </span>: <span className="icon">
+          <i className="fas fa-chevron-down"></i>
+        </span>}</h1>
+        </div>
+        </p>
+        <div className={`collapsible-content${isCategoryCollapsed ? " active" : ""}`}>
           {categories.map((category, index) => (
             <label key={category}>
               <input
@@ -155,26 +180,61 @@ export default function SearchResultsIndex() {
             </label>
           ))}
         </div>
-        <div>
-          <label>Color:</label>
-          {colors.map((color) => (
-            <div key={color}>
-              <input
-                type="radio"
-                id={color}
-                name="color"
-                value={color}
-                checked={filterColor === color}
-                onChange={handleColorChange}
-              />
-              <label htmlFor={color}>{color}</label>
-            </div>
-          ))}
+        <hr />
+      </div>
+      <div>
+        <label onClick={toggleColorCollapse}>
+        <div className="pt-and-collapse">
+         <h1>Color: </h1> 
+        <h1>{isColorCollapsed ? <span className="icon">
+          <i className="fas fa-chevron-up"></i>
+        </span>: <span className="icon">
+          <i className="fas fa-chevron-down"></i>
+        </span>}</h1>
         </div>
+        </label>
+        <div className={`collapsible-content${isColorCollapsed ? " active" : ""}`}>
+          <div className="color-grid">
+            {colors.map((color) => (
+              <div
+  key={color}
+  className={`color-container`}
+  onClick={() => setFilterColor(color)}
+>
+  <input
+    type="radio"
+    id={color}
+    name="color"
+    value={color}
+    checked={filterColor === color}
+    onChange={handleColorChange}
+    style={{ display: "none" }}
+  />
+  <label htmlFor={color} className={`color-label ${color.toLowerCase()}`}>
+    <div className={`color-circle ${color.toLowerCase()}`}></div>
+    {color}
+  </label>
+</div>
 
-        <div className="product-type-options">
-          <br></br>
-          <p>Product Type:</p>
+            ))}
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <div className="product-type-options">
+        <br />
+        <p onClick={toggleProductTypeCollapse}>
+          <div className="pt-and-collapse">
+          <h1>Product Type: </h1>
+          <h1>{isProductTypeCollapsed ? <span className="icon">
+          <i className="fas fa-chevron-up"></i>
+        </span>: <span className="icon">
+          <i className="fas fa-chevron-down"></i>
+        </span>}</h1>
+          </div>
+        </p>
+        <div className={`collapsible-content${isProductTypeCollapsed ? " active" : ""}`}>
           {productTypes.map((type) => (
             <label key={type}>
               <input
@@ -187,16 +247,27 @@ export default function SearchResultsIndex() {
             </label>
           ))}
         </div>
+        <hr />
       </div>
+    </div>
       <div className="search-results-items">
         {productsToDisplayByColor.map((product) => (
           <a key={product.id}>
             <SearchResultIndexItem product={product} />
           </a>
         ))}
+      {
+          productsToDisplayByColor.length === 0 && (
+            <div className="no-results">
+              <h1>No results found</h1>
+              <p>Try a different search term or filter</p>
+            </div>
+          )
+        }
+        
       </div>
     </div>
-    </>
+    </div>
   );
 }
 

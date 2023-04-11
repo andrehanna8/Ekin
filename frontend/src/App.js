@@ -28,8 +28,11 @@ function App() {
           <Route exact path="/login">
             <LoginFormPage />
           </Route>
+          
           <Route exact path="/search">
+          <div className="whole-search">
             <SearchResultsIndex />
+            </div>
           </Route>
           <Route exact path="/">
             <SplashPage />
