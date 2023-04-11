@@ -83,19 +83,26 @@ onClose={() => setShowErrorModal(false)}
 />
 )}
 
+
   <div className="cart-container">
     <div className="cart-index">
       <h1 id="bag-header">Bag </h1>
-      <ul id="checkout-items">
-        {cartItems.map((cartItem) => (
+      {cartItems.length === 0 ? (
+          <div>There are no items in your bag.</div>
+        ) : (
           <>
-            <li id="checkout-item">{<CartIndexItem cartItem={cartItem} />}</li>
-            <br></br>
-            <br></br>
-            <div id="breakline-cart"></div>
+            <ul id="checkout-items">
+              {cartItems.map((cartItem) => (
+                <>
+                  <li id="checkout-item">{<CartIndexItem cartItem={cartItem} />}</li>
+                  <br></br>
+                  <br></br>
+                  <div id="breakline-cart"></div>
+                </>
+              ))}
+            </ul>
           </>
-        ))}
-      </ul>
+        )}
     </div>
     <div className="cart-total">
       <h1>Summary:</h1>
