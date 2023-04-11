@@ -16,9 +16,9 @@ import BottomBanner from "./components/BottomBanner";
 function App() {
   return (
     <>
+    <div className="whole-app">
     <NavBar />
     <SecondNavBar />
-    
         <Switch>
           <Route exact path="/products/:productId">
           <SlideShowBar />
@@ -44,6 +44,7 @@ function App() {
             <SplashPage />
           </Route>
         </Switch>
+        </div>
     </>
   );
 }

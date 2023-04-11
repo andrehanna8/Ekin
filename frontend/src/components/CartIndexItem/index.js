@@ -115,7 +115,7 @@ if (!product) return <div className="loader"></div>;
 
         <div className="left-side-cart">
             <Link to={`/products/${product.id}`} > 
-                <img src={product.photUrl} alt={product.name} />
+                <img src="https://secure-images.nike.com/is/image/DotCom/FD0867_133?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg" alt={product.name} />
             </Link>
       </div>
 

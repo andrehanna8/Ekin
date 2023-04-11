@@ -9,8 +9,10 @@ import './SplashPage.css'
 export default function SplashPage() {
 return (
 <>
+   <div className='splash-page'>
    <VideoComponent />
    <Products />
+   </div>
 </>
 )
 }

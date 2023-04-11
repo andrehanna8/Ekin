@@ -129,6 +129,7 @@
 .label-value-container {
   display: flex;
   justify-content: space-between;
+  height: 15px;
 }
 
 .promo-code-toggle-container {
