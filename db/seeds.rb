@@ -460,7 +460,7 @@ p36 = Product.create!({
   name: "Nike Air Zoom Victory Tour 3 NRG Men's Golf Shoes",
   description: "The Nike Air Zoom Victory Tour 3 NRG Men's Golf Shoes offer exceptional comfort and support on the course. With a Zoom Air unit and React cushioning, these shoes provide a responsive and stable ride.",
   price: 200,
-  category: "Men's Golf Shoes",
+  category: "Men's Shoes",
   size: "M",
   color: "Multi-Color",
 })
@@ -471,7 +471,7 @@ p37 = Product.create!({
   name: "Nike Air Zoom Infinity Tour NEXT% NRG Golf Shoes",
   description: "The Nike Air Zoom Infinity Tour NEXT% NRG Golf Shoes are designed for maximum performance on the golf course. Featuring a responsive Zoom Air unit and innovative traction pattern, these shoes provide exceptional stability and grip.",
   price: 180,
-  category: "Golf Shoes",
+  category: "Men's Shoes",
   size: "M",
   color: "Yellow",
 })
@@ -482,7 +482,7 @@ p38 = Product.create!({
   name: "Nike Dri-FIT Tour Men's Golf Polo",
   description: "Stay comfortable and stylish on the golf course with the Nike Dri-FIT Tour Men's Golf Polo. Made with moisture-wicking Dri-FIT technology, this polo keeps you dry and cool throughout your round.",
   price: 80,
-  category: "Men's Golf Apparel",
+  category: "Men's Tops",
   size: "M",
   color: "Green",
 })
@@ -493,7 +493,7 @@ p39 = Product.create!({
   name: "Nike Dri-FIT Repel Men's 5-Pocket Slim Fit Golf Pants",
   description: "The Nike Dri-FIT Repel Men's 5-Pocket Slim Fit Golf Pants provide a sleek and modern look for the golf course. With Dri-FIT technology and a water-repellent finish, these pants offer both comfort and functionality.",
   price: 95,
-  category: "Men's Golf Apparel",
+  category: "Men's Bottoms",
   size: "M",
   color: "Black",
 })
@@ -504,7 +504,7 @@ p40 = Product.create!({
   name: "Nike Infinity Ace Next Nature NRG Golf Shoes",
   description: "The Nike Infinity Ace Next Nature NRG Golf Shoes are crafted with sustainable materials and offer excellent traction and support on the golf course. The unique design provides a comfortable fit for all-day wear.",
   price: 120,
-  category: "Golf Shoes",
+  category: "Men's Shoes",
   size: "M",
   color: "White",
 })
@@ -515,7 +515,7 @@ p41 = Product.create!({
   name: "Nike Air Max 1 '86 OG G NRG Men's Golf Shoes",
   description: "The Nike Air Max 1 '86 OG G NRG Men's Golf Shoes offer a classic look with modern performance. Featuring Air Max cushioning and a durable outsole, these shoes provide exceptional comfort and traction on the course.",
   price: 170,
-  category: "Men's Golf Shoes",
+  category: "Men's Shoes",
   size: "M",
   color: "Multi-Color",
 })
@@ -526,7 +526,7 @@ p42 = Product.create!({
   name: "Nike Air Hybrid Energy Golf Bag",
   description: "The Nike Air Hybrid Energy Golf Bag offers ample storage and organization for all your golfing essentials. With a lightweight design and comfortable carrying system, this bag is perfect for the golfer on the go.",
   price: 295,
-  category: "Golf Bags",
+  category: "Men's Accessories",
   size: "One Size",
   color: "Multi-Color",
 })
@@ -548,7 +548,7 @@ p44 = Product.create!({
   name: "Nike G-Flex Stretch Woven Belt",
   description: "The Nike G-Flex Stretch Woven Belt offers a comfortable fit and a stylish look for any golfer. With its stretchy woven design and G-Flex technology, this belt moves with you for ultimate comfort and performance.",
   price: 55,
-  category: "Golf Accessories",
+  category: "Men's Accessories",
   size: "One Size",
   color: "Gray",
 })
@@ -559,7 +559,7 @@ p45 = Product.create!({
   name: "Air Jordan 1 Low G Golf Shoes",
   description: "The Air Jordan 1 Low G Golf Shoes combine iconic style with performance features for the golf course. With a responsive cushioning system and a durable outsole, these shoes provide excellent comfort and traction during your round.",
   price: 140,
-  category: "Golf Shoes",
+  category: "Men's Shoes",
   size: "M",
   color: "Black",
 })
@@ -614,7 +614,7 @@ p50 = Product.create!({
   name: "Nike Lunar Cortez Baseball Baseball Cleats",
   description: "The Nike Lunar Cortez Baseball Cleats combine the iconic Cortez design with performance features for the baseball field. With a Lunarlon cushioning system and a durable outsole, these cleats provide exceptional comfort and traction during play.",
   price: 63.97,
-  category: "Baseball Cleats",
+  category: "Men's Shoes",
   size: "M",
   color: "White",
 })

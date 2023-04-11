@@ -11,6 +11,9 @@ import { useMemo } from "react";
 const categories = ["All", "Men's", "Women's", "Kids", "Sale"];
 const productTypes = ["All", "Shoes", "Tops", "Bottoms", "Accessories"];
 
+function useSearchParamsMemo(location) {
+  return useMemo(() => new URLSearchParams(location.search), [location.search]);
+}
 export default function SearchResultsIndex() {
   const products = useSelector((state) => Object.values(state.products));
   const dispatch = useDispatch();
@@ -20,10 +23,6 @@ export default function SearchResultsIndex() {
 
   const searchTerm = searchParams.get("q") || "";
   const genderFilter = searchParams.get("gender") || "";
-
-  function useSearchParamsMemo(location) {
-    return useMemo(() => new URLSearchParams(location.search), [location.search]);
-  }
 
   const [sortOrder, setSortOrder] = useState("default");
   const [filterCategory, setFilterCategory] = useState("All");
@@ -36,6 +35,7 @@ export default function SearchResultsIndex() {
   const [isColorCollapsed, setIsColorCollapsed] = useState(true);
   const [isSortOptionsVisible, setIsSortOptionsVisible] = useState(false);
   const [resultsCount, setResultsCount] = useState(0);
+  
 
 
   const toggleSortOptions = () => {
@@ -54,6 +54,14 @@ export default function SearchResultsIndex() {
   const toggleColorCollapse = () => {
     setIsColorCollapsed(!isColorCollapsed);
   };
+
+  useEffect(() => {
+    // Reset filters when the searchTerm changes
+    setFilterCategory("All");
+    setFilterProductType("All");
+    setFilterColor("All");
+  }, [searchTerm]);
+  
 
 
   const filterByCategoryAndType = (product, searchTerm) => {
@@ -215,27 +223,27 @@ export default function SearchResultsIndex() {
         <div className={`collapsible-content${isColorCollapsed ? " active" : ""}`}>
           <div className="color-grid">
             {colors.map((color) => (
-              <div
-  key={color}
-  className={`color-container`}
-  onClick={() => setFilterColor(color)}
->
-  <input
-    type="radio"
-    id={color}
-    name="color"
-    value={color}
-    checked={filterColor === color}
-    onChange={handleColorChange}
-    style={{ display: "none" }}
-  />
-  <label htmlFor={color} className={`color-label ${color.toLowerCase()}`}>
-    <div className={`color-circle ${color.toLowerCase()}`}></div>
-    {color}
-  </label>
-</div>
+  <div
+    key={color}
+    className={`color-container${filterColor === color ? " selected" : ""}`}
+    onClick={() => setFilterColor(color)}
+  >
+    <input
+      type="radio"
+      id={color}
+      name="color"
+      value={color}
+      checked={filterColor === color}
+      onChange={handleColorChange}
+      style={{ display: "none" }}
+    />
+    <label htmlFor={color} className={`color-label ${color.toLowerCase()}`}>
+      <div className={`color-circle ${color.toLowerCase()}`}></div>
+      {color}
+    </label>
+  </div>
+))}
 
-            ))}
           </div>
         </div>
         <hr />

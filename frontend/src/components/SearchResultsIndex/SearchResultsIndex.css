@@ -292,3 +292,21 @@ input[type="radio"]:hover {
 .whole-search::-webkit-scrollbar {
   display: none;
 }
+
+.color-container {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.color-container input:focus {
+  background-color: #efefef;
+}
+
+.color-container:hover {
+  cursor: pointer;
+  background-color: #efefef;
+}
+
+.color-container.selected {
+  background-color: #efefef;
+}
