@@ -53,21 +53,23 @@ export default function CartIndex() {
   ) : cartItems.length > 0 ? (
     <>
       {showThankYouModal && <ThankYouModal />}
-      <h1 id="bag-header">Bag </h1>
-      <div className="cart-index">
-        <ul id="checkout-items">
-          {cartItems.map((cartItem) => (
-            <>
-              <li id="checkout-item">
-                {<CartIndexItem cartItem={cartItem} />}
-              </li>
-              <div id="breakline-cart"></div>
-            </>
-          ))}
-        </ul>
-
+      
+      <div className="cart-container">
+        <div className="cart-index">
+        <h1 id="bag-header">Bag </h1>
+          <ul id="checkout-items">
+            {cartItems.map((cartItem) => (
+              <>
+                <li id="checkout-item">
+                  {<CartIndexItem cartItem={cartItem} />}
+                </li>
+                <div id="breakline-cart"></div>
+              </>
+            ))}
+          </ul>
+        </div>
         <div className="cart-total">
-        <h1>Summary:</h1>
+          <h1>Summary:</h1>
           <br></br>
           <h3>Subtotal: ${totalPrice(cartItems)}</h3>
           <br></br>

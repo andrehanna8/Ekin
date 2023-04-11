@@ -92,50 +92,48 @@ export default function CartIndexItem({cartItem}) {
 if (!cartItem) return null;
 if (!product) return <div className="loader"></div>;
     return (
+      <div className="cart-item-container"> 
         <div className="cart-item">
             <Link to={`/products/${product.id}`} > 
-                <img src={product.photoUrl} alt={product.name} />
+                <img src="https://secure-images.nike.com/is/image/DotCom/FD0821_100?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg" alt={product.name} />
             </Link>
-
+        </div>
                 <div className="cart-item-info"> 
-
                 <Link
-        to={`/products/${product.id}`}
-        style={{ textDecoration: "none" }}
-      >
-        <h1 id="name-link">
-          {product.name}{" "}
-          {isOnSale ? (
-            <>
-              <span id="name-price" style={{ textDecoration: "line-through" }}>
-                ${product.price}
-              </span>
-              <span id="name-price">${displayPrice}</span>
-            </>
-          ) : (
-            <span id="name-price">${product.price}</span>
-          )}
-        </h1>
-      </Link>
+                  to={`/products/${product.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <h1 id="name-link">
+                    {product.name}{" "}
+                    {isOnSale ? (
+                      <>
+                        <span id="name-price" style={{ textDecoration: "line-through" }}>
+                          ${product.price}
+                        </span>
+                        <span id="name-price">${displayPrice}</span>
+                      </>
+                    ) : (
+                      <span id="name-price">${product.price}</span>
+                    )}
+                  </h1>
+                </Link>
       <br></br>
       <h2>{categoryName}</h2>
-                    
                     <h3>{product.color}</h3>
-                    
-                    <h3></h3>
-                    
                     <label id="cart-label"> Size </label>
-      <select className="cart-label-select" onChange={handleSizeChange} style={{border: 'none'}} value={size}>
-          {sizeOptions.map((option) => (
-            <option value={option}>{option}</option>
-          ))}
-      </select>
-                    <label> &nbsp;&nbsp;&nbsp;Quantity:&nbsp;</label>
+                    <select className="cart-label-select" onChange={handleSizeChange} style={{border: 'none'}} value={size}>
+                        {sizeOptions.map((option) => (
+                          <option value={option}>{option}</option>
+                        ))}
+                    </select>
+                    <br></br>
+                    <label> Quantity:&nbsp;</label> &nbsp;
                     <input type="number" onChange={handleQuantityChange} value={quantity} style={{border: 'none'}}/>
                     <br></br>
                     <img id="trashcan" src="https://t4.ftcdn.net/jpg/03/01/07/99/360_F_301079914_TDcwbIag3uOp7dwNRWb0bqpfWeOzb6Xu.jpg" onClick={ () => dispatch(deleteCartItem(cartItem.id)) }></img>
             
             </div>
-        </div>
+      
+      </div>
     )
 }

@@ -1,20 +1,16 @@
-.cart-item {
-    margin: 50px;
-    float: left;
 
-}
 
 .cart-item img {
-    float: left;
-    margin: 10px;
     height: 200px;
     width: 200px;
 }
 
-
-#name-price {
-    margin-left: 220px;
+.cart-item-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
 }
+
 
 #cart-label{
     font-family: 'Roboto', sans-serif;
@@ -68,20 +64,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.cart-item img {
-    float: left;
-    margin: 10px;
-    /* height: 200px;
-    width: 200px; */
-}
-
-.cart-item-info {
-    float: right;
-    margin: 10px;
-    
-    margin-left: 20px;
-}
-
 #breakline {
     height: 1px;
     margin: 5px;
@@ -92,9 +74,9 @@
   }
 
   #trashcan {
-    height: 100%;
+    max-height: 100%;
     max-width: 35px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     cursor: pointer;
 }
 
@@ -115,8 +97,3 @@
       transform: rotate(360deg);
     }
   }
-
-  
-/* #name-link {
-    
-} */
