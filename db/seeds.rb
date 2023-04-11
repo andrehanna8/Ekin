@@ -168,7 +168,7 @@ p11 = Product.create!({
   color: "Black/White",
 })
 
-# p11.photo.attach(io: URI.open('https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/40dc8e57-0fbc-48f3-964b-6a8db73e9d6e/air-zoom-pegasus-38-running-shoe-6PzQfV.png'), filename: 'pegasus-38.png')
+p11.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a69ba219-ca54-4692-bae6-3352c53cdc6e/pegasus-38-pittsburgh-steelers-mens-running-shoes-884pG1.png'), filename: 'pegasus-38.png')
 
 # Product 12
 p12 = Product.create!({
