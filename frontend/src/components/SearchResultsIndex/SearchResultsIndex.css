@@ -1,10 +1,11 @@
 .search-results {
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-left: 20px;
   margin-right: 20px;
   justify-content: space-between;
   overflow-y: hidden;
+  height: 70vh;
 }
 
 /* remove the scrollbar from the .search-results */
@@ -247,6 +248,19 @@ input[type="radio"]:hover {
 
 .sort-options {
   cursor: pointer;
+}
+
+.search-results-header {
+  height: fit-content;
+  padding-bottom: 10px;
+}
+
+.search-results-header-left{
+  height: fit-content;
+}
+
+.search-results-header-right{
+  height: fit-content;
 }
 
 .search-results-header-left h1 {

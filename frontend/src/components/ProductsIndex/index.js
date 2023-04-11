@@ -209,14 +209,14 @@ export default function Products({ searchTerm }) {
             <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_1423,c_limit/5e4a0ef7-a2c9-483a-8e5b-45d8277db19d/nike-just-do-it.jpg" />
       </div>
 
-      <div className="pop-now">
+      {/* <div className="pop-now">
             <h1>Popular Now</h1>
             {popNowBlocks.map((product) => (
               <a key={product.id}>
                 <ProductsIndexItem product={product} />
               </a>
             ))}
-      </div>
+      </div> */}
         
           <div className="bottom-banner">
             <a id="github" target="_blank" href="https://github.com/andrehanna8">
