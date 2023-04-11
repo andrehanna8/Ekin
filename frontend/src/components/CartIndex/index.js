@@ -74,7 +74,8 @@ export default function CartIndex() {
     <div>Loading...</div>
   ) : (
     <>
-      {showThankYouModal && <ThankYouModal />}
+      {showThankYouModal && <ThankYouModal setShowThankYouModal={setShowThankYouModal} />}
+
       {showErrorModal && ( // 5. Add the error modal
         <ErrorModal
           title="Error"
