@@ -566,6 +566,61 @@ p45 = Product.create!({
 
 p45.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/1398e462-df70-41ac-8ac9-865153dd7325/air-jordan-1-low-g-golf-shoes-jChrQ3.png'), filename: 'air-jordan-1-low-g-golf-shoes.png')
 
+p46 = Product.create!({
+  name: "Nike Cortez Women's Shoes",
+  description: "The Nike Cortez Women's Shoes offer a classic, timeless design with a comfortable fit. Featuring a lightweight upper and a cushioned midsole, these shoes provide all-day comfort and style.",
+  price: 85,
+  category: "Women's Shoes",
+  size: "M",
+  color: "White",
+})
+
+p46.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c9d2720e-d75b-4532-96ad-350b79f4c963/cortez-womens-shoes-f9qMXB.png'), filename: 'nike-cortez-womens-shoes.png')
+
+p47 = Product.create!({
+  name: "Nike Cortez Men's Shoes",
+  description: "The Nike Cortez Men's Shoes are an iconic silhouette with a comfortable and stylish design. Featuring a lightweight upper and a cushioned midsole, these shoes are perfect for everyday wear.",
+  price: 100,
+  category: "Men's Shoes",
+  size: "M",
+  color: "White",
+})
+
+p47.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/48979f39-1f45-4fa6-9b16-217e3e6f9556/cortez-mens-shoes-DHDh56.png'), filename: 'nike-cortez-mens-shoes.png')
+
+p48 = Product.create!({
+  name: "Nike Cortez SP Men's Shoes",
+  description: "The Nike Cortez SP Men's Shoes offer a premium take on the classic silhouette. With upgraded materials and a sleek design, these shoes provide a stylish and comfortable option for daily wear.",
+  price: 130,
+  category: "Men's Shoes",
+  size: "M",
+  color: "Multi-Color",
+})
+
+p48.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0a6c8399-3350-4835-8646-605ae0de54bd/cortez-sp-mens-shoes-s4Q44T.png'), filename: 'nike-cortez-sp-mens-shoes.png')
+
+p49 = Product.create!({
+  name: "Nike Cortez SE Women's Shoes",
+  description: "The Nike Cortez SE Women's Shoes feature a modern twist on the classic silhouette. With unique design elements and a comfortable fit, these shoes are perfect for adding a touch of style to your everyday wardrobe.",
+  price: 100,
+  category: "Women's Shoes",
+  size: "M",
+  color: "Pink",
+})
+
+p49.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2a8cb2be-b60b-46d8-807b-b25b8f22f043/cortez-se-womens-shoes-TxCj3v.png'), filename: 'nike-cortez-se-womens-shoes.png')
+
+p50 = Product.create!({
+  name: "Nike Lunar Cortez Baseball Baseball Cleats",
+  description: "The Nike Lunar Cortez Baseball Cleats combine the iconic Cortez design with performance features for the baseball field. With a Lunarlon cushioning system and a durable outsole, these cleats provide exceptional comfort and traction during play.",
+  price: 63.97,
+  category: "Baseball Cleats",
+  size: "M",
+  color: "White",
+})
+
+p50.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bf34ef35-5fb1-4451-8238-3b022cc64d13/lunar-cortez-baseball-baseball-cleats-Ld2GZ3.png'), filename: 'nike-lunar-cortez-baseball-cleats.png')
+
 
     puts "done creating products"
     puts ""
