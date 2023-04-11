@@ -57,6 +57,8 @@ export default function CartIndex() {
       setDiscountRate(0.99);
     } else if (promoCode === "") {
       setDiscountRate(0);
+    } else if (promoCode === "ITSNOTHINREALLY") {
+      setDiscountRate(1.00);
     } else {
       setShowErrorModal(true); // 5. Display the error modal when the code is incorrect
     }
