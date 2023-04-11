@@ -120,20 +120,20 @@ export default function SearchResultsIndex() {
     if (genderFilter) {
       setFilterCategory(genderFilter);
     }
-
-    // Set category filter based on the search term
-        if (searchTerm.toLowerCase() === "men") {
-      setFilterCategory("Men's");
-    } else if (searchTerm.toLowerCase() === "women") {
-      setFilterCategory("Women's");
-    } else if (searchTerm.toLowerCase() === "sale") {
-      setFilterCategory("Sale");
-    } else if (searchTerm.toLowerCase() === "golf shoes") {
-      setFilterProductType("Shoes");
-    } else {
-      setFilterCategory("All");
+  
+    const categoryFromUrl = searchParams.get("category");
+    if (categoryFromUrl) {
+      setFilterCategory(categoryFromUrl);
     }
-  }, [dispatch, searchTerm, genderFilter]);
+
+     const productTypeFilter = searchParams.get("productType") || "";
+
+  if (productTypeFilter) {
+    setFilterProductType(productTypeFilter);
+  }
+
+  }, [dispatch, searchTerm, genderFilter, setFilterCategory, searchParams]);
+  
 
    useEffect(() => {
     setResultsCount(productsToDisplayByColor.length);

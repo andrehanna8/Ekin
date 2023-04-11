@@ -175,10 +175,28 @@
   color: #a4a4a4;
 }
 
+#promo-code-input:focus {
+  outline: none;
+  border:  #a4a4a4 solid 1px;
+}
+
+#promo-code-input::value {
+  color: black;
+}
+
 .input-and-button {
   display: flex;
   align-items: center;
   flex-direction: row;
   height: 55px;
   margin: 5px;
+}
+
+#bold {
+  font-weight: bold !important;
+  font-size: 15px;
+}
+
+#display-price{
+  color: #128A09;
 }

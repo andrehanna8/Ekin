@@ -131,10 +131,10 @@ if (!product) return <div className="loader"></div>;
                       <h1>
                         {isOnSale ? (
                           <>
-                            <span style={{ textDecoration: "line-through" }}>
-                              ${product.price}
-                            </span>
-                            <span >${displayPrice}</span>
+                            <span id="sale-price" style={{ textDecoration: "line-through" }}>
+                              ${product.price} 
+                            </span>&nbsp; &nbsp;
+                            <span id="display-price">${displayPrice}</span>
                           </>
                         ) : (
                           <span >${product.price}</span>
@@ -174,7 +174,7 @@ if (!product) return <div className="loader"></div>;
         <div className="under-cart-item-left">
             <div className="UC-ship">
               <h1>Free Shipping</h1>
-              <h1>Arrives by {deliveryDate} to {randomZipCode}</h1>
+              <h1>Arrives by <span id="bold">{deliveryDate}</span>  to <span id="bold">{randomZipCode}</span></h1>
             </div>
             <br></br>
             <div className="UC-pick">

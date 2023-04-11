@@ -11,6 +11,18 @@ export default function SecondNavBar() {
     const dispatch = useDispatch();
     const history = useHistory();
 
+    const handleCategoryButtonClick = (category) => {
+      history.push(`/search?category=${encodeURIComponent(category)}`);
+    };
+
+    const handleClick = (type, isProductType = false) => {
+      const searchQuery = isProductType
+        ? `/search?q=${encodeURIComponent(type)}&productType=${type}`
+        : `/search?q=${encodeURIComponent(type)}`;
+      history.push(searchQuery);
+    };
+    
+    
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
       };
@@ -56,17 +68,15 @@ export default function SecondNavBar() {
 
             <div className="middle-nav-bar"> 
             <div className="category-buttons">
-                <Link to="/search?q="> <button className="category-button"> New&nbsp;&&nbsp;Featured </button></Link>
+                <button onClick={() => handleCategoryButtonClick("All")} className="category-button"> New&nbsp;&&nbsp;Featured </button>
               
-                <Link to="/search?q=men">  <button className="category-button"> Men </button> </Link>
+                <button onClick={() => handleCategoryButtonClick("Men's")} className="category-button"> Men </button> 
 
-                <Link to="/search?q=women">  <button className="category-button"> Women </button> </Link>
-                <Link to="/search?q=kids"> <button className="category-button"> Kids </button></Link>
-              
-
-                {/* <button className="category-button"> Accessories </button> */}
-                <Link to="/search?q=accessories"> <button className="category-button"> Accessories </button></Link>
-                <Link to="/search?q=Sale"> <button className="category-button"> Sale </button></Link>
+                 <button onClick={() => handleCategoryButtonClick("Women's")} className="category-button"> Women </button>
+                <button  onClick={() => handleCategoryButtonClick("Kids")}className="category-button"> Kids </button>
+            
+                <Link to="/search?q=Accessories"> <button className="category-button"> Accessories </button></Link>  
+                 <button onClick={() => handleCategoryButtonClick("Sale")}className="category-button"> Sale </button>
             </div>
             </div>
 
