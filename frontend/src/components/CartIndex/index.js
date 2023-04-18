@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import { fetchCartItems } from "../../store/cartItems";
+import { clearCartItems, fetchCartItems } from "../../store/cartItems";
 import CartIndexItem from "../CartIndexItem";
 import ThankYouModal from "../ThankYouModal";
 import ErrorModal from "../ErrorModal"; // 5. Import the ErrorModal component
@@ -9,6 +9,7 @@ import { getSalePrice } from "../CartIndexItem";
 import ProductsClicker from "../ProductsClicker";
 import BottomBanner from "../BottomBanner";
 import '../../components/BottomBanner/BottomBanner.css'
+import { clearCart } from "../../store/cartItems";
 
 export default function CartIndex() {
   const [showThankYouModal, setShowThankYouModal] = useState(false);
@@ -66,6 +67,7 @@ export default function CartIndex() {
   };
 
   const displayThankYouModal = () => {
+    dispatch(clearCartItems())
     setShowThankYouModal(true);
   };
 
