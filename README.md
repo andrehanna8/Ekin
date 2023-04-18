@@ -1,6 +1,6 @@
 # Ekin: A Full Stack E-Commerce Clone of Nike
 
-![Ekin Logo](./ekin-logo.png)
+![Ekin Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png)
 
 Ekin is a full stack e-commerce clone of the popular website Nike. It is designed to provide a seamless shopping experience, allowing users to browse and purchase products easily. Ekin is built using Ruby on Rails for the backend and React for the frontend, ensuring a fast and responsive user interface. You can access the live site at [clonenike.com](https://www.clonenike.com/), or explore the codebase in the [GitHub repository](https://github.com/andrehanna8/ekin-auth).
 
@@ -52,7 +52,6 @@ To get started with Ekin locally, follow these steps:
 ```npm install```
 ```npm start```
 
-=
 
 6. Visit [http://localhost:3000](http://localhost:3000) in your browser to explore the app locally.
 
