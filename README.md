@@ -1,27 +1,20 @@
-# Ekin: A Full Stack E-Commerce Clone of Nike
+# <a  href="https://www.clonenike.com/" target="_blank" > Ekin </a>: A Full Stack E-Commerce Clone of Nike
 
 <a href="https://www.clonenike.com/">
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <img src="app\assets\images\nike-icegif-1.gif" alt="Ekin Logo" style="max-width: 150px;" />
-=======
-  <img src="../app/assets/images/ekin-logo.png" alt="Ekin Logo" style="max-width: 150px;" />
->>>>>>> 9b2319a5abca97310aa90d06137b8dc76dcabe83
-=======
-  <img src="https://www.icegif.com/wp-content/uploads/nike-icegif-1.gif" alt="Ekin Logo" style="width: 150px;" />
->>>>>>> ddf54db3c37a23a86a6eb0c8d15dbdf737136ee5
+  <img src="https://www.icegif.com/wp-content/uploads/nike-icegif-1.gif" alt="Ekin Logo" style="width: 175px;" />
 </a>
 
 
-Ekin is a full stack e-commerce clone of the popular website Nike. It is designed to provide a seamless shopping experience, allowing users to browse and search for  products easily. Ekin is built using Ruby on Rails for the backend and React for the frontend, ensuring a fast and responsive user interface. You can access the live site at [clonenike.com](https://www.clonenike.com/), or explore the codebase in the [GitHub repository](https://github.com/andrehanna8/ekin-auth).
+Ekin is a full stack e-commerce clone of the popular website Nike. It is designed to provide a seamless shopping experience, allowing users to browse and search for  products easily. Ekin is built using Ruby on Rails for the backend and React for the frontend, ensuring a fast and responsive user interface. You can access the live site at [clonenike.com](https://www.clonenike.com/), or explore the codebase in the [GitHub repository](https://github.com/andrehanna8/ekin-auth) Also check out the [Ekin wiki!](https://github.com/andrehanna8/ekin-auth/wiki).
+
+## User Flow
+https://user-images.githubusercontent.com/34076045/232656263-6f4d46d3-5f78-422d-baa4-bf3ffe8cdffd.mp4
 
 ## Table of Contents
 
 1. [Features](#features)
 2. [Installation](#installation)
 3. [Technologies Used](#technologies-used)
-4. [Contributing](#contributing)
-5. [License](#license)
 
 ## Features
 
@@ -62,7 +55,9 @@ To get started with Ekin locally, follow these steps:
 ```npm start```
 
 
-6. Visit [http://localhost:3000](http://localhost:3000) in your browser to explore the app locally.
+6. Visit [http://localhost:3000](http://localhost:3000)
+
+in your browser to explore the app locally.
 
 ## Technologies Used
 
