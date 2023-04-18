@@ -237,7 +237,7 @@ p17 = Product.create!({
   price: 28,
   category: "Men's Tops",
   size: "M",
-  color: "White",
+  color: "Black",
 })
 
 p17.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cdbd490b-6e76-49f8-bbfe-4f4c7a43bf7b/pro-dri-fit-mens-slim-fit-short-sleeve-top-H7B5f3.png'), filename: 'pro-mens-short-sleeve-top.png')
@@ -261,7 +261,7 @@ p19 = Product.create!({
   price: 65,
   category: "Men's Tops",
   size: "M",
-  color: "Blue",
+  color: "Pink",
 })
 
 p19.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c79b0d4d-f837-4beb-96a1-08ec72a22f0d/therma-mens-therma-fit-hooded-fitness-pullover-X9fVm2.png'), filename: 'therma-mens-training-hoodie.png')
@@ -273,7 +273,7 @@ p20 = Product.create!({
   price: 100,
   category: "Men's Tops",
   size: "M",
-  color: "Black/White",
+  color: "White",
 })
 
 p20.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a52dc894-7459-4e47-b651-7197cfa04d6a/storm-fit-windrunner-mens-primaloft-insulated-vest-lMmN5v.png'), filename: 'windrunner-jacket.png')
@@ -285,7 +285,7 @@ p21 = Product.create!({
   price: 55,
   category: "Men's Bottoms",
   size: "M",
-  color: "Black",
+  color: "Pink",
 })
 
 p21.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/eaf227ef-f494-478b-9430-d31428ecd680/sportswear-club-fleece-joggers-KflRdQ.png'), filename: 'club-fleece-joggers.png')
@@ -297,7 +297,7 @@ p22 = Product.create!({
   price: 50,
   category: "Men's Bottoms",
   size: "M",
-  color: "Grey",
+  color: "Black",
 })
 
 p22.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c13e59b5-81ea-4847-a176-29719973949f/dri-fit-mens-training-pants-41n6G2.png'), filename: 'dri-fit-mens-training-pants.png')
@@ -321,7 +321,7 @@ p24 = Product.create!({
   price: 70,
   category: "Men's Bottoms",
   size: "M",
-  color: "Olive",
+  color: "Brown",
 })
 
 p24.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a1dc8682-1cba-4cc1-8834-5be5d9017c54/jordan-essentials-mens-utility-pants-F0MNZ6.png'), filename: 'club-cargo-pants.png')
@@ -357,7 +357,7 @@ p27 = Product.create!({
   price: 30,
   category: "Men's Accessories",
   size: "One Size",
-  color: "Black",
+  color: "Grey",
 })
 
 p27.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/79362ee5-35e5-462a-a4db-f0d3c3e1ccb2/sportswear-essentials-sling-bag-8l-2gM57K.png'), filename: 'essentials-hip-pack.png')
@@ -368,7 +368,7 @@ p28 = Product.create!({
   price: 16,
   category: "Men's Accessories",
   size: "M",
-  color: "White/Black",
+  color: "Black",
 })
 
 p28.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c65858d8-72f0-4061-8202-ec3142eb4d2e/elite-kay-yow-basketball-crew-socks-0jpqqV.png'), filename: 'elite-basketball-crew-socks.png')
@@ -391,7 +391,7 @@ p30 = Product.create!({
   price: 45,
   category: "Men's Accessories",
   size: "One Size",
-  color: "Black",
+  color: "White",
 })
 
 p30.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fd7c9754-4951-40b8-bd45-a47628705883/sport-scarf-3hkHf7.png'), filename: 'tech-fleece-scarf.png')
@@ -404,7 +404,7 @@ p31 = Product.create!({
   price: 25,
   category: "Women's Accessories",
   size: "One Size",
-  color: "Pink",
+  color: "Blue",
 })
 
 p31.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8645801f-3570-4366-91c6-64f78714215c/sportswear-heritage86-futura-washed-hat-9xDxge.png'), filename: 'heritage86-futura-washed-cap-pink.png')
@@ -428,7 +428,7 @@ p33 = Product.create!({
   price: 20,
   category: "Women's Accessories",
   size: "M",
-  color: "White",
+  color: "Brown",
 })
 
 p33.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4d6c67c0-7d6c-47c9-b610-d816c8b42bff/everyday-plus-cushioned-training-crew-socks-3-pairs-kt8drs.png'), filename: 'womens-training-crew-socks.png')
@@ -439,7 +439,7 @@ p34 = Product.create!({
   price: 35,
   category: "Women's Accessories",
   size: "One Size",
-  color: "Black",
+  color: "Brown",
 })
 
 p34.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/36387f61-5a00-42cf-b053-b4cf7908140f/one-club-womens-training-duffel-bag-24l-sMgH5x.png'), filename: 'gym-club-training-duffel-bag.png')

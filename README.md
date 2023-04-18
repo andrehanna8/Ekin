@@ -2,10 +2,14 @@
 
 <a href="https://www.clonenike.com/">
 <<<<<<< HEAD
+<<<<<<< HEAD
   <img src="app\assets\images\nike-icegif-1.gif" alt="Ekin Logo" style="max-width: 150px;" />
 =======
   <img src="../app/assets/images/ekin-logo.png" alt="Ekin Logo" style="max-width: 150px;" />
 >>>>>>> 9b2319a5abca97310aa90d06137b8dc76dcabe83
+=======
+  <img src="https://www.icegif.com/wp-content/uploads/nike-icegif-1.gif" alt="Ekin Logo" style="width: 150px;" />
+>>>>>>> ddf54db3c37a23a86a6eb0c8d15dbdf737136ee5
 </a>
 
 
