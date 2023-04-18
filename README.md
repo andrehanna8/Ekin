@@ -1,7 +1,7 @@
 # Ekin: A Full Stack E-Commerce Clone of Nike
 
 <a href="https://www.clonenike.com/">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Old_Nike_logo.jpg/150px-Old_Nike_logo.jpg" alt="Ekin Logo" style="max-width: 150px;" />
+  <img src="app\assets\images\nike-icegif-1.gif" alt="Ekin Logo" style="max-width: 150px;" />
 </a>
 
 
