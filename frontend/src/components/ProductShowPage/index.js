@@ -267,9 +267,9 @@ const showSuccessBanner = () => {
                         </div>
                         <br></br>
 
-                        <div className="favorite-button">
+                        {/* <div className="favorite-button">
                             <button id="fav-button" type="radio">Favorite &nbsp;&nbsp; <span id="fav-emoji"> &#9825; </span>  </button>
-                        </div>
+                        </div> */}
                     </div>
                     <br></br>
 
