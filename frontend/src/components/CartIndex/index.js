@@ -8,6 +8,7 @@ import "./CartIndex.css";
 import { getSalePrice } from "../CartIndexItem";
 import ProductsClicker from "../ProductsClicker";
 import BottomBanner from "../BottomBanner";
+import '../../components/BottomBanner/BottomBanner.css'
 
 export default function CartIndex() {
   const [showThankYouModal, setShowThankYouModal] = useState(false);
@@ -89,7 +90,7 @@ onClose={() => setShowErrorModal(false)}
 />
 )}
 
-
+  <div className="cart-app">
   <div className="cart-container">
     <div className="cart-index">
       <h1 id="bag-header">Bag </h1>
@@ -163,7 +164,9 @@ onClose={() => setShowErrorModal(false)}
       </button>
     </div>
   </div>
- <BottomBanner />
+
+  <BottomBanner />
+</div>
 </>
 );
 }

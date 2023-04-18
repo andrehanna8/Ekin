@@ -61,6 +61,7 @@
   /* width: 100% */
   flex-direction: column;
   margin-top: 50px;
+  width: auto;
 }
 
 .spring-banner h1, h2, h3 {

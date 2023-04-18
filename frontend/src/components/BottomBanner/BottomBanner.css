@@ -3,13 +3,13 @@
     flex-direction: row;
     background-color: #111111;
     height: 275px !important;
-    width: 100%;
+    width: auto;
     height: 100%;
     /* padding-left: 100px; */
     padding-right: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
-    /* bottom: 0; */
+    bottom: 0;
   }
 
   .bb-left{

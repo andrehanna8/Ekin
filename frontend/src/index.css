@@ -79,16 +79,32 @@ table {
 
    
     #root {
-      overflow-x: hidden;;
+      overflow-x: hidden;
     }
 
     body {
       overflow-x: hidden;
     }
 
+    html {
+      /* overflow-x: hidden; */
+    }
+
+
     .whole-app {
-      /* width: 100%; */
-      /* margin-left: 50px; */
+
+      /* max-width: 100%; */
+
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       /* border: red solid 1px; */
-      padding-left: auto;
+    }
+    
+    .cart-app {
+      display: flex;
+      /* height: 95vh;   */
+      /* height: 100vh !important; */
+      flex-direction: column;
+      justify-content: space-between;
     }

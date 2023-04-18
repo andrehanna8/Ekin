@@ -40,8 +40,10 @@ function App() {
             </div>
           </Route>
           <Route exact path="/">
+            <div className="whole-splash">
           <SlideShowBar />
             <SplashPage />
+            </div>
           </Route>
         </Switch>
         </div>

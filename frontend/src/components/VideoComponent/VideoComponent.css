@@ -15,6 +15,6 @@
   }
   
   .nike-video-container video {
-    width: auto;
+    width: 100%;
     height: auto;
   }
