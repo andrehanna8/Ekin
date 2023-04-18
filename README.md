@@ -1,4 +1,3 @@
-Copy code
 # Ekin: A Full Stack E-Commerce Clone of Nike
 
 ![Ekin Logo](./ekin-logo.png)
@@ -28,42 +27,32 @@ To get started with Ekin locally, follow these steps:
 
 1. Clone the repository:
 
-git clone https://github.com/andrehanna8/ekin-auth.git
+```git clone https://github.com/andrehanna8/ekin-auth.git```
 
-markdown
-Copy code
 
 2. Install the required dependencies:
 
-cd ekin-auth
-bundle install
-yarn install
-
-javascript
-Copy code
+```cd ekin-auth```
+```bundle install```
+```npm install``` 
 
 3. Set up the database:
 
-rails db:create
-rails db:migrate
-rails db:seed
-
-markdown
-Copy code
+```rails db:create```
+```rails db:migrate```
+```rails db:seed```
 
 4. Start the Rails server:
 
-rails s
-
-sql
-Copy code
+```rails s```
 
 5. Open a new terminal window and start the React development server:
 
-yarn start
+ ```cd frontend```
+```npm install```
+```npm start```
 
-markdown
-Copy code
+=
 
 6. Visit [http://localhost:3000](http://localhost:3000) in your browser to explore the app locally.
 
@@ -72,6 +61,5 @@ Copy code
 - Backend: Ruby on Rails
 - Frontend: React, Redux, JavaScript, HTML5, CSS3
 - Database: PostgreSQL
-- Payment Integration: Stripe API
 - Image Hosting: Amazon S3
-- Deployment: Heroku
+- Deployment: Render
