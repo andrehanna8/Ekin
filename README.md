@@ -1,4 +1,4 @@
-# Ekin: A Full Stack E-Commerce Clone of Nike
+# <a href="https://www.clonenike.com/"> Ekin </a>: A Full Stack E-Commerce Clone of Nike
 
 <a href="https://www.clonenike.com/">
   <img src="https://www.icegif.com/wp-content/uploads/nike-icegif-1.gif" alt="Ekin Logo" style="width: 175px;" />
