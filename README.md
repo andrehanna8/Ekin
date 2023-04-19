@@ -147,7 +147,7 @@ const productTypes = ["All", "Shoes", "Tops", "Bottoms", "Accessories"];
 
 The categories and productTypes constants define the available categories and product types that can be used for filtering.
 
-```
+```javascript
 function useSearchParamsMemo(location) {
   return useMemo(() => new URLSearchParams(location.search), [location.search]);
 }
@@ -158,7 +158,7 @@ export default function SearchResultsIndex() {
 ```
 The useSearchParamsMemo custom hook memoizes the search parameters from the URL. The SearchResultsIndex functional component is responsible for handling the product browsing and filtering.
 
-```
+```javascript
 const products = useSelector((state) => Object.values(state.products));
 const dispatch = useDispatch();
 const location = useLocation();
@@ -170,7 +170,7 @@ const genderFilter = searchParams.get("gender") || "";
 ```
 The component retrieves the products from the Redux state, initializes the dispatch function, and accesses the current location to read search parameters. It sets the searchTerm and genderFilter based on the search parameters.
 
-```
+```javascript
 const filterByCategoryAndType = (product, searchTerm) => {
   // ... filtering logic ...
 };
@@ -179,7 +179,7 @@ const productsToDisplay = products.filter((product) => filterByCategoryAndType(p
 ```
 The filterByCategoryAndType function filters products based on the selected category, product type, and search term. The productsToDisplay array stores the filtered list of products.
 
-```
+```javascript
 const sortedProducts = productsToDisplay.sort((a, b) => {
   if (sortOrder === "priceLowToHigh") {
     return a.price - b.price;
@@ -196,7 +196,7 @@ const productsToDisplayByColor =
 ```
 The sortedProducts array sorts the products based on the selected sort order. The productsToDisplayByColor array filters the sorted products by color, if a specific color filter is applied.
 
-```
+```javascript
 useEffect(() => {
   // ... fetching and updating filter state based on search parameters ...
 }, [dispatch, searchTerm, genderFilter, setFilterCategory, searchParams]);
@@ -214,7 +214,7 @@ The useEffect hook is used to fetch products and update filter state based on th
 This code provides a shopping cart implementation allowing users to add items to their cart and manage item quantities with ease. It uses a CartItem model and a CartItemsController for handling shopping cart operations in a Rails application.
 
 ** CartItem Model **
-```
+```ruby
 class CartItem < ApplicationRecord
     validates :user_id, :product_id, :quantity, presence: true
     validates :quantity, numericality: { greater_than: 0 }
@@ -232,7 +232,7 @@ end
 The CartItem model validates the presence of user_id, product_id, and quantity fields, and ensures that the quantity is greater than 0. It defines belongs_to associations for User and Product models.
 
 **CartItemsController**
-```
+```ruby
 class Api::CartItemsController < ApplicationController
     # ... controller methods ...
 end
@@ -240,7 +240,7 @@ end
 The CartItemsController handles shopping cart-related actions like fetching cart items, adding new items to the cart, updating item quantities, and removing items from the cart.
 
 **Index Action**
-```
+```ruby
 def index
     @cart_items = CartItem.all
     render :index
@@ -249,7 +249,7 @@ end
 The index action retrieves all cart items and renders them using the index view.
 
 **Show Action**
-```
+```ruby
 def show
     @cart_item = CartItem.find(params[:id])
     render :show
@@ -258,7 +258,7 @@ end
 The show action finds a specific cart item by its ID and renders it using the show view.
 
 **Create Action**
-```
+```ruby
     @cart_item = CartItem.find_by(user_id: current_user.id, product_id: cart_item_params[:product_id], options: cart_item_params[:options])
     
     if @cart_item
@@ -284,7 +284,7 @@ end
 The create action checks if the cart item already exists for the current user and the selected product. If the item exists, it updates the quantity; otherwise, it creates a new cart item.
 
 **Update Action**
-```
+```ruby
 def update
     @cart_item = CartItem.find_by(id: params[:id])
     if @cart_item.update(cart_item_params)
@@ -297,7 +297,7 @@ end
 The update action finds a cart item by its ID and updates its attributes using the submitted parameters.
 
 **Destroy Action**
-```
+```ruby
 def destroy
     @cart_item = CartItem.find(params[:id])
     @cart_item.destroy
@@ -308,9 +308,6 @@ The destroy action finds a cart item by its ID, removes it from the cart, and re
 
 </details>
 
-
-
-
   <details>
   <summary>Learn More About: Reviews </summary>
 
@@ -318,7 +315,7 @@ The destroy action finds a cart item by its ID, removes it from the cart, and re
 
 Allow users to share their thoughts on a product by leaving a review and rating. This feature is implemented using Ruby on Rails, with the Review model representing a product review and the Api::ReviewsController managing reviews.
 
-```
+```ruby
 class Review < ApplicationRecord
   validates :user_id, :product_id, :rating, :title, presence: true
   validates :rating, numericality: { greater_than: 0, less_than: 6 }
@@ -335,14 +332,14 @@ end
 ```
 The Review model includes validations for the presence of user_id, product_id, rating, and title. The rating is validated to be between 1 and 5, and the body is limited to a maximum length of 500 characters. The model has associations with both the User and Product models.
 
-```
+```ruby
 class Api::ReviewsController < ApplicationController
   # ... other actions ...
 end
 ```
 The Api::ReviewsController is responsible for handling CRUD operations on reviews.
 
-```
+```ruby
 def create
   @review = Review.new(review_params)
   @review.user_id = current_user.id
@@ -355,7 +352,7 @@ end
 ```
 The create action initializes a new review using review_params, sets the user_id to the current_user.id, and attempts to save the review. If successful, it renders the show view; otherwise, it returns JSON with error messages and a 422 status code.
 
-```
+```ruby
 def update
   @review = Review.find(params[:id])
   if @review.update(review_params)
