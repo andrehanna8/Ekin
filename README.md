@@ -389,7 +389,8 @@ The update action updates an existing review with the provided review_params, an
   <tr>
     <td valign="top" width="50%">
       <div style="width: 100%; max-height: 400px; overflow-y: scroll; white-space: pre-wrap;">
-       import { useSelector } from "react-redux";
+  ```      
+import { useSelector } from "react-redux";
 import { useState } from "react";
 import SearchResultIndexItem from "../SearchResultIndexItem";
 import "./SearchResultsIndex.css";
@@ -445,10 +446,6 @@ export default function SearchResultsIndex() {
   const toggleColorCollapse = () => {
     setIsColorCollapsed(!isColorCollapsed);
   };
-
-
-  
-
 
   const filterByCategoryAndType = (product, searchTerm) => {
     const [productGender, productType] = product.category.split(" ");
@@ -546,14 +543,6 @@ export default function SearchResultsIndex() {
    useEffect(() => {
     setResultsCount(productsToDisplayByColor.length);
   }, [productsToDisplayByColor]);
-  
-  // useEffect(() => {
-  //   // Reset filters when the searchTerm changes
-  //   setFilterCategory("All");
-  //   setFilterProductType("All");
-  //   setFilterColor("All");
-  // }, [searchTerm]);
-
   return (
     <div className="sr-wrapper  hide-main-scrollbar">
     <div className="search-results-header"> 
@@ -698,6 +687,7 @@ export default function SearchResultsIndex() {
     </div>
   );
 }
+```
       </div>
     </td>
     <td valign="top" width="50%">
