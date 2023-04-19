@@ -133,7 +133,7 @@ The `Api::UsersController` class inherits from `ApplicationController` and is re
 
 ----
 
-Product Browsing
+## Product Browsing
 This code allows users to browse through an extensive catalog of products with filtering and sorting options for a more personalized shopping experience. It is implemented in a React application using Redux for state management.
 
 ```
