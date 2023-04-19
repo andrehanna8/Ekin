@@ -295,6 +295,73 @@ The destroy action finds a cart item by its ID, removes it from the cart, and re
 
 ----
 
+## Product Reviews
+
+Allow users to share their thoughts on a product by leaving a review and rating. This feature is implemented using Ruby on Rails, with the Review model representing a product review and the Api::ReviewsController managing reviews.
+
+```
+class Review < ApplicationRecord
+  validates :user_id, :product_id, :rating, :title, presence: true
+  validates :rating, numericality: { greater_than: 0, less_than: 6 }
+  validates :body, length: { maximum: 500 }
+
+  belongs_to :user,
+    foreign_key: :user_id,
+    class_name: :User
+
+  belongs_to :product,
+    foreign_key: :product_id,
+    class_name: :Product
+end
+```
+The Review model includes validations for the presence of user_id, product_id, rating, and title. The rating is validated to be between 1 and 5, and the body is limited to a maximum length of 500 characters. The model has associations with both the User and Product models.
+
+```
+class Api::ReviewsController < ApplicationController
+  # ... other actions ...
+end
+```
+The Api::ReviewsController is responsible for handling CRUD operations on reviews.
+
+```
+def create
+  @review = Review.new(review_params)
+  @review.user_id = current_user.id
+  if @review.save
+    render :show
+  else
+    render json: @review.errors.full_messages, status: 422
+  end
+end
+```
+The create action initializes a new review using review_params, sets the user_id to the current_user.id, and attempts to save the review. If successful, it renders the show view; otherwise, it returns JSON with error messages and a 422 status code.
+
+```
+def update
+  @review = Review.find(params[:id])
+  if @review.update(review_params)
+    render :show
+  else
+    render json: @review.errors.full_messages, status: 422
+  end
+end
+
+def destroy
+  @review = Review.find(params[:id])
+  @review.destroy
+  render :show
+end
+
+private
+
+def review_params
+  params.require(:review).permit(:product_id, :title, :rating, :body)
+end
+```
+The update action updates an existing review with the provided review_params, and the destroy action deletes a review. Both actions render the show view upon success. The review_params method defines the list of allowed parameters for reviews.
+----
+
+
 ## Installation
 
 To get started with Ekin locally, follow these steps:
