@@ -206,7 +206,7 @@ The useEffect hook is used to fetch products and update filter state based on th
 </details>
 
   <details>
-  <summary>Learn More About The: Cart /summary>
+  <summary>Learn More About The: Cart </summary>
 
 ## Cart
 
