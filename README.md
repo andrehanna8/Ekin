@@ -194,6 +194,105 @@ useEffect(() => {
 
 The useEffect hook is used to fetch products and update filter state based on the search parameters in the URL when the component mounts or when the search parameters change.
 
+** Shopping Cart
+
+This code provides a shopping cart implementation allowing users to add items to their cart and manage item quantities with ease. It uses a CartItem model and a CartItemsController for handling shopping cart operations in a Rails application.
+
+** CartItem Model **
+```
+class CartItem < ApplicationRecord
+    validates :user_id, :product_id, :quantity, presence: true
+    validates :quantity, numericality: { greater_than: 0 }
+
+    belongs_to :user,
+        foreign_key: :user_id,
+        class_name: :User
+
+    belongs_to :product,
+        foreign_key: :product_id,
+        class_name: :Product
+end
+```
+
+The CartItem model validates the presence of user_id, product_id, and quantity fields, and ensures that the quantity is greater than 0. It defines belongs_to associations for User and Product models.
+
+** CartItemsController **
+```
+class Api::CartItemsController < ApplicationController
+    # ... controller methods ...
+end
+The CartItemsController handles shopping cart-related actions like fetching cart items, adding new items to the cart, updating item quantities, and removing items from the cart.
+
+Index Action
+ruby
+Copy code
+def index
+    @cart_items = CartItem.all
+    render :index
+end
+The index action retrieves all cart items and renders them using the index view.
+
+Show Action
+ruby
+Copy code
+def show
+    @cart_item = CartItem.find(params[:id])
+    render :show
+end
+```
+The show action finds a specific cart item by its ID and renders it using the show view.
+
+**Create Action**
+```
+    @cart_item = CartItem.find_by(user_id: current_user.id, product_id: cart_item_params[:product_id], options: cart_item_params[:options])
+    
+    if @cart_item
+        # If the item exists, update the quantity
+        @cart_item.quantity += 1
+        if @cart_item.save
+            render :show
+        else
+            render json: @cart_item.errors.full_messages, status: 422
+        end
+    else
+        # If the item doesn't exist, create a new cart item
+        @cart_item = CartItem.new(cart_item_params)
+        @cart_item.user_id = current_user.id
+        if @cart_item.save
+            render :show
+        else
+            render json: @cart_item.errors.full_messages, status: 422
+        end
+    end
+end
+```
+The create action checks if the cart item already exists for the current user and the selected product. If the item exists, it updates the quantity; otherwise, it creates a new cart item.
+
+**Update Action**
+```
+def update
+    @cart_item = CartItem.find_by(id: params[:id])
+    if @cart_item.update(cart_item_params)
+        render :show
+    else
+        render json: @cart_item.errors.full_messages, status: 422
+    end
+end
+```
+The update action finds a cart item by its ID and updates its attributes using the submitted parameters.
+
+**Destroy Action**
+```
+def destroy
+    @cart_item = CartItem.find(params[:id])
+    @cart_item.destroy
+    render :show
+end
+```
+The destroy action finds a cart item by its ID, removes it from the cart, and renders the show view.
+
+
+
 ----
 
 ## Installation
