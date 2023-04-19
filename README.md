@@ -125,12 +125,6 @@ The `Api::UsersController` class inherits from `ApplicationController` and is re
 - The `create` action is responsible for creating a new user with the provided parameters, and logging them in if the user is successfully created. If there are errors in the provided data, it returns an error message and an unprocessable_entity status.
 - The `user_params` private method is used to whitelist the parameters allowed in the API request for creating a user.
 
-**Technologies utilized:**
-
-- Ruby on Rails: A popular web application framework built on the Ruby programming language. It employs the MVC (Model-View-Controller) pattern for organizing application code.
-- ActiveRecord: An ORM (Object-Relational Mapping) system in Rails that abstracts and simplifies database communication.
-- Bcrypt: A Ruby gem used for secure password hashing and authentication.
-
 ----
 
 ## Product Browsing
@@ -199,12 +193,6 @@ useEffect(() => {
 ```
 
 The useEffect hook is used to fetch products and update filter state based on the search parameters in the URL when the component mounts or when the search parameters change.
-
-## Technologies utilized
-
-- React: A popular JavaScript library for building user interfaces. It enables the creation of reusable UI components and simplifies the management of component state.
-- Redux: A library for managing application state in JavaScript applications. It helps to create a single store for the entire application and provides a predictable state container.
-- React Router: A library for handling routing and navigation in React applications. It provides a set of components and hooks for creating links, handling URL parameters, and managing navigation history.
 
 ----
 
