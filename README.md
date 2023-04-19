@@ -380,10 +380,7 @@ The update action updates an existing review with the provided review_params, an
   
 ----
 
-## Cool Code:
- 
-  
-  
+
 ## Installation
 
 To get started with Ekin locally, follow these steps:
