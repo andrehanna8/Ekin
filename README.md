@@ -383,6 +383,33 @@ The update action updates an existing review with the provided review_params, an
   
 ----
 
+## Cool Code:
+ 
+ <table>
+  <tr>
+    <td valign="top" width="50%">
+      <pre>
+      
+      </pre>
+    </td>
+    <td valign="top" width="50%">
+      <h3>Custom Search Hook</h3>
+      <p>
+        This custom hook returns a memoized version of URLSearchParams...
+      </p>
+      
+      <h3>Filter By Category and Type</h3>
+      <p>
+        This function filters products based on their category and product type...
+      </p>
+      
+      <!-- Add more sections here -->
+
+    </td>
+  </tr>
+</table> 
+  
+  
 ## Installation
 
 To get started with Ekin locally, follow these steps:
