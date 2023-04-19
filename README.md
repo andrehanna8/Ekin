@@ -23,7 +23,7 @@ https://user-images.githubusercontent.com/34076045/232656263-6f4d46d3-5f78-422d-
 - **Shopping Cart**: Add items to your shopping cart and manage quantities with ease.
 - **Product Reviews**: Share your thoughts on a product by leaving a review and rating.
 
-## User Authentication
++ ## User Authentication
 
 This code is implementing a secure user registration and login system in a Ruby on Rails application. It utilizes the ActiveRecord ORM for database communication and the Bcrypt gem for password hashing and authentication.
 
