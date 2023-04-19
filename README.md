@@ -25,6 +25,8 @@ https://user-images.githubusercontent.com/34076045/232656263-6f4d46d3-5f78-422d-
 
 ----
 
+## Dive Deeper!
+
 <details>
   <summary>Learn More About: User Authentication</summary>
   
