@@ -218,25 +218,25 @@ end
 
 The CartItem model validates the presence of user_id, product_id, and quantity fields, and ensures that the quantity is greater than 0. It defines belongs_to associations for User and Product models.
 
-** CartItemsController **
+**CartItemsController**
 ```
 class Api::CartItemsController < ApplicationController
     # ... controller methods ...
 end
+```
 The CartItemsController handles shopping cart-related actions like fetching cart items, adding new items to the cart, updating item quantities, and removing items from the cart.
 
-Index Action
-ruby
-Copy code
+**Index Action**
+```
 def index
     @cart_items = CartItem.all
     render :index
 end
+```
 The index action retrieves all cart items and renders them using the index view.
 
-Show Action
-ruby
-Copy code
+**Show Action**
+```
 def show
     @cart_item = CartItem.find(params[:id])
     render :show
@@ -292,8 +292,6 @@ def destroy
 end
 ```
 The destroy action finds a cart item by its ID, removes it from the cart, and renders the show view.
-
-
 
 ----
 
