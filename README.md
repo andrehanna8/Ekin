@@ -133,7 +133,80 @@ The `Api::UsersController` class inherits from `ApplicationController` and is re
 
 ----
 
+Product Browsing
+This code allows users to browse through an extensive catalog of products with filtering and sorting options for a more personalized shopping experience. It is implemented in a React application using Redux for state management.
 
+```
+const categories = ["All", "Men's", "Women's", "Kids", "Sale"];
+const productTypes = ["All", "Shoes", "Tops", "Bottoms", "Accessories"];
+```
+
+The categories and productTypes constants define the available categories and product types that can be used for filtering.
+
+```
+function useSearchParamsMemo(location) {
+  return useMemo(() => new URLSearchParams(location.search), [location.search]);
+}
+
+export default function SearchResultsIndex() {
+  // ... component code ...
+}
+```
+The useSearchParamsMemo custom hook memoizes the search parameters from the URL. The SearchResultsIndex functional component is responsible for handling the product browsing and filtering.
+
+```
+const products = useSelector((state) => Object.values(state.products));
+const dispatch = useDispatch();
+const location = useLocation();
+const searchParams = useSearchParamsMemo(location);
+
+const searchTerm = searchParams.get("q") || "";
+const genderFilter = searchParams.get("gender") || "";
+// ... other filter state variables ...
+```
+The component retrieves the products from the Redux state, initializes the dispatch function, and accesses the current location to read search parameters. It sets the searchTerm and genderFilter based on the search parameters.
+
+```
+const filterByCategoryAndType = (product, searchTerm) => {
+  // ... filtering logic ...
+};
+
+const productsToDisplay = products.filter((product) => filterByCategoryAndType(product, searchTerm));
+```
+The filterByCategoryAndType function filters products based on the selected category, product type, and search term. The productsToDisplay array stores the filtered list of products.
+
+```
+const sortedProducts = productsToDisplay.sort((a, b) => {
+  if (sortOrder === "priceLowToHigh") {
+    return a.price - b.price;
+  } else if (sortOrder === "priceHighToLow") {
+    return b.price - a.price;
+  }
+  return 0;
+});
+
+const productsToDisplayByColor =
+  filterColor === "All"
+    ? sortedProducts
+    : sortedProducts.filter((product) => product.color === filterColor);
+```
+The sortedProducts array sorts the products based on the selected sort order. The productsToDisplayByColor array filters the sorted products by color, if a specific color filter is applied.
+
+```
+useEffect(() => {
+  // ... fetching and updating filter state based on search parameters ...
+}, [dispatch, searchTerm, genderFilter, setFilterCategory, searchParams]);
+```
+
+The useEffect hook is used to fetch products and update filter state based on the search parameters in the URL when the component mounts or when the search parameters change.
+
+##Technologies utilized:
+
+React: A popular JavaScript library for building user interfaces. It enables the creation of reusable UI components and simplifies the management of component state.
+Redux: A library for managing application state in JavaScript applications. It helps to create a single store for the entire application and provides a predictable state container.
+React Router: A library for handling routing and navigation in React applications. It provides a set of components and hooks for creating links, handling URL parameters, and managing navigation history.
+
+----
 
 ## Installation
 
