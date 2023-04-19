@@ -200,7 +200,7 @@ useEffect(() => {
 
 The useEffect hook is used to fetch products and update filter state based on the search parameters in the URL when the component mounts or when the search parameters change.
 
-##Technologies utilized
+## Technologies utilized
 
 - React: A popular JavaScript library for building user interfaces. It enables the creation of reusable UI components and simplifies the management of component state.
 - Redux: A library for managing application state in JavaScript applications. It helps to create a single store for the entire application and provides a predictable state container.
