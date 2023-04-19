@@ -32,7 +32,7 @@ https://user-images.githubusercontent.com/34076045/232656263-6f4d46d3-5f78-422d-
 
 This code is implementing a secure user registration and login system in a Ruby on Rails application. It utilizes the ActiveRecord ORM for database communication and the Bcrypt gem for password hashing and authentication.
 
-```
+```ruby
 class User < ApplicationRecord
   before_validation :ensure_session_token
 
@@ -99,7 +99,7 @@ The `User` class inherits from `ApplicationRecord` and represents a user in the 
 - The `reset_session_token!` method resets a user's session token and saves it to the database.
 - The `generate_unique_session_token` and `ensure_session_token` methods are used to generate and set a unique session token for a user.
 
-```
+```ruby
 class Api::UsersController < ApplicationController
   wrap_parameters include: User.attribute_names + ['firstName', 'lastName', 'password']
   def create
@@ -140,7 +140,7 @@ The `Api::UsersController` class inherits from `ApplicationController` and is re
     
 This code allows users to browse through an extensive catalog of products with filtering and sorting options for a more personalized shopping experience. It is implemented in a React application using Redux for state management.
 
-```
+```javascript
 const categories = ["All", "Men's", "Women's", "Kids", "Sale"];
 const productTypes = ["All", "Shoes", "Tops", "Bottoms", "Accessories"];
 ```
