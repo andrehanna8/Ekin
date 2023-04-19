@@ -22,7 +22,7 @@ https://user-images.githubusercontent.com/34076045/232656263-6f4d46d3-5f78-422d-
 - **Product Browsing**: Browse through an extensive catalog of products, with filtering and sorting options for a more personalized shopping experience.
 - **Shopping Cart**: Add items to your shopping cart and manage quantities with ease.
 - **Product Reviews**: Share your thoughts on a product by leaving a review and rating.
-- 
+
 <details>
   <summary>Learn More About: User Authentication</summary>
   ## User Authentication
@@ -128,11 +128,14 @@ The `Api::UsersController` class inherits from `ApplicationController` and is re
 - The `user_params` private method is used to whitelist the parameters allowed in the API request for creating a user.
 
 </details>
-
+  
+  ----
   
   <details>
   <summary>Learn More About: Product Browsing: </summary>
+    
   ## Product Browsing
+    
 This code allows users to browse through an extensive catalog of products with filtering and sorting options for a more personalized shopping experience. It is implemented in a React application using Redux for state management.
 
 ```
@@ -310,7 +313,7 @@ The destroy action finds a cart item by its ID, removes it from the cart, and re
 ----
 
   <details>
-  <summary>Learn More About Reviews: </summary>
+  <summary>Learn More About: Reviews </summary>
 
 ## Product Reviews
 
@@ -376,11 +379,10 @@ def review_params
 end
 ```
 The update action updates an existing review with the provided review_params, and the destroy action deletes a review. Both actions render the show view upon success. The review_params method defines the list of allowed parameters for reviews.
-----
-
 
 </details>
   
+----
 
 ## Installation
 
