@@ -194,7 +194,9 @@ useEffect(() => {
 
 The useEffect hook is used to fetch products and update filter state based on the search parameters in the URL when the component mounts or when the search parameters change.
 
-** Shopping Cart
+----
+
+## Shopping Cart
 
 This code provides a shopping cart implementation allowing users to add items to their cart and manage item quantities with ease. It uses a CartItem model and a CartItemsController for handling shopping cart operations in a Rails application.
 
