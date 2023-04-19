@@ -22,8 +22,10 @@ https://user-images.githubusercontent.com/34076045/232656263-6f4d46d3-5f78-422d-
 - **Product Browsing**: Browse through an extensive catalog of products, with filtering and sorting options for a more personalized shopping experience.
 - **Shopping Cart**: Add items to your shopping cart and manage quantities with ease.
 - **Product Reviews**: Share your thoughts on a product by leaving a review and rating.
-
-+ ## User Authentication
+- 
+<details>
+  <summary>Click to expand/collapse this section</summary>
+  ## User Authentication
 
 This code is implementing a secure user registration and login system in a Ruby on Rails application. It utilizes the ActiveRecord ORM for database communication and the Bcrypt gem for password hashing and authentication.
 
@@ -117,7 +119,7 @@ end
 end
 ```
 
-**User's Controller:**
+**Users Controller:**
 
 The `Api::UsersController` class inherits from `ApplicationController` and is responsible for handling user-related API requests.
 
@@ -125,7 +127,8 @@ The `Api::UsersController` class inherits from `ApplicationController` and is re
 - The `create` action is responsible for creating a new user with the provided parameters, and logging them in if the user is successfully created. If there are errors in the provided data, it returns an error message and an unprocessable_entity status.
 - The `user_params` private method is used to whitelist the parameters allowed in the API request for creating a user.
 
-----
+</details>
+
 
 ## Product Browsing
 This code allows users to browse through an extensive catalog of products with filtering and sorting options for a more personalized shopping experience. It is implemented in a React application using Redux for state management.
