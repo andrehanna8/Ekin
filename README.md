@@ -400,11 +400,8 @@ The update action updates an existing review with the provided review_params, an
       
       <h3>Filter By Category and Type</h3>
       <p>
-        This function filters products based on their category and product type...
+        This function filters products based on their category and product type
       </p>
-      
-      <!-- Add more sections here -->
-
     </td>
   </tr>
 </table> 
