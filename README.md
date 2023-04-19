@@ -24,7 +24,7 @@ https://user-images.githubusercontent.com/34076045/232656263-6f4d46d3-5f78-422d-
 - **Product Reviews**: Share your thoughts on a product by leaving a review and rating.
 - 
 <details>
-  <summary>Click to expand/collapse this section</summary>
+  <summary>Learn More About: User Authentication</summary>
   ## User Authentication
 
 This code is implementing a secure user registration and login system in a Ruby on Rails application. It utilizes the ActiveRecord ORM for database communication and the Bcrypt gem for password hashing and authentication.
@@ -129,8 +129,10 @@ The `Api::UsersController` class inherits from `ApplicationController` and is re
 
 </details>
 
-
-## Product Browsing
+  
+  <details>
+  <summary>Learn More About: Product Browsing: </summary>
+  ## Product Browsing
 This code allows users to browse through an extensive catalog of products with filtering and sorting options for a more personalized shopping experience. It is implemented in a React application using Redux for state management.
 
 ```
@@ -197,7 +199,13 @@ useEffect(() => {
 
 The useEffect hook is used to fetch products and update filter state based on the search parameters in the URL when the component mounts or when the search parameters change.
 
+</details>
+
+
 ----
+  
+  <details>
+  <summaryLearn More About the Shopping Cart: /summary>
 
 ## Shopping Cart
 
@@ -296,7 +304,13 @@ end
 ```
 The destroy action finds a cart item by its ID, removes it from the cart, and renders the show view.
 
+</details>
+
+
 ----
+
+  <details>
+  <summary>Learn More About Reviews: </summary>
 
 ## Product Reviews
 
@@ -364,6 +378,9 @@ end
 The update action updates an existing review with the provided review_params, and the destroy action deletes a review. Both actions render the show view upon success. The review_params method defines the list of allowed parameters for reviews.
 ----
 
+
+</details>
+  
 
 ## Installation
 
