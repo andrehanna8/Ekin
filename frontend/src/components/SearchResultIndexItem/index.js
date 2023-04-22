@@ -14,7 +14,7 @@ const SearchResultIndexItem = ({ product }) => {
   return (
     <div className="search-result-index-item">
       <Link to={`/products/${product.id}`}>
-        <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/feb39c75-3aa3-44a7-9ec2-d298f19f2d27/air-max-270-womens-shoes-Pgb94t.png" alt={product.name} />
+        <img src={product.photoUrl} alt={product.name} />
       </Link>
       <div className='sr-product-info'>
         <br></br>
