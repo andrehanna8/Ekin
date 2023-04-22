@@ -124,11 +124,11 @@ input#searchbar:focus {
   margin-right: 30px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   #logo {
-    max-width: 61px;
-    height: 50%;
+    max-width: 35px !important;
+    height: 100% !important;
     margin: 20px;
     margin-right: 0px;
   }
