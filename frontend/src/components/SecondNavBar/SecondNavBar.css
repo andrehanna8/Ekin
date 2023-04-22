@@ -124,7 +124,7 @@ input#searchbar:focus {
   margin-right: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 926px) {
 
   #logo {
     max-width: 35px !important;
