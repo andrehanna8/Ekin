@@ -35,8 +35,13 @@ export default function SearchResultsIndex() {
   const [isColorCollapsed, setIsColorCollapsed] = useState(true);
   const [isSortOptionsVisible, setIsSortOptionsVisible] = useState(false);
   const [resultsCount, setResultsCount] = useState(0);
+  const [showControls, setShowControls] = useState(false);
 
-
+  const toggleControls = () => {
+    if (window.innerWidth <= 767) {
+      setShowControls(!showControls);
+    }
+  };
 
   const toggleSortOptions = () => {
     setIsSortOptionsVisible(!isSortOptionsVisible);
@@ -156,12 +161,6 @@ export default function SearchResultsIndex() {
     setResultsCount(productsToDisplayByColor.length);
   }, [productsToDisplayByColor]);
   
-  // useEffect(() => {
-  //   // Reset filters when the searchTerm changes
-  //   setFilterCategory("All");
-  //   setFilterProductType("All");
-  //   setFilterColor("All");
-  // }, [searchTerm]);
 
   return (
     <div className="sr-wrapper  hide-main-scrollbar">
@@ -190,9 +189,14 @@ export default function SearchResultsIndex() {
         </div>
     </div>
 
+    {/* <div className="toggle-controls-button">
+  <button onClick={toggleControls}>Toggle Filters</button>
+</div> */}
+
     <div className="search-results">
-        
-    <div className="search-results-controls">
+    
+    <div className={`search-results-controls${showControls ? "" : " hidden"}`}>
+
       <div className="category-options">
         <p onClick={toggleCategoryCollapse}>
         <div className="pt-and-collapse">
@@ -287,7 +291,10 @@ export default function SearchResultsIndex() {
         <hr />
       </div>
     </div>
+
+    
       <div className="search-results-items">
+
         {productsToDisplayByColor.map((product) => (
           <a key={product.id}>
             <SearchResultIndexItem product={product} />

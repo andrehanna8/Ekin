@@ -243,3 +243,43 @@
 #sale-price {
   color: #848383;
 }
+
+@media only screen and (max-width: 768px) {
+  .product-show-page {
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .product-show-page img {
+    margin: 0;
+    height: 300px;
+  }
+
+  .product-info {
+    margin-left: 0;
+    margin-right: 0;
+    width: 91%;
+  }
+
+  .size-buttons {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .add-favorite-show-page-buttons button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .create-review {
+    width: 100%;
+  }
+
+  .create-review input {
+  
+    width: 250px;
+    
+  }
+}

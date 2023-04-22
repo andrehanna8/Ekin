@@ -123,3 +123,58 @@ input#searchbar:focus {
   display: inline-block;
   margin-right: 30px;
 }
+
+@media (max-width: 767px) {
+
+  #logo {
+    max-width: 61px;
+    height: 50%;
+    margin: 20px;
+    margin-right: 0px;
+  }
+
+
+  .category-button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .second-nav-bar {
+    flex-direction: column;
+    height: auto;
+  }
+
+
+
+  .category-buttons button {
+   /* overflow-x: auto; */
+   /* padding: 20px; */
+    /* width: 80%; */
+    /* width: 50% !important; */
+    padding: 5px;
+    border: #E5E5E5 solid 1px;
+    border-radius: 5px;
+  }
+
+  .category-buttons {
+    justify-content: space-around;
+  }
+
+  #searchbar {
+    width: 80%;
+  }
+
+  .search-and-mag {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .search-and-mag i {
+    margin-right: 5px;
+  }
+
+  #bag {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}

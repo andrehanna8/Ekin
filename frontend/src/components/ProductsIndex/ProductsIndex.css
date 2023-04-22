@@ -347,3 +347,110 @@ height: auto;
   width: 99%;
   height: auto;
 }
+
+@media (max-width: 767px) {
+  /* Add your mobile-specific CSS styles here */
+
+  .spring-banner h2 {
+    font-size: 40px;
+    width: 80%;
+  }
+
+  .spring-banner h3 {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .always-iconic h1,
+  .hap-now h1 {
+    font-size: 20px;
+  }
+
+  .alwaysiconic-images {
+    /* flex-direction: column; */
+  }
+
+  .always-iconic h2 {
+    margin-top: 2%;
+  }
+
+  .alwaysiconic-images img {
+    margin-bottom: 15px;
+  }
+
+  .hap-now img {
+    width: 100%;
+  }
+
+  .hap-now-text {
+    /* margin-top: 10%; */
+    
+  }
+
+  .hap-now-text h2{
+    font-size: 30px !important;
+  }
+  
+  .hap-now-text h3 {
+    display: none;
+  }
+
+  .hap-now button {
+    margin-top: -20%;
+    /* margin-bottom: 20px !important; */
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  .hap-now-text {
+    /* height: 100px; */
+    /* padding: none; */
+    margin-top: 2.3% !important;
+  }
+  .first-teeup-text{
+      
+      /* margin-top: 30px; */
+      padding: 0px;
+      margin: 0px;
+      
+  }
+
+  .first-teeup-text button{
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-left: 110px;;
+  }
+
+  .second-teeup-text{
+    
+    /* margin-top: 30px; */
+    padding: 0px;
+    margin: 0px;
+    margin-left: 110px;
+  }
+
+  .second-teeup-text button{
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .first-teeup-text h1 {
+    display: none;
+  }
+
+  .second-teeup-text h1 {
+    display: none;
+  }
+
+  .first-teeup-text h2 {
+  
+    display: none;
+  }
+
+  .second-teeup-text h2 {
+    display: none;
+  }
+
+}
+
+

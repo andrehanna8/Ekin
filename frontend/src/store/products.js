@@ -53,21 +53,19 @@ export const fetchSearchResults = (searchTerm) => async (dispatch) => {
   };
   
 const productsReducer = (state = {}, action) => {
-    let newState = {...state}
+let newState = {...state}
 
-    switch (action.type) {
-
-        case RECIEVE_PRODUCTS:
-  if (Array.isArray(action.products)) {
-    return action.products.reduce((acc, product) => {
-      acc[product.id] = product;
-      return acc;
-    }, {});
-  } else {
-    return action.products;
-  }
-
-        case RECIEVE_PRODUCT:
+switch (action.type) {
+    case RECIEVE_PRODUCTS:
+        if (Array.isArray(action.products)) {
+            return action.products.reduce((acc, product) => {
+                acc[product.id] = product;
+                return acc;
+            }, {});
+        } else {
+            return action.products;
+        }
+    case RECIEVE_PRODUCT:
             newState[action.payload.product.id] = action.payload.product;
             return newState;
         default:

@@ -13,9 +13,7 @@ export default function Products({ searchTerm }) {
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => state.session.user);
 
-  const doubleBlocks = products.slice(0, 2);
   const scrollerBlocks = products.slice(2, 15);
-  const popNowBlocks = products.slice(16, 20);
 
   const clickSignUp = () => {
     const signUp = document.getElementById("sign-up");
@@ -23,8 +21,6 @@ export default function Products({ searchTerm }) {
       signUp?.click();
     }
   }
-
-
 
 
   useEffect(() => {
@@ -49,7 +45,6 @@ export default function Products({ searchTerm }) {
         </div>
       ) : (
         <>
-         
         <div className="spring-banner">
               <h1>Introducting Nike Pegasus 40</h1>
               {/* <br></br> */}
@@ -58,7 +53,6 @@ export default function Products({ searchTerm }) {
               <h3>Back in its fourth decade, the Nike Pegasus 40 is springier than ever and offers runners of all kinds a perfect fit.</h3>
               <Link to="/search?q=Pegasus">
               <button>Shop</button>
-
               </Link>
       </div>  
         

@@ -71,3 +71,28 @@
   transition: transform 0.5s;
 }
 
+@media (max-width: 767px) {
+  .message-container {
+    font-size: 14px;
+  }
+
+  .slide-nav-button {
+    font-size: 16px;
+  }
+
+  .prev-button {
+    margin-right: 5px;
+  }
+
+  .next-button {
+    margin-left: 5px;
+  }
+
+  .message-wrapper {
+    width: 80vw;
+  }
+
+  #promo-code {
+    font-size: 14px;
+  }
+}
