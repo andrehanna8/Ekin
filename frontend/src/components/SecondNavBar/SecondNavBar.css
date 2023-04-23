@@ -128,7 +128,7 @@ input#searchbar:focus {
 
   #logo {
     max-width: 35px !important;
-    height: 100% !important;
+    height: 15px !important;
     margin: 20px;
     margin-right: 0px;
   }
