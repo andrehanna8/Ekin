@@ -208,3 +208,20 @@
 #display-price{
   color: #128A09;
 }
+
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .cart-index {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .cart-total {
+    width: 100%;
+  }
+}
