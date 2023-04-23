@@ -22,11 +22,11 @@ export default function BottomBanner() {
                     <div className='col-2'>
                         <a href="https://www.nike.com/help" target="_blank" rel="noreferrer"><h1>GET HELP</h1></a>
                         <a href="https://www.nike.com/orders" target="_blank" rel="noreferrer"><h2>Order Status</h2></a>
-                        <a href="https://www.nike.com/help/a/shipping-info" target="_blank" rel="noreferrer"><h2>Shipping and Delivery</h2></a>
+                        <a href="https://www.nike.com/help/a/shipping-info" target="_blank" rel="noreferrer"><h2>Shipping</h2></a>
                         <a href="https://www.nike.com/help/a/returns-policy" target="_blank" rel="noreferrer"><h2>Returns</h2></a>
-                        <a href="https://www.nike.com/help/a/order-cancellation" target="_blank" rel="noreferrer"><h2>Order Cancellation</h2></a>
-                        <a href="https://www.nike.com/help/a/payment-options" target="_blank" rel="noreferrer"><h2>Payment Options</h2></a>
-                        <a href="https://www.nike.com/gift-cards/balance" target="_blank" rel="noreferrer"><h2>Gift Card Balance</h2></a>
+                        <a href="https://www.nike.com/help/a/order-cancellation" target="_blank" rel="noreferrer"><h2>Cancels</h2></a>
+                        <a href="https://www.nike.com/help/a/payment-options" target="_blank" rel="noreferrer"><h2>Payments</h2></a>
+                        <a href="https://www.nike.com/gift-cards/balance" target="_blank" rel="noreferrer"><h2>Balance</h2></a>
                         <a href="https://www.nike.com/help" target="_blank" rel="noreferrer"><h2>Contact Us</h2></a>
                     </div>
 

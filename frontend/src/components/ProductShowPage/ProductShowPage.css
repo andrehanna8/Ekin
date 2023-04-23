@@ -254,6 +254,7 @@
   .product-show-page img {
     margin: 0;
     height: 300px;
+    margin-left: 50px;
   }
 
   .product-info {
