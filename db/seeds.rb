@@ -621,7 +621,171 @@ p50 = Product.create!({
 
 p50.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bf34ef35-5fb1-4451-8238-3b022cc64d13/lunar-cortez-baseball-baseball-cleats-Ld2GZ3.png'), filename: 'nike-lunar-cortez-baseball-cleats.png')
 
+p51 = Product.create!({
+  name: "Nike Air Max 270 Kids",
+  description: "The Nike Air Max 270 Kids features a breathable mesh upper with a large Air Max unit in the heel for superior cushioning and comfort.",
+  price: 120,
+  category: "Kid's Shoes",
+  size: "Y",
+  color: "Black/White",
+  })
 
+p51.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/391a5bd8-4af5-4619-b718-ebfd7c3ae6b4/air-max-270-go-big-kids-easy-on-off-shoes-GDD3R0.png'), filename: 'air-max-270-kids-shoes.png')
+  
+  p52 = Product.create!({
+  name: "Nike Revolution 5 Kids",
+  description: "The Nike Revolution 5 Kids is a lightweight and flexible running shoe designed for everyday play, featuring soft foam cushioning for a comfortable feel.",
+  price: 65,
+  category: "Kid's Shoes",
+  size: "Y",
+  color: "Blue/White",
+  })
+
+p52.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/647588d2-93de-4768-ae98-00ca459dfe28/revolution-6-nn-jp-baby-toddler-shoes-TgzPsr.png'), filename: 'air-max-270-kids-shoes.png')
+  
+  p53 = Product.create!({
+  name: "Nike Dri-FIT Kids' Training T-Shirt",
+  description: "This Nike Dri-FIT Kids' Training T-Shirt is made with sweat-wicking fabric to help keep kids dry and comfortable during their activities.",
+  price: 20,
+  category: "Kid's Tops",
+  size: "Y",
+  color: "Red",
+  })
+
+p53.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f9adbab2-4fc0-4fde-b37d-a1dd8b6f6da6/dri-fit-multi-big-kids-boys-sleeveless-training-top-LwKKKT.png'), filename: 'air-max-270-kids-shoes.png')
+  
+  p54 = Product.create!({
+  name: "Nike Sportswear Club Kids' Fleece Joggers",
+  description: "The Nike Sportswear Club Kids' Fleece Joggers provide a comfortable and stylish option for everyday wear, featuring soft brushed-back fleece fabric and an adjustable waistband.",
+  price: 45,
+  category: "Kid's Bottoms",
+  size: "Y",
+  color: "Grey",
+  })
+
+p54.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/64672539-5c0b-4481-8aa8-c045b5598ce3/sportswear-club-fleece-big-kids-boys-pants-sfKXMD.png'), filename: 'air-max-270-kids-shoes.png')
+  
+  p55 = Product.create!({
+  name: "Nike Pro Kids' Tights",
+  description: "The Nike Pro Kids' Tights feature Dri-FIT technology to wick away sweat and keep kids comfortable during practice or play.",
+  price: 35,
+  category: "Kid's Bottoms",
+  size: "Y",
+  color: "Black",
+  })
+
+p55.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/658013ba-5baf-4946-b572-a8dd5608189c/pro-dri-fit-big-kids-boys-tights-Q2jjlQ.png'), filename: 'air-max-270-kids-shoes.png')
+  
+  p56 = Product.create!({
+  name: "Nike Sportswear Club Kids' Full-Zip Hoodie",
+  description: "This Nike Sportswear Club Kids' Full-Zip Hoodie is made with soft, brushed-back fleece for a warm and comfortable feel.",
+  price: 50,
+  category: "Kid's Tops",
+  size: "Y",
+  color: "Navy",
+  })
+
+p56.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c51f2d41-7fee-400f-9b33-68c7c044a377/sportswear-club-fleece-little-kids-full-zip-hoodie-XRdQpt.png'), filename: 'air-max-270-kids-shoes.png')
+  
+  p57 = Product.create!({
+  name: "Nike Kids' Elite Crew Basketball Socks",
+  description: "The Nike Kids' Elite Crew Basketball Socks provide cushioning and support in key areas, with Dri-FIT technology to keep feet dry and comfortable on the court.",
+  price: 14,
+  category: "Kids Accessories",
+  size: "Y",
+  color: "White/Black",
+  })
+
+p57.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/mx0ti2o9qtlickhdlsid/elite-crew-basketball-socks-zGJxZD.png'), filename: 'air-max-270-kids-shoes.png')
+  
+  p58 = Product.create!({
+  name: "Nike Air Force 1 Low Kids",
+  description: "The Nike Air Force 1 Low Kids is a classic silhouette with a leather upper and an Air-Sole unit for all-day comfort and style.",
+  price: 85,
+  category: "Kid's Shoes",
+  size: "Y",
+  color: "White",
+  })
+
+p58.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/742e2f04-b7d0-499e-b4f6-e1e9ad36dd23/force-1-low-asw-little-kids-shoes-gRcv7N.png'), filename: 'air-max-270-kids-shoes.png')
+  
+  p59 = Product.create!({
+  name: "Nike Sportswear Windrunner Kids' Jacket",
+  description: "The Nike Sportswear Windrunner Kids' Jacket is a lightweight, water-repellent layer that offers protection from the elements.",
+  price: 60,
+  category: "Kid's Tops",
+  size: "Y",
+  color: "Black/White",
+  })
+
+p59.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/684cef53-3895-4cbd-bb17-472cbc546603/sportswear-windrunner-big-kids-boys-jacket-wbg87N.png'), filename: 'air-max-270-kids-shoes.png')
+  
+p60 = Product.create!({
+  name: "Nike Kids' Featherlight Adjustable Hat",
+  description: "The Nike Kids' Featherlight Adjustable Hat is designed with Dri-FIT technology to wick away sweat, providing comfort and sun protection during outdoor activities.",
+  price: 22,
+  category: "Kids Accessories",
+  size: "Y",
+  color: "Pink",
+})
+
+p60.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ohx8kffu3cribij9tssg/aerobill-featherlight-kids-adjustable-hat-rJTGmO3r.png'), filename: 'air-max-270-kids-shoes.png')
+
+  p61 = Product.create!({
+    name: "Nike Kids' Graphic Gym Sack",
+    description: "The Nike Kids' Graphic Gym Sack is a lightweight, easy-to-carry bag that's perfect for holding kids' essentials during sports or other activities.",
+    price: 15,
+    category: "Kids Accessories",
+    size: "Y",
+    color: "Blue/Orange",
+    })
+
+p61.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/77d20601-ee2e-41a9-91b3-3210ed145849/heritage-drawstring-bag-13l-qqH3vG.png'), filename: 'air-max-270-kids-shoes.png')
+    
+    p62 = Product.create!({
+    name: "Nike Flex Runner Kids",
+    description: "The Nike Flex Runner Kids is a lightweight and flexible slip-on shoe that promotes natural motion, perfect for young athletes on the go.",
+    price: 50,
+    category: "Kid's Shoes",
+    size: "Y",
+    color: "Grey/White",
+    })
+
+p62.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3c5f7119-731c-4220-bbc8-103142124aa3/flex-runner-2-little-kids-shoes-5nS0pV.png'), filename: 'air-max-270-kids-shoes.png')
+    
+    p63 = Product.create!({
+    name: "Nike Sportswear Club Kids' Shorts",
+    description: "The Nike Sportswear Club Kids' Shorts offer casual comfort and style, made with soft cotton fabric and an adjustable waistband for a personalized fit.",
+    price: 25,
+    category: "Kid's Bottoms",
+    size: "Y",
+    color: "Black",
+    })
+
+p63.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/869fc636-8e2f-461e-8c5f-ad6f9129f3a8/sportswear-club-big-kids-girls-french-terry-shorts-d1T5gR.png'), filename: 'air-max-270-kids-shoes.png')
+    
+    p64 = Product.create!({
+    name: "Nike Kids' Performance Cushioned Crew Training Socks",
+    description: "The Nike Kids' Performance Cushioned Crew Training Socks provide comfort and support with a cushioned footbed and arch compression.",
+    price: 16,
+    category: "Kids Accessories",
+    size: "Y",
+    color: "Multi-color",
+    })
+
+p64.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0f91160-45c7-40e3-ac52-1aeb36c10611/everyday-plus-cushioned-training-crew-socks-3-pairs-kt8drs.png'), filename: 'air-max-270-kids-shoes.png')
+    
+    p65 = Product.create!({
+    name: "Nike Court Borough Low 2 Kids",
+    description: "The Nike Court Borough Low 2 Kids is a classic low-top sneaker with a leather upper and a padded collar for all-day comfort and style.",
+    price: 55,
+    category: "Kid's Shoes",
+    size: "Y",
+    color: "White/Grey",
+    })
+  
+  p65.photo.attach(io: URI.open('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/r2ircg9qhenkmexgifbj/court-borough-low-2-little-kids-shoes-8j4qrd.png'), filename: 'air-max-270-kids-shoes.png')
+  
     puts "done creating products"
     puts ""
 
